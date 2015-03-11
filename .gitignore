@@ -1,0 +1,23 @@
+#Vagrant directories
+.vagrant/
+
+#Gradle directories
+.gradle/
+
+#Idea directories
+.idea/
+*.iml
+*.ipr
+*.iws
+
+#Build dirs
+build/
+out/
+classes/
+target/
+
+#Test Directory
+mci-api/target/
+
+#OSX specific files
+.DS_Store

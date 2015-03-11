@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.7
+version = '1.0'
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs "${rootDir}/lib"
+    }
+}
+
+dependencies {
+    compile 'org.apache.commons:commons-csv:1.1'
+    compile 'commons-io:commons-io:2.4'
+    compile 'org.apache.commons:commons-lang3:3.0'
+    compile 'com.toddfast.mutagen:mutagen:0.3.0'
+    compile 'com.toddfast.mutagen:mutagen-cassandra-0.4.2-SNAPSHOT'
+    compile 'com.datastax.cassandra:cassandra-driver-dse:2.0.4'
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
