@@ -9,8 +9,8 @@ version = '1.0'
 
 mainClassName = "org.sharedhealth.hie.data.Main"
 
-run{
-    args = [System.getProperty("project"), System.getProperty("script.action") != null ? System.getProperty("script.action") : "all"]
+run {
+    args = [System.getProperty("project"), System.getProperty("output.dir")]
 }
 
 repositories {
