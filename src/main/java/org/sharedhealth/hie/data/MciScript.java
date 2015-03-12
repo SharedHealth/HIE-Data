@@ -7,7 +7,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
-import java.io.IOException;
+import java.net.URL;
 import java.nio.charset.Charset;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
@@ -17,17 +17,17 @@ public class MciScript {
 
     private static final String EMPTY_PARENT = "00";
 
-    public void generate(String outputDirPath) throws IOException {
+    public void generate(String outputDirPath) throws Exception {
         generateLocationScripts(outputDirPath);
     }
 
-    private void generateLocationScripts(String outputDirPath) throws IOException {
+    private void generateLocationScripts(String outputDirPath) throws Exception {
         System.out.println("Generating MCI location scripts. Output directory: " + outputDirPath);
         File outputDir = new File(outputDirPath);
         outputDir.mkdirs();
         FileUtils.cleanDirectory(outputDir);
 
-        File input = getResource(LR_DUMP);
+        URL input = getResource(LR_DUMP);
         File output = new File(outputDir, "mci-locations.cql");
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
@@ -38,7 +38,7 @@ public class MciScript {
 
     private String buildScripts(CSVRecord csvRecord) {
         return String.format("INSERT INTO mci.locations (\"code\", \"name\", \"parent\") VALUES " +
-                "('%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), csvRecord.get("name") , getParent(csvRecord));
+                "('%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), csvRecord.get("name"), getParent(csvRecord));
     }
 
     private String getParent(CSVRecord csvRecord) {
@@ -47,8 +47,8 @@ public class MciScript {
         return isNotBlank(parent) ? parent : EMPTY_PARENT;
     }
 
-    private File getResource(String resource) {
+    private URL getResource(String resource) throws Exception {
         ClassLoader classLoader = this.getClass().getClassLoader();
-        return new File(classLoader.getResource(resource).getFile());
+        return classLoader.getResource(resource).toURI().toURL();
     }
 }
