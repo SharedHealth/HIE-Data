@@ -11,23 +11,26 @@ import java.net.URL;
 import java.nio.charset.Charset;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
-import static org.sharedhealth.hie.data.Main.LR_DUMP;
+import static org.sharedhealth.hie.data.Main.LOCATIONS_DUMP;
 
 public class MciScript {
 
     private static final String EMPTY_PARENT = "00";
 
-    public void generate(String outputDirPath) throws Exception {
-        generateLocationScripts(outputDirPath);
+    public void generate(String inputDir, String outputDirPath) throws Exception {
+        generateLocationScripts(inputDir, outputDirPath);
     }
 
-    private void generateLocationScripts(String outputDirPath) throws Exception {
+    private void generateLocationScripts(String inputDir, String outputDirPath) throws Exception {
         System.out.println("Generating MCI location scripts. Output directory: " + outputDirPath);
+        String locations = String.format("%s/%s", inputDir, LOCATIONS_DUMP);
+        System.out.println("Picking MCI location data from:" + locations);
+
         File outputDir = new File(outputDirPath);
         outputDir.mkdirs();
         FileUtils.cleanDirectory(outputDir);
 
-        URL input = getResource(LR_DUMP);
+        URL input = getResource(locations);
         File output = new File(outputDir, "mci-locations.cql");
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
@@ -37,8 +40,8 @@ public class MciScript {
     }
 
     private String buildScripts(CSVRecord csvRecord) {
-        return String.format("INSERT INTO mci.locations (\"code\", \"name\", \"parent\") VALUES " +
-                "('%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), csvRecord.get("name"), getParent(csvRecord));
+        return String.format("INSERT INTO locations (\"code\", \"name\", \"parent\") VALUES " +
+                "('%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), csvRecord.get("name") , getParent(csvRecord));
     }
 
     private String getParent(CSVRecord csvRecord) {
