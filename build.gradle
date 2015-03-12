@@ -1,8 +1,17 @@
 apply plugin: 'java'
+apply plugin: 'application'
 apply plugin: 'idea'
 
 sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
 version = '1.0'
+
+mainClassName = "org.sharedhealth.hie.data.Main"
+
+run{
+    args = [System.getProperty("project"), System.getProperty("script.action") != null ? System.getProperty("script.action") : "all"]
+}
 
 repositories {
     mavenCentral()
@@ -19,5 +28,5 @@ dependencies {
     compile 'com.toddfast.mutagen:mutagen-cassandra-0.4.2-SNAPSHOT'
     compile 'com.datastax.cassandra:cassandra-driver-dse:2.0.4'
 
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile 'junit:junit:4.11'
 }

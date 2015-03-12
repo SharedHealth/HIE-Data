@@ -21,3 +21,7 @@ mci-api/target/
 
 #OSX specific files
 .DS_Store
+
+#Generated scripts
+*.cql
+*.sql
