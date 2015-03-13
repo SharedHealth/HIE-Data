@@ -11,7 +11,8 @@ import java.net.URL;
 import java.nio.charset.Charset;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
-import static org.sharedhealth.hie.data.Main.LOCATIONS_DUMP;
+import static org.sharedhealth.hie.data.Main.LOCATIONS_DATA;
+import static org.sharedhealth.hie.data.Main.LOCATIONS_SCRIPTS;
 
 public class MciScript {
 
@@ -23,7 +24,7 @@ public class MciScript {
 
     private void generateLocationScripts(String inputDir, String outputDirPath) throws Exception {
         System.out.println("Generating MCI location scripts. Output directory: " + outputDirPath);
-        String locations = String.format("%s/%s", inputDir, LOCATIONS_DUMP);
+        String locations = String.format("%s/%s", inputDir, LOCATIONS_DATA);
         System.out.println("Picking MCI location data from:" + locations);
 
         File outputDir = new File(outputDirPath);
@@ -31,7 +32,7 @@ public class MciScript {
         FileUtils.cleanDirectory(outputDir);
 
         URL input = getResource(locations);
-        File output = new File(outputDir, "mci-locations.cql");
+        File output = new File(outputDir, LOCATIONS_SCRIPTS);
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
         for (CSVRecord csvRecord : parser) {
@@ -41,7 +42,7 @@ public class MciScript {
 
     public String buildScripts(CSVRecord csvRecord) {
         return String.format("INSERT INTO locations (\"code\", \"name\", \"parent\") VALUES " +
-                "('%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), StringUtils.replace(csvRecord.get("name"),"'","''") , getParent(csvRecord));
+                "('%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), StringUtils.replace(csvRecord.get("name"), "'", "''") , getParent(csvRecord));
     }
 
     private String getParent(CSVRecord csvRecord) {

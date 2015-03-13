@@ -3,7 +3,8 @@ package org.sharedhealth.hie.data;
 public class Main {
 
 
-    public static String LOCATIONS_DUMP="locations.csv";
+    public static String LOCATIONS_DATA ="locations.csv";
+    public static String LOCATIONS_SCRIPTS ="locations.cql";
     public static void main(String[] args) throws Exception {
         if (args.length < 2) {
             throw new RuntimeException("Missing argument(s).");
