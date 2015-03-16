@@ -12,10 +12,14 @@ public class Main {
             throw new RuntimeException("Missing argument(s).");
         }
 
+        String proj= args[0];
+        String env= args[1];
+        String outputDir = String.format("%s/%s/%s", args[2],env,proj);
+
 
         if ("mci".equals(args[0])) {
-            String inputDir = String.format("%s/%s","data",args[1]);
-            new MciScript().generate(inputDir, args[2]);
+            String inputDir = String.format("%s/%s","data",env);
+            new MciScript().generate(inputDir, outputDir);
         }
     }
 }
