@@ -1,1 +1,1 @@
-*.csv filter=git-crypt diff=git-crypt
+src/main/resources/data/prod/*.csv filter=git-crypt diff=git-crypt
