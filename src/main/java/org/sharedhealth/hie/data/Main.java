@@ -6,7 +6,9 @@ public class Main {
     public static String LOCATIONS_DATA ="locations.csv";
     public static String LOCATIONS_SCRIPTS ="locations.cql";
     public static void main(String[] args) throws Exception {
-        if (args.length < 2) {
+        if (args.length < 3) {
+            System.out.println("Please use the below format");
+            System.out.println("java -jar <<project-name|mci>> <<env|prod,qa,showcase>> <<output-dir-path>>");
             throw new RuntimeException("Missing argument(s).");
         }
 
