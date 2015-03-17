@@ -41,8 +41,9 @@ public class MciScript {
     }
 
     public String buildScripts(CSVRecord csvRecord) {
-        return String.format("INSERT INTO locations (\"code\", \"name\", \"parent\") VALUES " +
-                "('%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), StringUtils.replace(csvRecord.get("name"), "'", "''") , getParent(csvRecord));
+        return String.format("INSERT INTO locations (\"code\", \"name\", \"active\",\"parent\") VALUES " +
+                "('%s','%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), StringUtils.replace(csvRecord.get("name"), "'", "''") ,"1", getParent(csvRecord));
+
     }
 
     private String getParent(CSVRecord csvRecord) {
