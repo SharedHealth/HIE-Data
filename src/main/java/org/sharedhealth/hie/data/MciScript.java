@@ -31,7 +31,7 @@ public class MciScript {
         outputDir.mkdirs();
         FileUtils.cleanDirectory(outputDir);
 
-        URL input = getResource(locations);
+        URL input = new SHRFileUtils().getResource(locations);
         File output = new File(outputDir, LOCATIONS_SCRIPTS);
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
@@ -52,8 +52,5 @@ public class MciScript {
         return isNotBlank(parent) ? parent : EMPTY_PARENT;
     }
 
-    private URL getResource(String resource) throws Exception {
-        ClassLoader classLoader = this.getClass().getClassLoader();
-        return classLoader.getResource(resource).toURI().toURL();
-    }
+
 }
