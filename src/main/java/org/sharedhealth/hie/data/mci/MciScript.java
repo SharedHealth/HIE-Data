@@ -1,10 +1,11 @@
-package org.sharedhealth.hie.data;
+package org.sharedhealth.hie.data.mci;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.sharedhealth.hie.data.SHRFileUtils;
 
 import java.io.File;
 import java.net.URL;

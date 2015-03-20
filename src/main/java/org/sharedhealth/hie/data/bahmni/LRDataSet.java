@@ -1,10 +1,11 @@
-package org.sharedhealth.hie.data;
+package org.sharedhealth.hie.data.bahmni;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.sharedhealth.hie.data.SHRFileUtils;
 
 import java.io.File;
 import java.net.URL;
@@ -16,13 +17,9 @@ import static org.apache.commons.lang3.StringUtils.isNotBlank;
 import static org.sharedhealth.hie.data.Main.LOCATIONS_DATA;
 import static org.sharedhealth.hie.data.Main.LOCATIONS_SCRIPTS;
 
-public class BDSHRClientScript {
+public class LRDataSet {
 
     public void generate(String inputDir, String outputDirPath) throws Exception {
-        generateLocationScripts(inputDir, outputDirPath);
-    }
-
-    private void generateLocationScripts(String inputDir, String outputDirPath) throws Exception {
         System.out.println("Generating SHR-Client location scripts. Output directory: " + outputDirPath);
         String locations = String.format("%s/%s", inputDir, LOCATIONS_DATA);
         System.out.println("Picking SHR-Client location data from:" + locations);
@@ -49,8 +46,8 @@ public class BDSHRClientScript {
 
     public String buildInsertScripts(CSVRecord csvRecord) {
         UUID uuid = UUID.randomUUID();
-        return String.format("INSERT INTO address_hierarchy_entry (name,level_id,user_generated_id,uuid) select " +
-                        "'%s','%s','%s','%s' from dual where not exists(SELECT * from address_hierarchy_entry where user_generated_id = '%s');\n",
+        return String.format("INSERT INTO address_hierarchy_entry (name,level_id,user_generated_id,uuid) SELECT " +
+                        "'%s','%s','%s','%s' FROM dual WHERE NOT EXISTS(SELECT * FROM address_hierarchy_entry WHERE user_generated_id = '%s');\n",
                 StringUtils.replace(csvRecord.get("name"), "'", "''"),
                 csvRecord.get("level"), csvRecord.get("location_code"),
                 uuid, csvRecord.get("location_code"));
@@ -60,10 +57,10 @@ public class BDSHRClientScript {
 
         String parentCode = getParentCode(csvRecord);
         return parentCode != null ?
-                String.format("update address_hierarchy_entry set parent_id=" +
-                        "(select address_hierarchy_entry_id as parent_id from" +
-                        "(select address_hierarchy_entry_id from address_hierarchy_entry where user_generated_id='%s') as temp)" +
-                        "where user_generated_id='%s';\n", parentCode, csvRecord.get("location_code"))
+                String.format("UPDATE address_hierarchy_entry SET parent_id=" +
+                        "(SELECT address_hierarchy_entry_id AS parent_id FROM" +
+                        "(SELECT address_hierarchy_entry_id FROM address_hierarchy_entry WHERE user_generated_id='%s') AS temp)" +
+                        "WHERE user_generated_id='%s';\n", parentCode, csvRecord.get("location_code"))
                 : null;
 
     }
