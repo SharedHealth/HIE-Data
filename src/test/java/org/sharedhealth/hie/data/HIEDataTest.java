@@ -7,6 +7,8 @@ import org.sharedhealth.hie.data.bahmni.LRDataSet;
 import org.sharedhealth.hie.data.bahmni.PRDataSet;
 import org.sharedhealth.hie.data.mci.MciScript;
 
+import java.io.File;
+
 public class HIEDataTest {
 
     @Test
@@ -16,17 +18,17 @@ public class HIEDataTest {
 
     @Test
     public void shouldGenerateBahmniLocationDataFromCSV() throws Exception {
-        new LRDataSet().generate("data/test", "./scripts");
+        new LRDataSet().generate("data/test", new File("./scripts"));
 
     }
 
     @Test
     public void shouldGenerateFacilityDataFromCSV() throws Exception {
-        new FRDataSet().generate("data/test","./scripts");
+        new FRDataSet().generate("data/test", new File("./scripts"));
     }
 
     @Test
     public void shouldGenerateProviderDataFromCSV() throws Exception {
-        new PRDataSet().generate("data/test","./scripts");
+        new PRDataSet().generate("data/test", new File("./scripts"));
     }
 }

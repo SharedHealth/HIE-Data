@@ -19,14 +19,10 @@ import static org.sharedhealth.hie.data.Main.LOCATIONS_SCRIPTS;
 
 public class LRDataSet {
 
-    public void generate(String inputDir, String outputDirPath) throws Exception {
-        System.out.println("Generating SHR-Client location scripts. Output directory: " + outputDirPath);
+    public void generate(String inputDir, File outputDir) throws Exception {
+        System.out.println(String.format("Generating SHR-Client location scripts. Output directory: %s/%s", outputDir.getPath(), LOCATIONS_SCRIPTS));
         String locations = String.format("%s/%s", inputDir, LOCATIONS_DATA);
         System.out.println("Picking SHR-Client location data from:" + locations);
-
-        File outputDir = new File(outputDirPath);
-        outputDir.mkdirs();
-        FileUtils.cleanDirectory(outputDir);
 
         URL input = new SHRFileUtils().getResource(locations);
         File output = new File(outputDir, LOCATIONS_SCRIPTS);

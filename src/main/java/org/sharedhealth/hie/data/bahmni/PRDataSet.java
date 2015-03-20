@@ -18,14 +18,10 @@ import static org.sharedhealth.hie.data.Main.PROVIDERS_SCRIPTS;
 
 public class PRDataSet {
 
-    public void generate(String inputDir, String outputDirPath) throws Exception {
-        System.out.println("Generating SHR-Client Provider scripts. Output directory: " + outputDirPath);
+    public void generate(String inputDir, File outputDir) throws Exception {
+        System.out.println(String.format("Generating SHR-Client Provider scripts. Output directory: %s/%s", outputDir.getPath(), PROVIDERS_SCRIPTS));
         String providers = String.format("%s/%s", inputDir, PROVIDERS_DATA);
         System.out.println("Picking SHR-Client Provider data from:" + providers);
-
-        File outputDir = new File(outputDirPath);
-        outputDir.mkdirs();
-        FileUtils.cleanDirectory(outputDir);
 
         URL input = new SHRFileUtils().getResource(providers);
         File output = new File(outputDir, PROVIDERS_SCRIPTS);
@@ -37,7 +33,10 @@ public class PRDataSet {
         for (CSVRecord csvRecord : csvRecords) {
             providerId++;
             FileUtils.writeStringToFile(output, buildInsertProviderScripts(csvRecord, providerId), Charset.forName("UTF-8"), true);
-            FileUtils.writeStringToFile(output, buildInsertProviderAttributeScripts(csvRecord, providerId), Charset.forName("UTF-8"), true);
+            String providerFacilityMapping = buildInsertProviderAttributeScripts(csvRecord, providerId);
+            if(providerFacilityMapping != null){
+                FileUtils.writeStringToFile(output, providerFacilityMapping, Charset.forName("UTF-8"), true);
+            }
         }
 
     }
@@ -58,9 +57,10 @@ public class PRDataSet {
     private String buildInsertProviderAttributeScripts(CSVRecord csvRecord, int providerId) {
         UUID uuid = UUID.randomUUID();
         String facilityCode = csvRecord.get("facility_code");
-        return String.format("INSERT INTO provider_attribute(provider_id,attribute_type_id, value_reference, uuid, creator, date_created) SELECT " +
+        return !"NULL".equals(facilityCode) ? String.format("INSERT INTO provider_attribute(provider_id,attribute_type_id, value_reference, uuid, creator, date_created) SELECT " +
                              "%s, @attribute_type_id, '%s', '%s', 1, now() FROM DUAL WHERE NOT EXISTS(select * from provider_attribute WHERE value_reference = '%s');\n",
-                            providerId, facilityCode, uuid, facilityCode);
+                            providerId, facilityCode, uuid, facilityCode)
+                            : null;
     }
 
 

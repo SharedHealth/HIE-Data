@@ -19,14 +19,10 @@ import static org.sharedhealth.hie.data.Main.FACILITIES_SCRIPTS;
 
 public class FRDataSet {
 
-    public void generate(String inputDir, String outputDirPath) throws Exception {
-        System.out.println("Generating SHR-Client facilty scripts. Output directory: " + outputDirPath);
+    public void generate(String inputDir, File outputDir) throws Exception {
+        System.out.println(String.format("Generating SHR-Client facilty scripts. Output directory: %s/%s",outputDir.getPath(), FACILITIES_SCRIPTS));
         String facilities = String.format("%s/%s", inputDir, FACILITIES_DATA);
         System.out.println("Picking SHR-Client facility data from:" + facilities);
-
-        File outputDir = new File(outputDirPath);
-        outputDir.mkdirs();
-        FileUtils.cleanDirectory(outputDir);
 
         URL input = new SHRFileUtils().getResource(facilities);
         File output = new File(outputDir, FACILITIES_SCRIPTS);
