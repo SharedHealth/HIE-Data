@@ -8,9 +8,11 @@ public class Main {
 
     public static String LOCATIONS_DATA = "locations.csv";
     public static String FACILITIES_DATA = "facilities.csv";
+    public static String PROVIDERS_DATA = "providers.csv";
 
     public static String LOCATIONS_SCRIPTS = "locations.cql";
     public static String FACILITIES_SCRIPTS = "facilities.cql";
+    public static String PROVIDERS_SCRIPTS = "providers.cql";
 
     public static String HRM_TEST="http://hrmtest.dghs.gov.bd";
     public static String HRM_PROD="http://hrm.dghs.gov.bd";
