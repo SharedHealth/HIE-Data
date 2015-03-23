@@ -48,7 +48,7 @@ public class PRDataSet {
     public String buildInsertProviderScripts(CSVRecord csvRecord, int providerId) {
         UUID uuid = UUID.randomUUID();
         String providerIdentifier = csvRecord.get("provider_id");
-        return String.format("INSERT INTO provider (provider_id, name, identifier, creator, date_created, uuid) SELECT " +
+        return String.format("\nINSERT INTO provider (provider_id, name, identifier, creator, date_created, uuid) SELECT " +
                             "%s,'%s','%s',1,now(),'%s' FROM DUAL WHERE NOT EXISTS(SELECT * FROM provider WHERE identifier = '%s');\n",
                             providerId, StringUtils.replace(csvRecord.get("provider_name"), "'", "''"), providerIdentifier,
                             uuid, providerIdentifier);
@@ -58,8 +58,8 @@ public class PRDataSet {
         UUID uuid = UUID.randomUUID();
         String facilityCode = csvRecord.get("facility_code");
         return !"NULL".equals(facilityCode) ? String.format("INSERT INTO provider_attribute(provider_id,attribute_type_id, value_reference, uuid, creator, date_created) SELECT " +
-                             "%s, @attribute_type_id, '%s', '%s', 1, now() FROM DUAL WHERE NOT EXISTS(select * from provider_attribute WHERE value_reference = '%s');\n",
-                            providerId, facilityCode, uuid, facilityCode)
+                             "%s, @attribute_type_id, '%s', '%s', 1, now() FROM DUAL WHERE NOT EXISTS(select * from provider_attribute WHERE value_reference = '%s' and provider_id = %s);\n",
+                            providerId, facilityCode, uuid, facilityCode, providerId)
                             : null;
     }
 
