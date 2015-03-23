@@ -60,9 +60,13 @@ public class FRDataSet {
     }
 
     private String insertFacilityScript(CSVRecord csvRecord, int facilityId, UUID uuid) {
-        String facilityName = StringUtils.replace(csvRecord.get("name"), "'", "''");
-        return String.format("INSERT INTO location(location_id,name,creator,date_created,uuid) SELECT %s,'%s',1,now(),'%s' " +
-                            "FROM DUAL WHERE NOT EXISTS(SELECT * from location where name='%s' and location_id=%s);\n",facilityId, facilityName, uuid, facilityName, facilityId);
+        String facilityName = StringUtils.trim(StringUtils.replace(csvRecord.get("name"), "'", "''"));
+        return String.format("INSERT INTO location(location_id,name,creator,date_created,uuid,retired) SELECT %s,'%s',1,now(),'%s', %s " +
+                            "FROM DUAL WHERE NOT EXISTS(SELECT * from location where name='%s' and location_id=%s);\n",facilityId, facilityName, uuid, isRetired(csvRecord.get("is_active")), facilityName, facilityId);
+    }
+
+    private String isRetired(String active) {
+        return "1".equals(active)? "0" : "1";
     }
 
     private String getHRMFRSystemUri(String facilityCode) {
