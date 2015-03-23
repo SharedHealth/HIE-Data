@@ -61,8 +61,8 @@ public class FRDataSet {
 
     private String insertFacilityScript(CSVRecord csvRecord, int faclityId, UUID uuid) {
         String facilityName = StringUtils.replace(csvRecord.get("name"), "'", "''");
-        return String.format("INSERT INTO locations(location_id,name,creator,date_created,uuid) SELECT %s,'%s',1,now(),'%s' " +
-                            "FROM DUAL WHERE NOT EXISTS(SELECT * from locations where name='%s');\n",faclityId, facilityName, uuid, facilityName);
+        return String.format("INSERT INTO location(location_id,name,creator,date_created,uuid) SELECT %s,'%s',1,now(),'%s' " +
+                            "FROM DUAL WHERE NOT EXISTS(SELECT * from location where name='%s');\n",faclityId, facilityName, uuid, facilityName);
     }
 
     private String getHRMFRSystemUri(String facilityCode) {

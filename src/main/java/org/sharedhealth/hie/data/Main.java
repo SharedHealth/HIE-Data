@@ -26,7 +26,7 @@ public class Main {
 
         String proj = args[0];
         String env = args[1];
-        String outputDir = String.format("%s/%s/%s", args[2], env, proj);
+        String outputDir = String.format("%s/%s", args[2], proj);
         String inputDir = String.format("%s/%s", "data", env);
 
         HRM = "prod".equals(env)? HRM_PROD:HRM_TEST;
