@@ -44,7 +44,7 @@ public class LRDataSet {
         UUID uuid = UUID.randomUUID();
         return String.format("INSERT INTO address_hierarchy_entry (name,level_id,user_generated_id,uuid) SELECT " +
                         "'%s','%s','%s','%s' FROM dual WHERE NOT EXISTS(SELECT * FROM address_hierarchy_entry WHERE user_generated_id = '%s');\n",
-                StringUtils.replace(csvRecord.get("name"), "'", "''"),
+                StringUtils.trim(StringUtils.replace(csvRecord.get("name"), "'", "''")),
                 csvRecord.get("level"), csvRecord.get("location_code"),
                 uuid, csvRecord.get("location_code"));
     }

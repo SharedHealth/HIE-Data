@@ -13,7 +13,7 @@ import java.nio.charset.Charset;
 
 import static org.apache.commons.lang3.StringUtils.isNotBlank;
 import static org.sharedhealth.hie.data.Main.LOCATIONS_DATA;
-import static org.sharedhealth.hie.data.Main.LOCATIONS_SCRIPTS;
+import static org.sharedhealth.hie.data.Main.LOCATIONS_SCRIPTS_CQL;
 
 public class MciScript {
 
@@ -33,7 +33,7 @@ public class MciScript {
         FileUtils.cleanDirectory(outputDir);
 
         URL input = new SHRFileUtils().getResource(locations);
-        File output = new File(outputDir, LOCATIONS_SCRIPTS);
+        File output = new File(outputDir, LOCATIONS_SCRIPTS_CQL);
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
         for (CSVRecord csvRecord : parser) {
@@ -42,8 +42,10 @@ public class MciScript {
     }
 
     public String buildScripts(CSVRecord csvRecord) {
+        String locationName = StringUtils.trim(StringUtils.replace(csvRecord.get("name"), "'", "''"));
+
         return String.format("INSERT INTO locations (\"code\", \"name\", \"active\",\"parent\") VALUES " +
-                "('%s','%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), StringUtils.replace(csvRecord.get("name"), "'", "''") ,"1", getParent(csvRecord));
+                "('%s','%s','%s','%s') IF NOT EXISTS;\n", csvRecord.get("level_code"), locationName,"1", getParent(csvRecord));
 
     }
 
