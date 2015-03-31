@@ -51,7 +51,7 @@ public class PRDataSet {
         String facilityName = StringUtils.trim(StringUtils.replace(csvRecord.get("facility_name"), "'", "''"));
         String providerName = StringUtils.trim(StringUtils.replace(csvRecord.get("provider_name"), "'", "''"));
 
-        providerName = !"NULL".equals(facilityName) ? String.format("%s(%s)", providerName, facilityName) : providerName;
+        providerName = !"NULL".equals(facilityName) ? String.format("%s @ %s", providerName, facilityName) : providerName;
 
         return String.format("\nINSERT INTO provider (provider_id, name, identifier, creator, date_created, uuid) SELECT " +
                             "%s,'%s','%s',1,now(),'%s' FROM DUAL WHERE NOT EXISTS(SELECT * FROM provider WHERE identifier = '%s');\n",
