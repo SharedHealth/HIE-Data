@@ -4,10 +4,10 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.util.Properties;
 
 import static org.sharedhealth.hie.data.Main.HRM;
 
@@ -36,11 +36,15 @@ public class SHRUtils {
 
     }
 
-    private String getFeedUriForLastReadEntry(String uriFragment) {
+    private String getFeedUriForLastReadEntry(String uriFragment) throws IOException {
         return String.format("%s/api/1.0/%s?offset=0&limit=100&updatedSince=%s", HRM, uriFragment, getCurrentDateAndTime());
     }
 
-    private String getCurrentDateAndTime() {
-        return new SimpleDateFormat("YYYY-MM-dd HH:mm:ss").format(new Date());
+    private String getCurrentDateAndTime() throws IOException {
+        Properties hieProperties = new Properties();
+
+        InputStream stream = getClass().getClassLoader().getResourceAsStream("hie.properties");
+        hieProperties.load(stream);
+        return hieProperties.getProperty("DUMP_DATE");
     }
 }
