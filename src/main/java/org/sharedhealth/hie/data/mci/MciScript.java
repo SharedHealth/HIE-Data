@@ -5,7 +5,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.sharedhealth.hie.data.SHRFileUtils;
+import org.sharedhealth.hie.data.SHRUtils;
 
 import java.io.File;
 import java.net.URL;
@@ -32,13 +32,21 @@ public class MciScript {
         outputDir.mkdirs();
         FileUtils.cleanDirectory(outputDir);
 
-        URL input = new SHRFileUtils().getResource(locations);
+        SHRUtils shrUtils = new SHRUtils();
+        URL input = shrUtils.getResource(locations);
         File output = new File(outputDir, LOCATIONS_SCRIPTS_CQL);
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
         for (CSVRecord csvRecord : parser) {
             FileUtils.writeStringToFile(output, buildScripts(csvRecord), Charset.forName("UTF-8"), true);
         }
+
+        shrUtils.updateMarkersForMCI("DISTRICT", "locations/list/district", output);
+        shrUtils.updateMarkersForMCI("DIVISION", "locations/list/division", output);
+        shrUtils.updateMarkersForMCI("PAURASAVA", "locations/list/paurasava", output);
+        shrUtils.updateMarkersForMCI("UNION", "locations/list/union", output);
+        shrUtils.updateMarkersForMCI("UPAZILA", "locations/list/upazila", output);
+        shrUtils.updateMarkersForMCI("WARD", "locations/list/ward", output);
     }
 
     public String buildScripts(CSVRecord csvRecord) {

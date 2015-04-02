@@ -6,7 +6,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.sharedhealth.hie.data.Main;
-import org.sharedhealth.hie.data.SHRFileUtils;
+import org.sharedhealth.hie.data.SHRUtils;
 
 import java.io.File;
 import java.net.URL;
@@ -24,7 +24,8 @@ public class FRDataSet {
         String facilities = String.format("%s/%s", inputDir, FACILITIES_DATA);
         System.out.println("Picking SHR-Client facility data from:" + facilities);
 
-        URL input = new SHRFileUtils().getResource(facilities);
+        SHRUtils shrUtils = new SHRUtils();
+        URL input = shrUtils.getResource(facilities);
         File output = new File(outputDir, FACILITIES_SCRIPTS);
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
@@ -41,6 +42,8 @@ public class FRDataSet {
             FileUtils.writeStringToFile(output, insertIdMappingScript(csvRecord, uuid), Charset.forName("UTF-8"), true);
             FileUtils.writeStringToFile(output, insertLocationTagMapping(facilityId), Charset.forName("UTF-8"), true);
         }
+
+       shrUtils.updateMarkersForSHRClient(facilityId, "urn://fr/facilities", "facilities/list", output);
 
     }
 

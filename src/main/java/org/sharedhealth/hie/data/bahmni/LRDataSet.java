@@ -5,7 +5,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.sharedhealth.hie.data.SHRFileUtils;
+import org.sharedhealth.hie.data.SHRUtils;
 
 import java.io.File;
 import java.net.URL;
@@ -24,7 +24,9 @@ public class LRDataSet {
         String locations = String.format("%s/%s", inputDir, LOCATIONS_DATA);
         System.out.println("Picking SHR-Client location data from:" + locations);
 
-        URL input = new SHRFileUtils().getResource(locations);
+        SHRUtils shrUtils = new SHRUtils();
+
+        URL input = shrUtils.getResource(locations);
         File output = new File(outputDir, LOCATIONS_SCRIPTS);
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
@@ -38,6 +40,13 @@ public class LRDataSet {
                 FileUtils.writeStringToFile(output, updateParentScript, Charset.forName("UTF-8"), true);
             }
         }
+
+        shrUtils.updateMarkersForSHRClient(0, "urn://lr/districts", "locations/list/district", output);
+        shrUtils.updateMarkersForSHRClient(0, "urn://lr/divisions", "locations/list/division", output);
+        shrUtils.updateMarkersForSHRClient(0, "urn://lr/paurasavas", "locations/list/paurasava", output);
+        shrUtils.updateMarkersForSHRClient(0, "urn://lr/unions", "locations/list/union", output);
+        shrUtils.updateMarkersForSHRClient(0, "urn://lr/upazilas", "locations/list/upazila", output);
+        shrUtils.updateMarkersForSHRClient(0, "urn://lr/wards", "locations/list/ward", output);
     }
 
     public String buildInsertScripts(CSVRecord csvRecord) {

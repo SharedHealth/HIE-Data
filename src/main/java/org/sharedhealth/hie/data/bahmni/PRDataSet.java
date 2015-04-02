@@ -5,7 +5,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.sharedhealth.hie.data.SHRFileUtils;
+import org.sharedhealth.hie.data.SHRUtils;
 
 import java.io.File;
 import java.net.URL;
@@ -23,7 +23,8 @@ public class PRDataSet {
         String providers = String.format("%s/%s", inputDir, PROVIDERS_DATA);
         System.out.println("Picking SHR-Client Provider data from:" + providers);
 
-        URL input = new SHRFileUtils().getResource(providers);
+        SHRUtils shrUtils = new SHRUtils();
+        URL input = shrUtils.getResource(providers);
         File output = new File(outputDir, PROVIDERS_SCRIPTS);
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
@@ -38,6 +39,8 @@ public class PRDataSet {
                 FileUtils.writeStringToFile(output, providerFacilityMapping, Charset.forName("UTF-8"), true);
             }
         }
+
+        shrUtils.updateMarkersForSHRClient(providerId, "urn://pr/providers", "providers/list", output);
 
     }
 
