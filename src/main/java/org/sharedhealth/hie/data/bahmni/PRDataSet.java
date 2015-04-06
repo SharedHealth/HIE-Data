@@ -29,7 +29,7 @@ public class PRDataSet {
 
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
         List<CSVRecord> csvRecords = parser.getRecords();
-        int providerId=0;
+        int providerId=100;
         FileUtils.writeStringToFile(output, buildSelectProviderAttributeScript(), Charset.forName("UTF-8"), true);
         for (CSVRecord csvRecord : csvRecords) {
             providerId++;

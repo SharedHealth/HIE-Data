@@ -31,7 +31,7 @@ public class FRDataSet {
         CSVParser parser = CSVParser.parse(input, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
         List<CSVRecord> csvRecords = parser.getRecords();
 
-        int facilityId = 0;
+        int facilityId = 100;
         UUID uuid;
         FileUtils.writeStringToFile(output, selectLocationTagTypeScript(), Charset.forName("UTF-8"), true);
 
