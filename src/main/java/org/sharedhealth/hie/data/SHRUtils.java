@@ -1,6 +1,7 @@
 package org.sharedhealth.hie.data;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -46,5 +47,14 @@ public class SHRUtils {
         InputStream stream = getClass().getClassLoader().getResourceAsStream("hie.properties");
         hieProperties.load(stream);
         return hieProperties.getProperty("DUMP_DATE");
+    }
+
+    public static void writeLineToFile(File output, String data) throws IOException {
+        FileUtils.writeStringToFile(output, data, Charset.forName("UTF-8"), true);
+        FileUtils.writeStringToFile(output, "\n", Charset.forName("UTF-8"), true);
+    }
+
+    public static String replaceSpecialCharsWithEscapeSequences(String string) {
+        return StringUtils.trim(StringUtils.replace(string, "'", "''"));
     }
 }

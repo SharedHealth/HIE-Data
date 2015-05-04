@@ -2,6 +2,7 @@ package org.sharedhealth.hie.data;
 
 import org.sharedhealth.hie.data.bahmni.BDSHRClientScript;
 import org.sharedhealth.hie.data.mci.MciScript;
+import org.sharedhealth.hie.data.openmrs.OpenMRSConceptClientScript;
 
 public class Main {
 
@@ -16,29 +17,73 @@ public class Main {
     public static String FACILITIES_SCRIPTS = "facilities.sql";
     public static String PROVIDERS_SCRIPTS = "providers.sql";
 
-    public static String HRM_TEST="http://hrmtest.dghs.gov.bd";
-    public static String HRM_PROD="http://hrm.dghs.gov.bd";
+    public static String OPENMRS_CONCEPT_SCRIPTS = "openrms_concept_data.sql";
+
+    public static String HRM_TEST = "http://hrmtest.dghs.gov.bd";
+    public static String HRM_PROD = "http://hrm.dghs.gov.bd";
     public static String HRM = HRM_TEST;
+
     public static void main(String[] args) throws Exception {
-        if (args.length < 3) {
-            System.out.println("Please use the below format");
-            System.out.println("java -jar <<project-name|mci|shr-client>> <<env|prod,qa,showcase>> <<output-dir-path>>");
+        if (args.length < 1) {
+            System.out.println("Please specify the project name");
+            System.out.println("java -jar <<project-name|mci|shr-client|openmrs-concept>>");
             throw new RuntimeException("Missing argument(s).");
         }
 
         String proj = args[0];
+
+        if ("mci".equals(proj)) {
+            generateMciScripts(args, proj);
+        }
+
+        if ("shr-client".equals(proj)) {
+            generateShrClientHrmScripts(args, proj);
+        }
+
+        if ("openmrs-concept".equals(proj)) {
+            generateOpenmrsConceptScripts(args, proj);
+        }
+    }
+
+    private static void generateOpenmrsConceptScripts(String[] args, String proj) throws Exception {
+        if (args.length < 4) {
+            System.out.println("Please use the below format");
+            System.out.println("java -jar <<openmrs-concept>> <<input-dir-path>> <<output-dir-path>> <<create concept event: true|false>>");
+            throw new RuntimeException("Missing argument(s).");
+        }
+        String inputDir = args[1];
+        String outputDir = String.format("%s/%s", args[2], proj);
+        boolean createConceptEvent = new Boolean(args[3]);
+        new OpenMRSConceptClientScript(createConceptEvent).generate(inputDir, outputDir);
+    }
+
+    private static void generateShrClientHrmScripts(String[] args, String proj) throws Exception {
+        if (args.length < 3) {
+            System.out.println("Please use the below format");
+            System.out.println("java -jar <<mci>> <<env|prod,qa,showcase>> <<output-dir-path>>");
+            throw new RuntimeException("Missing argument(s).");
+        }
         String env = args[1];
         String outputDir = String.format("%s/%s", args[2], proj);
         String inputDir = String.format("%s/%s", "data", env);
 
-        HRM = "prod".equals(env)? HRM_PROD:HRM_TEST;
+        HRM = "prod".equals(env) ? HRM_PROD : HRM_TEST;
 
-        if ("mci".equals(proj)) {
-            new MciScript().generate(inputDir, outputDir);
-        }
+        new BDSHRClientScript().generate(inputDir, outputDir);
+    }
 
-        if ("shr-client".equals(proj)){
-            new BDSHRClientScript().generate(inputDir, outputDir);
+    private static void generateMciScripts(String[] args, String proj) throws Exception {
+        if (args.length < 3) {
+            System.out.println("Please use the below format");
+            System.out.println("java -jar <<shr-client>> <<env|prod,qa,showcase>> <<output-dir-path>>");
+            throw new RuntimeException("Missing argument(s).");
         }
+        String env = args[1];
+        String outputDir = String.format("%s/%s", args[2], proj);
+        String inputDir = String.format("%s/%s", "data", env);
+
+        HRM = "prod".equals(env) ? HRM_PROD : HRM_TEST;
+
+        new MciScript().generate(inputDir, outputDir);
     }
 }
