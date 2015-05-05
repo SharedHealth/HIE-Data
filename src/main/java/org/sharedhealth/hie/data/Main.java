@@ -64,7 +64,7 @@ public class Main {
             throw new RuntimeException("Missing argument(s).");
         }
         String env = args[1];
-        String outputDir = String.format("%s/%s", args[2], proj);
+        String outputDir = args[2];
         String inputDir = String.format("%s/%s", "data", env);
 
         HRM = "prod".equals(env) ? HRM_PROD : HRM_TEST;
