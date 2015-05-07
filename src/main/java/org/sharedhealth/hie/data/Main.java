@@ -41,11 +41,11 @@ public class Main {
         }
 
         if ("openmrs-concept".equals(proj)) {
-            generateOpenmrsConceptScripts(args, proj);
+            generateOpenmrsConceptScripts(args);
         }
     }
 
-    private static void generateOpenmrsConceptScripts(String[] args, String proj) throws Exception {
+    private static void generateOpenmrsConceptScripts(String[] args) throws Exception {
         if (args.length < 4) {
             System.out.println("Please use the below format");
             System.out.println("java -jar <<openmrs-concept>> <<input-dir-path>> <<output-dir-path>> <<create concept event: true|false>>");

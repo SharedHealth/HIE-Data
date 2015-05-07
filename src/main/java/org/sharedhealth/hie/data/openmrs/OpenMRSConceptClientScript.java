@@ -55,7 +55,7 @@ public class OpenMRSConceptClientScript {
             insertIntoConcept(output, csvRecord);
             addConceptToMemberConcept(output, csvRecord);
             addConceptToQuestionConcept(output, csvRecord);
-            createReferenceTerm(output, csvRecord);
+            createReferenceTermMap(output, csvRecord);
             writeLineToFile(output, "COMMIT;");
             writeLineToFile(output, "\n");
         }
@@ -226,25 +226,31 @@ public class OpenMRSConceptClientScript {
         }
     }
 
-    private void createReferenceTerm(File output, CSVRecord csvRecord) throws IOException {
+    private void createReferenceTermMap(File output, CSVRecord csvRecord) throws IOException {
         String referenceTermSource = StringUtils.trim(csvRecord.get("reference-term-source"));
         String referenceTermCode = replaceSpecialCharsWithEscapeSequences(csvRecord.get("reference-term-code"));
         String referenceTermName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("reference-term-name"));
         String referenceTermRelationship = StringUtils.trim(csvRecord.get("reference-term-relationship"));
         if (StringUtils.isNotBlank(referenceTermCode)) {
-            writeLineToFile(output, String.format("SELECT concept_source_id INTO @concept_source_id " +
-                    "FROM concept_reference_source WHERE name = '%s';", referenceTermSource));
-            writeLineToFile(output, String.format("SELECT concept_map_type_id INTO @concept_map_type_id " +
-                    "FROM concept_map_type WHERE name = '%s';", referenceTermRelationship));
-            writeLineToFile(output, String.format("INSERT INTO concept_reference_term (concept_source_id, name, code, creator, date_created, uuid) " +
-                            "SELECT @concept_source_id, '%s', '%s', 1, now(), uuid() FROM dual WHERE 0 = @should_insert;",
-                    referenceTermName, referenceTermCode));
+            createReferenceTerm(output, referenceTermSource, referenceTermCode, referenceTermName, referenceTermRelationship);
             writeLineToFile(output, String.format("SELECT concept_reference_term_id INTO @reference_id FROM concept_reference_term " +
-                    "WHERE name = '%s' AND code = '%s' AND concept_source_id = @concept_source_id;", referenceTermName, referenceTermCode));
+                    "WHERE code = '%s' AND concept_source_id = @concept_source_id;", referenceTermCode));
             writeLineToFile(output, "INSERT INTO concept_reference_map (concept_reference_term_id, concept_map_type_id, creator, date_created, concept_id, uuid) " +
                     "SELECT @reference_id, @concept_map_type_id, 1, now(), @concept_id, uuid() FROM dual WHERE 0 = @should_insert;");
-            addReferenceTermEvent(output);
         }
+    }
+
+    private void createReferenceTerm(File output, String referenceTermSource, String referenceTermCode, String referenceTermName, String referenceTermRelationship) throws IOException {
+        writeLineToFile(output, String.format("SELECT concept_source_id INTO @concept_source_id " +
+                "FROM concept_reference_source WHERE name = '%s';", referenceTermSource));
+        writeLineToFile(output, String.format("SELECT concept_map_type_id INTO @concept_map_type_id " +
+                "FROM concept_map_type WHERE name = '%s';", referenceTermRelationship));
+        writeLineToFile(output, String.format("SELECT concept_reference_term_id INTO @reference_id FROM concept_reference_term " +
+                "WHERE code = '%s' AND concept_source_id = @concept_source_id;", referenceTermCode));
+        writeLineToFile(output, String.format("INSERT INTO concept_reference_term (concept_source_id, name, code, creator, date_created, uuid) " +
+                        "SELECT @concept_source_id, '%s', '%s', 1, now(), uuid() FROM dual WHERE 0 = @should_insert AND 0 = @reference_id;",
+                referenceTermName, referenceTermCode));
+        addReferenceTermEvent(output);
     }
 
     private void addReferenceTermEvent(File output) throws IOException {
@@ -252,7 +258,7 @@ public class OpenMRSConceptClientScript {
             writeLineToFile(output, "SELECT uuid INTO @db_uuid FROM concept_reference_term WHERE concept_reference_term_id = @reference_id;");
             writeLineToFile(output, String.format("SELECT concat('%s', @db_uuid) INTO @uri;", REFERENCE_TERM_URL));
             writeLineToFile(output, "INSERT INTO event_records(uuid, title, category, uri, object) " +
-                    "SELECT uuid(), 'ConceptReferenceTerm', 'ConceptReferenceTerm', @uri, @uri FROM dual WHERE 0 = @should_insert;");
+                    "SELECT uuid(), 'ConceptReferenceTerm', 'ConceptReferenceTerm', @uri, @uri FROM dual WHERE 0 = @should_insert AND 0 = @reference_id;");
         }
     }
 }
