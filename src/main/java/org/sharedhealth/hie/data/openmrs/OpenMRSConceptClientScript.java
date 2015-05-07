@@ -11,8 +11,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.HashSet;
 import java.util.List;
 
+import static java.util.Arrays.asList;
 import static org.sharedhealth.hie.data.Main.OPENMRS_CONCEPT_SCRIPTS;
 import static org.sharedhealth.hie.data.SHRUtils.replaceSpecialCharsWithEscapeSequences;
 import static org.sharedhealth.hie.data.SHRUtils.writeLineToFile;
@@ -44,15 +46,17 @@ public class OpenMRSConceptClientScript {
         CSVParser parser = CSVParser.parse(inputFileUrl, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
         List<CSVRecord> csvRecords = parser.getRecords();
 
-        initializeMysqlVariables(output);
         writeLineToFile(output, "\n");
 
         for (CSVRecord csvRecord : csvRecords) {
+            writeLineToFile(output, "START TRANSACTION;");
+            initializeMysqlVariables(output);
+            checkIfConceptExists(output, csvRecord);
             insertIntoConcept(output, csvRecord);
             addConceptToMemberConcept(output, csvRecord);
             addConceptToQuestionConcept(output, csvRecord);
             createReferenceTerm(output, csvRecord);
-
+            writeLineToFile(output, "COMMIT;");
             writeLineToFile(output, "\n");
         }
     }
@@ -76,6 +80,8 @@ public class OpenMRSConceptClientScript {
 
         writeLineToFile(output, "SET @db_uuid = 0;");
         writeLineToFile(output, "SET @uri = 0;");
+
+        writeLineToFile(output, "SET @should_insert = 0;");
     }
 
     private void insertIntoConcept(File output, CSVRecord csvRecord) throws IOException {
@@ -102,6 +108,12 @@ public class OpenMRSConceptClientScript {
         addConceptEvent(output, "@concept_id", "'" + conceptClass + "'");
     }
 
+    private void checkIfConceptExists(File output, CSVRecord csvRecord) throws IOException {
+        String conceptName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("name"));
+        writeLineToFile(output, String.format("SELECT concept_id into @should_insert from " +
+                "concept_name where name = '%s' and concept_name_type = '%s';", conceptName, CONCEPT_NAME_TYPE_FULLY_SPECIFIED));
+    }
+
     private void addConceptToQuestionConcept(File output, CSVRecord csvRecord) throws IOException {
         String answerOf = replaceSpecialCharsWithEscapeSequences(csvRecord.get("answer-of"));
         String sortWeight = StringUtils.isNotBlank(csvRecord.get("answer-of-sort-weight")) ?
@@ -112,7 +124,7 @@ public class OpenMRSConceptClientScript {
                     "FROM concept_name WHERE name = '%s' " +
                     "AND concept_name_type='%s';", answerOf, CONCEPT_NAME_TYPE_FULLY_SPECIFIED));
             writeLineToFile(output, String.format("INSERT INTO concept_answer (concept_id, answer_concept, answer_drug, date_created, creator, uuid, sort_weight) " +
-                            "VALUES (@parent_question_concept_id, @concept_id, null, now(), 1, uuid(), %s);",
+                            "SELECT @parent_question_concept_id, @concept_id, null, now(), 1, uuid(), %s FROM dual WHERE 0 = @should_insert;",
                     sortWeight));
             addConceptEvent(output, "@parent_question_concept_id", null);
         }
@@ -127,7 +139,7 @@ public class OpenMRSConceptClientScript {
                     "FROM concept_name WHERE name = '%s' " +
                     "AND concept_name_type='%s';", memberOf, CONCEPT_NAME_TYPE_FULLY_SPECIFIED));
             writeLineToFile(output, String.format("INSERT INTO concept_set (concept_id, concept_set,sort_weight,creator,date_created,uuid) " +
-                            "VALUES (@concept_id, @member_of_concept, %s,1, now(),uuid());",
+                            "SELECT @concept_id, @member_of_concept, %s,1, now(),uuid() FROM dual WHERE 0 = @should_insert;",
                     sortWeight));
             addConceptEvent(output, "@member_of_concept", null);
         }
@@ -146,7 +158,7 @@ public class OpenMRSConceptClientScript {
             String lowNormal = StringUtils.isNotBlank(csvRecord.get("low-normal")) ? StringUtils.trim(csvRecord.get("low-normal")) : null;
             String highNormal = StringUtils.isNotBlank(csvRecord.get("high-normal")) ? StringUtils.trim(csvRecord.get("high-normal")) : null;
             String addConceptNumericStatement = String.format("INSERT INTO concept_numeric (concept_id, low_normal, hi_normal, units) " +
-                            "VALUES (@concept_id, %s, %s, %s);",
+                            "SELECT @concept_id, %s, %s, %s FROM dual WHERE 0 = @should_insert;",
                     lowNormal, highNormal,
                     units);
             writeLineToFile(output, addConceptNumericStatement);
@@ -156,7 +168,7 @@ public class OpenMRSConceptClientScript {
     private void addConcept(File output, String conceptUuid, String conceptIsSet) throws IOException {
         String isSet = conceptIsSet.equalsIgnoreCase("true") ? "1" : "0";
         String conceptInsertStmt = String.format("INSERT INTO concept (datatype_id, class_id, is_set, creator, date_created, changed_by, date_changed, uuid) " +
-                        "VALUES (@data_type_id, @class_id, '%s', 1, now(), 1, now(), %s);",
+                        "SELECT @data_type_id, @class_id, '%s', 1, now(), 1, now(), %s FROM dual WHERE 0 = @should_insert;",
                 isSet, conceptUuid);
         writeLineToFile(output, conceptInsertStmt);
         writeLineToFile(output, "SELECT MAX(concept_id) INTO @concept_id FROM concept;");
@@ -165,7 +177,7 @@ public class OpenMRSConceptClientScript {
     private void addConceptDescription(File output, String conceptDescription, String locale) throws IOException {
         if (StringUtils.isNotBlank(conceptDescription)) {
             writeLineToFile(output, String.format("INSERT INTO concept_description(uuid, concept_id, description, locale, creator, date_created) " +
-                    "VALUES(uuid(), @concept_id, '%s', '%s', 1, now());", conceptDescription, locale));
+                    "SELECT uuid(), @concept_id, '%s', '%s', 1, now() FROM dual WHERE 0 = @should_insert;", conceptDescription, locale));
         }
     }
 
@@ -184,7 +196,7 @@ public class OpenMRSConceptClientScript {
     private void addConceptNameAndConceptWord(File output, String conceptName, final String locale, final String locale_preferred, final String conceptNameType, final String mysqlConceptNameIdVar) throws IOException {
         if (StringUtils.isNotBlank(conceptName)) {
             writeLineToFile(output, String.format("INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, uuid) " +
-                            "VALUES (@concept_id, '%s', '%s', %s, 1, now(), '%s', uuid());",
+                            "SELECT @concept_id, '%s', '%s', %s, 1, now(), '%s', uuid() FROM dual WHERE 0 = @should_insert;",
                     conceptName, locale, locale_preferred, conceptNameType));
             writeLineToFile(output, String.format("SELECT MAX(concept_name_id) INTO %s FROM concept_name;", mysqlConceptNameIdVar));
             addConceptWord(output, conceptName, LOCALE_ENGLISH, mysqlConceptNameIdVar);
@@ -192,10 +204,10 @@ public class OpenMRSConceptClientScript {
     }
 
     private void addConceptWord(File output, String conceptName, String en, String mysqlConceptNameIdVar) throws IOException {
-        String[] strings = StringUtils.split(conceptName, ' ');
+        HashSet<String> strings = new HashSet<String>(asList(StringUtils.split(conceptName, ' ')));
         for (String string : strings) {
             writeLineToFile(output, String.format("INSERT INTO concept_word (word, locale, weight, concept_id, concept_name_id) " +
-                    "VALUES (UPPER('%s'), '%s', '1', @concept_id, %s);", string, en, mysqlConceptNameIdVar));
+                    "SELECT UPPER('%s'), '%s', '1', @concept_id, %s FROM dual WHERE 0 = @should_insert;", string, en, mysqlConceptNameIdVar));
         }
     }
 
@@ -207,9 +219,10 @@ public class OpenMRSConceptClientScript {
             }
             writeLineToFile(output, String.format("SELECT uuid INTO @db_uuid FROM concept WHERE concept_id = %s;", conceptIdVariableName));
             writeLineToFile(output, String.format("SELECT concat('%s', @db_uuid) INTO @uri;", CONCEPT_URL));
-            writeLineToFile(output, "INSERT INTO event_records(uuid, title, category, uri, object) VALUES (uuid(), 'concept', 'concept', @uri, @uri);");
+            writeLineToFile(output, "INSERT INTO event_records(uuid, title, category, uri, object) " +
+                    "SELECT uuid(), 'concept', 'concept', @uri, @uri FROM dual WHERE 0 = @should_insert;");
             writeLineToFile(output, String.format("INSERT INTO event_records(uuid, title, category, uri, object) " +
-                    "VALUES(uuid(), %s, %s, @uri, @uri);", conceptSourceName, conceptSourceName));
+                    "SELECT uuid(), %s, %s, @uri, @uri FROM dual WHERE 0 = @should_insert;", conceptSourceName, conceptSourceName));
         }
     }
 
@@ -224,11 +237,12 @@ public class OpenMRSConceptClientScript {
             writeLineToFile(output, String.format("SELECT concept_map_type_id INTO @concept_map_type_id " +
                     "FROM concept_map_type WHERE name = '%s';", referenceTermRelationship));
             writeLineToFile(output, String.format("INSERT INTO concept_reference_term (concept_source_id, name, code, creator, date_created, uuid) " +
-                    "VALUES (@concept_source_id, '%s', '%s', 1, now(), uuid());", referenceTermName, referenceTermCode));
+                            "SELECT @concept_source_id, '%s', '%s', 1, now(), uuid() FROM dual WHERE 0 = @should_insert;",
+                    referenceTermName, referenceTermCode));
             writeLineToFile(output, String.format("SELECT concept_reference_term_id INTO @reference_id FROM concept_reference_term " +
                     "WHERE name = '%s' AND code = '%s' AND concept_source_id = @concept_source_id;", referenceTermName, referenceTermCode));
             writeLineToFile(output, "INSERT INTO concept_reference_map (concept_reference_term_id, concept_map_type_id, creator, date_created, concept_id, uuid) " +
-                    "VALUES(@reference_id, @concept_map_type_id, 1, now(), @concept_id, uuid());");
+                    "SELECT @reference_id, @concept_map_type_id, 1, now(), @concept_id, uuid() FROM dual WHERE 0 = @should_insert;");
             addReferenceTermEvent(output);
         }
     }
@@ -237,7 +251,8 @@ public class OpenMRSConceptClientScript {
         if (shouldCreateConceptEvent) {
             writeLineToFile(output, "SELECT uuid INTO @db_uuid FROM concept_reference_term WHERE concept_reference_term_id = @reference_id;");
             writeLineToFile(output, String.format("SELECT concat('%s', @db_uuid) INTO @uri;", REFERENCE_TERM_URL));
-            writeLineToFile(output, "INSERT INTO event_records(uuid, title, category, uri, object) VALUES (uuid(), 'ConceptReferenceTerm', 'ConceptReferenceTerm', @uri, @uri);");
+            writeLineToFile(output, "INSERT INTO event_records(uuid, title, category, uri, object) " +
+                    "SELECT uuid(), 'ConceptReferenceTerm', 'ConceptReferenceTerm', @uri, @uri FROM dual WHERE 0 = @should_insert;");
         }
     }
 }
