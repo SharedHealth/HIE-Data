@@ -1,11 +1,1 @@
 uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
-815bbe20-2c3b-4afc-a355-0152ac7a04c3;Child Health under 5;Child Health under 5;Child Health under 5 Bangla;Child Health under 5 Bangla;ConvSet;N/A;Child Health under 5;TRUE;;;;;;;;Templates;1;;
-cccc6217-cf84-4f47-a2c9-2fcd787ae514;Nutritional Information;Nutritional Information;;;Misc;N/A;Nutritional Information;TRUE;;;;;;;;Child Health under 5;2;;
-94260807-4791-44f2-a231-e08b30d49fde;Child Immunization Status;Child Immunization Status;;;Misc;Coded;Child Immunization Status;FALSE;;;;;;;;Nutritional Information;1;;
-;BCG Completed;BCG Completed;;;Misc;N/A;;FALSE;;;;;;;;;;Child Immunization Status;1
-d38daa7e-0a66-4505-84c5-6495db96216d;Height;Height;;;Misc;Numeric;Height;FALSE;;;;;cm;250;10;Nutritional Information;2;;
-f40c34fd-f300-418e-a60e-f3ac00d4f08b;Vascular Parkinsonism;Vascular parkinsonism;;;Diagnosis;N/A;Parkinsonism;FALSE;ICD10-BD;G21.4;Vascular Parkinsonism;SAME-AS;;;;;;;
-;Is the child (6-23 months) provided (4 or 4+ food group) complimentary food?;;;;Misc;Boolean;;;;;;;;;;Nutritional Information;3;;
-;MUAC(6-59 months);;;;Finding;Numeric;;;;;;;;;;Nutritional Information;4;;
-;Treatment's;;;;Misc;Coded;;;;;;;;;;Nutritional Information;5;;
-;Dyspepsia;Dyspepsia;;;Symptom/Finding;N/A;Dyspepsia;FALSE;ICD10-BD;K30;Dyspepsia;SAME-AS;;;;;;;
