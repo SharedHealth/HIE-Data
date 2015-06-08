@@ -100,8 +100,8 @@ public class OpenMRSConceptClientScript {
         selectConceptClass(output, conceptClass);
         addConcept(output, conceptUuid, conceptIsSet);
         addConceptNameAndConceptWord(output, conceptName, LOCALE_ENGLISH, "1", CONCEPT_NAME_TYPE_FULLY_SPECIFIED, "@concept_name_full_id");
-        addConceptNameAndConceptWord(output, conceptShortName, LOCALE_ENGLISH, "1", CONCEPT_NAME_TYPE_SHORT, "@concept_name_short_id");
-        addConceptNameAndConceptWord(output, conceptLocalName, LOCALE_BANGLA, "1", CONCEPT_NAME_TYPE_FULLY_SPECIFIED, "@concept_name_local_full_id");
+        addConceptNameAndConceptWord(output, conceptShortName, LOCALE_ENGLISH, "0", CONCEPT_NAME_TYPE_SHORT, "@concept_name_short_id");
+        addConceptNameAndConceptWord(output, conceptLocalName, LOCALE_BANGLA, "0", CONCEPT_NAME_TYPE_FULLY_SPECIFIED, "@concept_name_local_full_id");
         addConceptDescription(output, conceptDescription, LOCALE_ENGLISH);
         addConceptDescription(output, conceptLocalDescription, LOCALE_BANGLA);
         addConceptNumeric(output, csvRecord);
