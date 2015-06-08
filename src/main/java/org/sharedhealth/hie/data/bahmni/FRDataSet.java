@@ -48,7 +48,7 @@ public class FRDataSet {
     }
 
     private String selectLocationTagTypeScript() {
-        return "SELECT location_tag_id FROM location_tag WHERE name='DGHS Facilities' INTO @tag;\n";
+        return "SELECT location_tag_id FROM location_tag WHERE name='HIE Facilities' INTO @tag;\n";
     }
 
     private String insertLocationTagMapping(int facilityId) {
