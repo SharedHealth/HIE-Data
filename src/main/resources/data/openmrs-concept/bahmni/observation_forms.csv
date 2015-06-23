@@ -1,5 +1,4 @@
 uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
-;Vitals;Vitals;;;ConvSet;N/A;Vitals;TRUE;;;;;;;;All Observation Templates;1;;
 ;History and Examination;History and Examination;;;ConvSet;N/A;History and Examination;TRUE;;;;;;;;All Observation Templates;2;;
 ;Chief Complaint Data;;;;Concept Details;N/A;Chief Complaint Data;TRUE;;;;;;;;History and Examination;1;;
 ;Chief Complaint;;;;Misc;Coded;Chief Complaint;FALSE;;;;;;;;Chief Complaint Data;1;;
