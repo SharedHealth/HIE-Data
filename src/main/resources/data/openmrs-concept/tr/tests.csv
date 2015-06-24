@@ -1,0 +1,9 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Complete blood count (hemogram) panel ;;;;LabSet;N/A;Complete blood count (hemogram) panel ;TRUE;LOINC-BD ;58410-2;Complete blood count (hemogram) panel;SAME-AS;;;;;;;
+;Leukocytes [#/?volume] in Blood by Automated count ;;;;Test;Numeric;Leukocytes [#/?volume] in Blood by Automated count ;FALSE;LOINC-BD ;6690-2;Leukocytes:NCnc:Pt:Bld:Qn:Automated count;SAME-AS;;;;Complete blood count (hemogram) panel ;1;;
+;Erythrocytes [#/?volume] in Blood by Automated count;;;;Test;Numeric;Erythrocytes [#/?volume] in Blood by Automated count;FALSE;LOINC-BD ;789-8;Erythrocytes:NCnc:Pt:Bld:Qn:Automated count;SAME-AS;;;;Complete blood count (hemogram) panel ;2;;
+;Hemoglobin [Mass/?volume] in Blood ;;;;Test;Numeric;Hemoglobin [Mass/?volume] in Blood ;FALSE;LOINC-BD ;718-7;"Hemoglobin:MCnc:Pt:Bld:Qn: 	
+";SAME-AS;;;;Complete blood count (hemogram) panel ;3;;
+;Creatinine 24 hour urine panel - 24 hour Urine ;;;;LabSet;N/A;Creatinine 24 hour urine panel - 24 hour Urine ;TRUE;LOINC-BD ;65634-8;Creatinine 24 hour urine panel - 24 hour Urine ;SAME-AS;;;;;;;
+;Creatinine [Mass/?time] in 24 hour Urine ;;;;Test;Numeric;Creatinine [Mass/?time] in 24 hour Urine ;FALSE;LOINC-BD ;2162-6;Creatinine:MRat:24H:Urine:Qn:;SAME-AS;;;;Creatinine 24 hour urine panel - 24 hour Urine ;1;;
+;Creatinine [Mass/?volume] in Urine;;;;Test;Numeric;Creatinine [Mass/?volume] in Urine;FALSE;LOINC-BD ;2161-8 ;Creatinine:MCnc:Pt:Urine:Qn:;SAME-AS;;;;Creatinine 24 hour urine panel - 24 hour Urine ;2;;

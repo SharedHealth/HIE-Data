@@ -1,0 +1,7 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Headache;;;;Symptom;N/A;Headache;FALSE;ICD10-BD ;R51;Vascular Headache ;SAME-AS;;;;;;;
+;Weakness;;;;Symptom;N/A;Weakness;FALSE;ICD10-BD ;R53;Malaise;SAME-AS;;;;;;;
+;Nausea & vomitting;;;;Symptom;N/A;Nausea & vomitting;FALSE;ICD10-BD ;R11;Nausea & vomitting;SAME-AS;;;;;;;
+;Chest pain;;;;Symptom;N/A;Chest pain;FALSE;ICD10-BD ;R07.4;Chest pain, unspecified;SAME-AS;;;;;;;
+;Breathlessness;;;;Symptom;N/A;Breathlessness;FALSE;ICD10-BD ;R06.0;Shortness of Breath on Exertion ;SAME-AS;;;;;;;
+;Abdominal Pain;;;;Symptom;N/A;Abdominal Pain;FALSE;ICD10-BD ;R10.4;Abdominal Pain;SAME-AS;;;;;;;

@@ -1,0 +1,20 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Vibrio Cholera ;;;;Diagnosis;N/A;Vibrio Cholera ;FALSE;ICD10-BD ;A00.0;Vibrio Cholera;SAME-AS;;;;;;;
+;Severe Pneumonia;;;;Diagnosis;N/A;Severe Pneumonia;FALSE;ICD10-BD ;J12 ;Viral Pneumonia;SAME-AS;;;;;;;
+;Pneumonia;;;;Diagnosis;N/A;Pneumonia;FALSE;ICD10-BD ;J18.9;Pneumonia;SAME-AS;;;;;;;
+;Fever;;;;Diagnosis;N/A;Fever;FALSE;ICD10-BD ;R50.9;Fever;SAME-AS;;;;;;;
+;Very severe disease;;;;Diagnosis;N/A;Very severe disease;FALSE;;;;;;;;;;;
+;Cough and cold;;;;Diagnosis;N/A;Cough and cold;FALSE;ICD10-BD ;J00;Common cold;SAME-AS;;;;;;;
+;Malaria fever;;;;Diagnosis;N/A;Malaria fever;FALSE;ICD10-BD ;B54;Malarial fever;SAME-AS;;;;;;;
+;Ear problem;;;;Diagnosis;N/A;Ear problem;FALSE;ICD10-BD ;H93.9;Ear problem;SAME-AS;;;;;;;
+;Measles;;;;Diagnosis;N/A;Measles;FALSE;ICD10-BD ;B05.9;Measles complication;SAME-AS;;;;;;;
+;Drowning;;;;Diagnosis;N/A;Drowning;FALSE;ICD10-BD ;T75.1;Accidental Drowning;SAME-AS;;;;;;;
+;Child injury;;;;Diagnosis;N/A;Child injury;FALSE;;;;;;;;;;;
+;Diarrhea and dysentery;;;;Diagnosis;N/A;Diarrhea and dysentery;FALSE;ICD10-BD ;A09.0;Other and unspecified gastroenteritis and colitis of infectious origin ;SAME-AS;;;;;;;
+;Other diseases;;;;Diagnosis;N/A;Other diseases;FALSE;;;;;;;;;;;
+;Gestational Diabetes;;;;Diagnosis;N/A;Gestational Diabetes;FALSE;ICD10-BD ;O24.4;Gestational Diabetes Mellitus, Antepartum ;SAME-AS;;;;;;;
+;Pulmonary TB;;;;Diagnosis;N/A;Pulmonary TB;FALSE;ICD10-BD ;A150;Pulmonary TB;SAME-AS;;;;;;;
+;Kalazar;;;;Diagnosis;N/A;Kalazar;FALSE;ICD10-BD ;B55.0;Visceral Leishmaniasis;SAME-AS;;;;;;;
+;Typhoid ;;;;Diagnosis;N/A;Typhoid;FALSE;ICD10-BD ;A01.0;Typhoid fever;SAME-AS;;;;;;;
+;Asthma;;;;Diagnosis;N/A;Asthma;FALSE;ICD10-BD ;J45.9;Asthma Exacerbation;SAME-AS;;;;;;;
+;Jaundice;;;;Diagnosis;N/A;Jaundice;FALSE;ICD10-BD ;R17;Jaundice Unspecified;SAME-AS;;;;;;;

@@ -1,0 +1,5 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Systolic blood pressure;;;;Finding;Numeric;Diastolic blood pressure;FALSE;SNOMED-CT-BD ;271649006;Systolic blood pressure;SAME-AS;;;;;;;
+;Diastolic blood pressure;;;;Finding;Numeric;Systolic blood pressure;FALSE;SNOMED-CT-BD ;271649006;Diastolic blood pressure;SAME-AS;;;;;;;
+;Temperature;;;;Finding;Numeric;Temperature;FALSE;SNOMED-CT-BD ;386725007;Temperature;SAME-AS;;;;;;;
+;Pulse;;;;Finding;Numeric;Pulse;FALSE;SNOMED-CT-BD ;78564009;Pulse;SAME-AS;;;;;;;

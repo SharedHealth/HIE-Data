@@ -1,0 +1,5 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Colposcopy;;;;Procedure;N/A;Colposcopy;;SNOMED-CT-BD ;392003006;Colposcopy;SAME-AS;;;;;;;
+;Cryotherapy;;;;Procedure;N/A;Cryotherapy;;SNOMED-CT-BD ;78203001;Cryotherapy;SAME-AS;;;;;;;
+;Histopathology;;;;Procedure;N/A;Histopathology;;SNOMED-CT-BD ;252416005;Histopathology;SAME-AS;;;;;;;
+;Nasal endoscopy;;;;Procedure;N/A;Nasal endoscopy;;SNOMED-CT-BD ;2557002;Nasal endoscopy;SAME-AS;;;;;;;

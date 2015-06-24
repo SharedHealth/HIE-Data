@@ -1,0 +1,13 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;BCG;;;;Drug;N/A;BCG;FALSE;WHO ATC-BD;LAXO303;BCG vaccine;SAME-AS;;;;;;;
+;Penta 1;;;;Drug;N/A;Penta 1;FALSE;;;;;;;;;;;
+;Penta 2;;;;Drug;N/A;Penta 2;FALSE;;;;;;;;;;;
+;Pena 3;;;;Drug;N/A;Pena 3;FALSE;;;;;;;;;;;
+;OPV 1;;;;Drug;N/A;OPV 1;FALSE;WHO ATC-BD;J07BF01;Oral Polio Vaccine 1;SAME-AS;;;;;;;
+;OPV 2;;;;Drug;N/A;OPV 2;FALSE;WHO ATC-BD;J07BF02;Oral Polio Vaccine 2;SAME-AS;;;;;;;
+;OPV 3;;;;Drug;N/A;OPV 3;FALSE;WHO ATC-BD;J07BF03;Oral Polio Vaccine 3;SAME-AS;;;;;;;
+;OPV 4;;;;Drug;N/A;OPV 4;FALSE;WHO ATC-BD;J07BF04;Oral Polio Vaccine 4;SAME-AS;;;;;;;
+;MCV 2;;;;Drug;N/A;MCV 2;FALSE;;;;;;;;;;;
+;ORT;;;;Drug;N/A;ORT;FALSE;SNOMED-CT-BD ;346599006;Oral Rehydration Salts;SAME-AS;;;;;;;
+;IFA;;;;Drug;N/A;IFA;FALSE;WHO ATC-BD;B03AD ;Iron in combination with folic acid;SAME-AS;;;;;;;
+;Paracetamol;;;;Drug;N/A;Paracetamol;FALSE;WHO ATC-BD;N02BE01 ;Paracetamol;SAME-AS;;;;;;;
