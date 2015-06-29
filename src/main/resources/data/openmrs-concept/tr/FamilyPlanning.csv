@@ -1,5 +1,5 @@
-uuid,name,description,local-name,local-description,class,datatype,shortname,is-set,reference-term-source,reference-term-code,reference-term-name,reference-term-relationship,units,high-normal,low-normal,member-of,member-of-sort-weight,answer-of,answer-of-sort-weight,,,,,,,,,,,,,,,,,,,,,,,
-,Family Planning,,,,Question,Coded,Family Planning,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-,Condoms distributed,,,,Misc,N/A,Condoms distributed,,,,,,,,,,,Family Planning,1,,,,,,,,,,,,,,,,,,,,,,,
-,Injectable distributed,,,,Misc,N/A,Injectable distributed,,,,,,,,,,,Family Planning,2,,,,,,,,,,,,,,,,,,,,,,,
-,Oral pill distributed,,,,Misc,N/A,Oral pill distributed,,,,,,,,,,,Family Planning,3,,,,,,,,,,,,,,,,,,,,,,,
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Family Planning;;;;Question;Coded;Family Planning;;;;;;;;;;;;
+;Condoms distributed;;;;Misc;N/A;Condoms distributed;;;;;;;;;;;Family Planning;1
+;Injectable distributed;;;;Misc;N/A;Injectable distributed;;;;;;;;;;;Family Planning;2
+;Oral pill distributed;;;;Misc;N/A;Oral pill distributed;;;;;;;;;;;Family Planning;3
