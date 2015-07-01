@@ -1,0 +1,5 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Snake bite;;;;Diagnosis;N/A;Snake bite;;ICD10-BD;T63.0;Snake Bite;SAME-AS;;;;;;;
+;Bee bite;;;;Diagnosis;N/A;Bee bite;;ICD10-BD;X23;Bee bite;SAME-AS;;;;;;;
+;Dengue Fever;;;;Diagnosis;N/A;Dengue Fever;;ICD10-BD;A90;Dengue fever - Classical;SAME-AS;;;;;;;
+;Kidney Failure;;;;Diagnosis;N/A;Kidney failure;;ICD10-BD;N17.9;Acute Kidney Fever;SAME-AS;;;;;;;
