@@ -250,6 +250,7 @@ public class OpenMRSConceptClientScript {
         writeLineToFile(output, String.format("INSERT INTO concept_reference_term (concept_source_id, name, code, creator, date_created, uuid) " +
                         "SELECT @concept_source_id, '%s', '%s', 1, now(), uuid() FROM dual WHERE 0 = @should_insert AND 0 = @reference_id;",
                 referenceTermName, referenceTermCode));
+        writeLineToFile(output, "SELECT MAX(concept_reference_term_id) INTO @reference_id FROM concept_reference_term;");
         addReferenceTermEvent(output);
     }
 
