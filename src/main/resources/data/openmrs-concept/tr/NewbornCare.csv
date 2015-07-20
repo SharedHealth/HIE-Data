@@ -1,8 +1,9 @@
-uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight;,
-;Birth weight;;;;Question;Coded;Birth weight;;SNOMED-CT-BD;364589006;Birth weight, qualitative;SAME-AS;;;;;;;;
-;Normal;;;;Finding;N/A;Normal;;SNOMED-CT-BD;17621005;Normal;SAME-AS;;;;;;;Birth weight;1,
-;Low;;;;Finding;N/A;Low;;SNOMED-CT-BD;62482003;Low;SAME-AS;;;;;;;Birth weight;2,
-;Newborn care received;;;;Question;Coded;Newborn care received;;;;;;;;;;;;;,
-;Immediate thermal care;;;;Misc;N/A;Immediate thermal care;;;;;;;;;;;;Newborn care received;1,
-;Breastfeed within an hour of birth;;;;Misc;N/A;Breastfeed within an hour of birth;;SNOMED-CT-BD;431868002;Early initiation of breastfeeding;SAME-AS;;;;;;;Newborn care received;2,
-;Delayed bathing (after 72 hours);;;;Misc;N/A;Delayed bathing (after 72 hours);;;;;;;;;;;;Newborn care received;3,
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight;
+;Newborn Care;;;;ConvSet;N/A;Newborn Care;TRUE;;;;;;;;;;;;
+;Birth weight;;;;Question;Coded;Birth weight;;SNOMED-CT-BD;364589006;Birth weight, qualitative;SAME-AS;;;;Newborn Care;1;;;
+;Normal;;;;Finding;N/A;Normal;;SNOMED-CT-BD;17621005;Normal;SAME-AS;;;;;;;Birth weight;1
+;Low;;;;Finding;N/A;Low;;SNOMED-CT-BD;62482003;Low;SAME-AS;;;;;;;Birth weight;2
+;Newborn care received;;;;Question;Coded;Newborn care received;;;;;;;;;Newborn Care;2;;;
+;Immediate thermal care;;;;Misc;N/A;Immediate thermal care;;;;;;;;;;;;Newborn care received;1
+;Breastfeed within an hour of birth;;;;Misc;N/A;Breastfeed within an hour of birth;;SNOMED-CT-BD;431868002;Early initiation of breastfeeding;SAME-AS;;;;;;;Newborn care received;2
+;Delayed bathing (after 72 hours);;;;Misc;N/A;Delayed bathing (after 72 hours);;;;;;;;;;;;Newborn care received;3
