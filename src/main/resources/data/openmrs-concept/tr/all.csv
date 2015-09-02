@@ -1,4 +1,4 @@
-uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight 
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
 ;Vibrio Cholera ;;;;Diagnosis;N/A;Vibrio Cholera ;FALSE;ICD10-BD ;A00.0;Vibrio Cholera;SAME-AS;;;;;;;
 ;Severe Pneumonia;;;;Diagnosis;N/A;Severe Pneumonia;FALSE;ICD10-BD ;J12 ;Viral Pneumonia;SAME-AS;;;;;;;
 ;Pneumonia;;;;Diagnosis;N/A;Pneumonia;FALSE;ICD10-BD ;J18.9;Pneumonia;SAME-AS;;;;;;;
@@ -105,28 +105,28 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;MCV 2;;;;Drug;N/A;MCV 2;FALSE;;;;;;;;;;;
 ;ORT;;;;Drug;N/A;ORT;FALSE;SNOMED-CT-BD ;346599006;Oral Rehydration Salts;SAME-AS;;;;;;;
 ;IFA;;;;Drug;N/A;IFA;FALSE;WHO ATC-BD;B03AD ;Iron in combination with folic acid;SAME-AS;;;;;;;
-;Paracetamol;;;;Drug;N/A;Paracetamol;FALSE;WHO ATC-BD;N02BE01 ;Paracetamol;SAME-AS;;;;;;; 
+;Paracetamol;;;;Drug;N/A;Paracetamol;FALSE;WHO ATC-BD;N02BE01 ;Paracetamol;SAME-AS;;;;;;;
 ;Snake bite;;;;Diagnosis;N/A;Snake bite;;ICD10-BD;T63.0;Snake Bite;SAME-AS;;;;;;;
 ;Bee bite;;;;Diagnosis;N/A;Bee bite;;ICD10-BD;X23;Bee bite;SAME-AS;;;;;;;
 ;Dengue Fever;;;;Diagnosis;N/A;Dengue Fever;;ICD10-BD;A90;Dengue fever - Classical;SAME-AS;;;;;;;
-;Kidney Failure;;;;Diagnosis;N/A;Kidney failure;;ICD10-BD;N17.9;Acute Kidney Fever;SAME-AS;;;;;;; 
+;Kidney Failure;;;;Diagnosis;N/A;Kidney failure;;ICD10-BD;N17.9;Acute Kidney Fever;SAME-AS;;;;;;;
 ;Family Planning;;;;Question;Coded;Family Planning;;;;;;;;;;;;
 ;Condoms distributed;;;;Misc;N/A;Condoms distributed;;;;;;;;;;;Family Planning;1
 ;Injectable distributed;;;;Misc;N/A;Injectable distributed;;;;;;;;;;;Family Planning;2
-;Oral pill distributed;;;;Misc;N/A;Oral pill distributed;;;;;;;;;;;Family Planning;3 
+;Oral pill distributed;;;;Misc;N/A;Oral pill distributed;;;;;;;;;;;Family Planning;3
 ;PNC number;;;;Question;Coded;PNC number;;SNOMED-CT-BD;169762003;Postnatal visit number;SAME-AS;;;;;;;
-;Is PNC Within 48 Hours After Birth;;;;Question;Boolean;Is PNC Within 48 Hours After Birth;;;;;;;;;;;; 
+;Is PNC Within 48 Hours After Birth;;;;Question;Boolean;Is PNC Within 48 Hours After Birth;;;;;;;;;;;;
 ;Colposcopy;;;;Procedure;N/A;Colposcopy;;SNOMED-CT-BD ;392003006;Colposcopy;SAME-AS;;;;;;;
 ;Cryotherapy;;;;Procedure;N/A;Cryotherapy;;SNOMED-CT-BD ;78203001;Cryotherapy;SAME-AS;;;;;;;
 ;Histopathology;;;;Procedure;N/A;Histopathology;;SNOMED-CT-BD ;252416005;Histopathology;SAME-AS;;;;;;;
-;Nasal endoscopy;;;;Procedure;N/A;Nasal endoscopy;;SNOMED-CT-BD ;2557002;Nasal endoscopy;SAME-AS;;;;;;; 
+;Nasal endoscopy;;;;Procedure;N/A;Nasal endoscopy;;SNOMED-CT-BD ;2557002;Nasal endoscopy;SAME-AS;;;;;;;
 ;Complete blood count (hemogram) panel ;;;;LabSet;N/A;Complete blood count (hemogram) panel ;TRUE;LOINC-BD ;58410-2;Complete blood count (hemogram) panel;SAME-AS;;;;;;;
 ;Leukocytes [#/volume] in Blood by Automated count ;;;;Test;Numeric;Leukocytes [#/volume] in Blood by Automated count ;FALSE;LOINC-BD ;6690-2;Leukocytes:NCnc:Pt:Bld:Qn:Automated count;SAME-AS;;;;Complete blood count (hemogram) panel ;1;;
 ;Erythrocytes [#/volume] in Blood by Automated count;;;;Test;Numeric;Erythrocytes [#/volume] in Blood by Automated count;FALSE;LOINC-BD ;789-8;Erythrocytes:NCnc:Pt:Bld:Qn:Automated count;SAME-AS;;;;Complete blood count (hemogram) panel ;2;;
 ;Hemoglobin [Mass/volume] in Blood ;;;;Test;Numeric;Hemoglobin [Mass/volume] in Blood ;FALSE;LOINC-BD ;718-7;Hemoglobin:MCnc:Pt:Bld:Qn:;SAME-AS;;;;Complete blood count (hemogram) panel ;3;;
 ;Creatinine 24 hour urine panel - 24 hour Urine ;;;;LabSet;N/A;Creatinine 24 hour urine panel - 24 hour Urine ;TRUE;LOINC-BD ;65634-8;Creatinine 24 hour urine panel - 24 hour Urine ;SAME-AS;;;;;;;
 ;Creatinine [Mass/time] in 24 hour Urine ;;;;Test;Numeric;Creatinine [Mass/time] in 24 hour Urine ;FALSE;LOINC-BD ;2162-6;Creatinine:MRat:24H:Urine:Qn:;SAME-AS;;;;Creatinine 24 hour urine panel - 24 hour Urine ;1;;
-;Creatinine [Mass/volume] in Urine;;;;Test;Numeric;Creatinine [Mass/volume] in Urine;FALSE;LOINC-BD ;2161-8 ;Creatinine:MCnc:Pt:Urine:Qn:;SAME-AS;;;;Creatinine 24 hour urine panel - 24 hour Urine ;2;; 
+;Creatinine [Mass/volume] in Urine;;;;Test;Numeric;Creatinine [Mass/volume] in Urine;FALSE;LOINC-BD ;2161-8 ;Creatinine:MCnc:Pt:Urine:Qn:;SAME-AS;;;;Creatinine 24 hour urine panel - 24 hour Urine ;2;;
 ;Systolic blood pressure;;;;Finding;Numeric;Diastolic blood pressure;FALSE;SNOMED-CT-BD ;271649006;Systolic blood pressure;SAME-AS;;;;;;;
 ;Diastolic blood pressure;;;;Finding;Numeric;Systolic blood pressure;FALSE;SNOMED-CT-BD ;271649006;Diastolic blood pressure;SAME-AS;;;;;;;
 ;Temperature;;;;Finding;Numeric;Temperature;FALSE;SNOMED-CT-BD ;386725007;Temperature;SAME-AS;;;;;;;
