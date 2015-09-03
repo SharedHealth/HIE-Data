@@ -27,10 +27,10 @@ public class OpenMRSConceptClientScript {
     private final static String CONCEPT_NAME_TYPE_SHORT = "SHORT";
     private final static String LOCALE_ENGLISH = "en";
     private final static String LOCALE_BANGLA = "bn";
-    private boolean shouldCreateConceptEvent;
+    private boolean isTr;
 
-    public OpenMRSConceptClientScript(boolean createConceptEvent) {
-        this.shouldCreateConceptEvent = createConceptEvent;
+    public OpenMRSConceptClientScript(boolean isTr) {
+        this.isTr = isTr;
     }
 
     public void generate(String inputDirPath, String outputDirPath) throws Exception {
@@ -99,9 +99,9 @@ public class OpenMRSConceptClientScript {
         selectConceptDatatype(output, conceptDatatype);
         selectConceptClass(output, conceptClass);
         addConcept(output, conceptUuid, conceptIsSet);
-        addConceptNameAndConceptWord(output, conceptName, LOCALE_ENGLISH, "1", CONCEPT_NAME_TYPE_FULLY_SPECIFIED, "@concept_name_full_id");
-        addConceptNameAndConceptWord(output, conceptShortName, LOCALE_ENGLISH, "0", CONCEPT_NAME_TYPE_SHORT, "@concept_name_short_id");
-        addConceptNameAndConceptWord(output, conceptLocalName, LOCALE_BANGLA, "0", CONCEPT_NAME_TYPE_FULLY_SPECIFIED, "@concept_name_local_full_id");
+        addConceptName(output, conceptName, LOCALE_ENGLISH, "1", CONCEPT_NAME_TYPE_FULLY_SPECIFIED, "@concept_name_full_id");
+        addConceptName(output, conceptShortName, LOCALE_ENGLISH, "0", CONCEPT_NAME_TYPE_SHORT, "@concept_name_short_id");
+        addConceptName(output, conceptLocalName, LOCALE_BANGLA, "0", CONCEPT_NAME_TYPE_FULLY_SPECIFIED, "@concept_name_local_full_id");
         addConceptDescription(output, conceptDescription, LOCALE_ENGLISH);
         addConceptDescription(output, conceptLocalDescription, LOCALE_BANGLA);
         addConceptNumeric(output, csvRecord);
@@ -193,13 +193,15 @@ public class OpenMRSConceptClientScript {
                 conceptDatatype));
     }
 
-    private void addConceptNameAndConceptWord(File output, String conceptName, final String locale, final String locale_preferred, final String conceptNameType, final String mysqlConceptNameIdVar) throws IOException {
+    private void addConceptName(File output, String conceptName, final String locale, final String locale_preferred, final String conceptNameType, final String mysqlConceptNameIdVar) throws IOException {
         if (StringUtils.isNotBlank(conceptName)) {
             writeLineToFile(output, String.format("INSERT INTO concept_name (concept_id, name, locale, locale_preferred, creator, date_created, concept_name_type, uuid) " +
                             "SELECT @concept_id, '%s', '%s', %s, 1, now(), '%s', uuid() FROM dual WHERE 0 = @should_insert;",
                     conceptName, locale, locale_preferred, conceptNameType));
             writeLineToFile(output, String.format("SELECT MAX(concept_name_id) INTO %s FROM concept_name;", mysqlConceptNameIdVar));
-            addConceptWord(output, conceptName, LOCALE_ENGLISH, mysqlConceptNameIdVar);
+            if (isTr) {
+                addConceptWord(output, conceptName, LOCALE_ENGLISH, mysqlConceptNameIdVar);
+            }
         }
     }
 
@@ -212,7 +214,7 @@ public class OpenMRSConceptClientScript {
     }
 
     private void addConceptEvent(File output, String conceptIdVariableName, String conceptSourceName) throws IOException {
-        if (shouldCreateConceptEvent) {
+        if (isTr) {
             if (conceptSourceName == null) {
                 selectConceptClassNameFromConceptId(output, conceptIdVariableName);
                 conceptSourceName = "@concept_source_name";
@@ -254,7 +256,7 @@ public class OpenMRSConceptClientScript {
     }
 
     private void addReferenceTermEvent(File output) throws IOException {
-        if (shouldCreateConceptEvent) {
+        if (isTr) {
             writeLineToFile(output, "SELECT uuid INTO @db_uuid FROM concept_reference_term WHERE concept_reference_term_id = @reference_id;");
             writeLineToFile(output, String.format("SELECT concat('%s', @db_uuid) INTO @uri;", REFERENCE_TERM_URL));
             writeLineToFile(output, "INSERT INTO event_records(uuid, title, category, uri, object) " +
