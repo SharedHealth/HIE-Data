@@ -11,10 +11,8 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
-import java.util.HashSet;
 import java.util.List;
 
-import static java.util.Arrays.asList;
 import static org.sharedhealth.hie.data.Main.OPENMRS_CONCEPT_SCRIPTS;
 import static org.sharedhealth.hie.data.SHRUtils.replaceSpecialCharsWithEscapeSequences;
 import static org.sharedhealth.hie.data.SHRUtils.writeLineToFile;
@@ -199,17 +197,6 @@ public class OpenMRSConceptClientScript {
                             "SELECT @concept_id, '%s', '%s', %s, 1, now(), '%s', uuid() FROM dual WHERE 0 = @should_insert;",
                     conceptName, locale, locale_preferred, conceptNameType));
             writeLineToFile(output, String.format("SELECT MAX(concept_name_id) INTO %s FROM concept_name;", mysqlConceptNameIdVar));
-            if (isTr) {
-                addConceptWord(output, conceptName, LOCALE_ENGLISH, mysqlConceptNameIdVar);
-            }
-        }
-    }
-
-    private void addConceptWord(File output, String conceptName, String en, String mysqlConceptNameIdVar) throws IOException {
-        HashSet<String> strings = new HashSet<String>(asList(StringUtils.split(conceptName, ' ')));
-        for (String string : strings) {
-            writeLineToFile(output, String.format("INSERT INTO concept_word (word, locale, weight, concept_id, concept_name_id) " +
-                    "SELECT UPPER('%s'), '%s', '1', @concept_id, %s FROM dual WHERE 0 = @should_insert;", string, en, mysqlConceptNameIdVar));
         }
     }
 
