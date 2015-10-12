@@ -16,7 +16,8 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Procedure End Date;;;;Misc;Date;End Date;FALSE;;;;;;;;Procedure Template;2;;
 ;Procedure Notes;;;;Misc;Text;Notes;FALSE;;;;;;;;Procedure Template;5;;
 ;Procedure Type;;;;Misc;Coded;Procedure;FALSE;;;;;;;;Procedure Template;3;;
-;Procedure Diagnostic Study;;;;ConvSet;N/A;Diagnostic Study;TRUE;;;;;;;;Procedure Template;4;;
+;Procedure Followup;;;;Misc;Coded;Followup;FALSE;;;;;;;;Procedure Template;4;;
+;Procedure Diagnostic Study;;;;ConvSet;N/A;Diagnostic Study;TRUE;;;;;;;;Procedure Template;5;;
 ;Procedure Diagnostic Test;;;;Misc;Coded;Test;FALSE;;;;;;;;Procedure Diagnostic Study;1;;
 ;Procedure Diagnostic Result;;;;Misc;Text;Result;FALSE;;;;;;;;Procedure Diagnostic Study;2;;
 ;Procedure Diagnosis;;;;Misc;Coded;Diagnosis;FALSE;;;;;;;;Procedure Diagnostic Study;3;;
