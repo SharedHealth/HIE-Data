@@ -220,6 +220,10 @@ public class OpenMRSConceptClientScript {
         String referenceTermCode = replaceSpecialCharsWithEscapeSequences(csvRecord.get("reference-term-code"));
         String referenceTermName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("reference-term-name"));
         String referenceTermRelationship = StringUtils.trim(csvRecord.get("reference-term-relationship"));
+        String conceptName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("name"));
+        if (StringUtils.isBlank(referenceTermName)) {
+            referenceTermName = conceptName;
+        }
         if (StringUtils.isNotBlank(referenceTermCode)) {
             createReferenceTerm(output, referenceTermSource, referenceTermCode, referenceTermName, referenceTermRelationship);
             writeLineToFile(output, "INSERT INTO concept_reference_map (concept_reference_term_id, concept_map_type_id, creator, date_created, concept_id, uuid) " +

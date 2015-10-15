@@ -1,0 +1,353 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Drug suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;7946007;;SAME-AS;;;;;;Medication Forms;1
+;Drug stick ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;11190007;;SAME-AS;;;;;;Medication Forms;2
+;Drug lotion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;17519006;;SAME-AS;;;;;;Medication Forms;3
+;Drug aerosol foam ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;30843009;;SAME-AS;;;;;;Medication Forms;4
+;Drug patch ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;36875001;;SAME-AS;;;;;;Medication Forms;5
+;Drug paste ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;37937005;;SAME-AS;;;;;;Medication Forms;6
+;Pill ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;46992007;;SAME-AS;;;;;;Medication Forms;7
+;Caplet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;48582000;;SAME-AS;;;;;;Medication Forms;8
+;Drug aerosol ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;52262001;;SAME-AS;;;;;;Medication Forms;9
+;Liniment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;63316001;;SAME-AS;;;;;;Medication Forms;10
+;Drug pledget;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;64241004;;SAME-AS;;;;;;Medication Forms;11
+;Chewable tablet;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;66076007;;SAME-AS;;;;;;Medication Forms;12
+;Drug solution;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;77899000;;SAME-AS;;;;;;Medication Forms;13
+;Drug powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;85581007;;SAME-AS;;;;;;Medication Forms;14
+;Oral drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385018001;;SAME-AS;;;;;;Medication Forms;15
+;Oral drops solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385019009;;SAME-AS;;;;;;Medication Forms;16
+;Oral drops suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385020003;;SAME-AS;;;;;;Medication Forms;17
+;Oral drops emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385021004;;SAME-AS;;;;;;Medication Forms;18
+;Oral liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385022006;;SAME-AS;;;;;;Medication Forms;19
+;Oral solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385023001;;SAME-AS;;;;;;Medication Forms;20
+;Oral suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385024007;;SAME-AS;;;;;;Medication Forms;21
+;Oral emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385025008;;SAME-AS;;;;;;Medication Forms;22
+;Powder for oral solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385026009;;SAME-AS;;;;;;Medication Forms;23
+;Powder for oral suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385027000;;SAME-AS;;;;;;Medication Forms;24
+;Granules for oral solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385028005;;SAME-AS;;;;;;Medication Forms;25
+;Granules for oral suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385029002;;SAME-AS;;;;;;Medication Forms;26
+;Syrup ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385032004;;SAME-AS;;;;;;Medication Forms;27
+;Powder for syrup ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385033009;;SAME-AS;;;;;;Medication Forms;28
+;Granules for syrup ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385034003;;SAME-AS;;;;;;Medication Forms;29
+;Soluble tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385035002;;SAME-AS;;;;;;Medication Forms;30
+;Dispersible tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385036001;;SAME-AS;;;;;;Medication Forms;31
+;Oral gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385038000;;SAME-AS;;;;;;Medication Forms;32
+;Oral paste ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385039008;;SAME-AS;;;;;;Medication Forms;33
+;Oral powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385041009;;SAME-AS;;;;;;Medication Forms;34
+;Effervescent powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385042002;;SAME-AS;;;;;;Medication Forms;35
+;Granules dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385043007;;SAME-AS;;;;;;Medication Forms;36
+;Effervescent granules ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385044001;;SAME-AS;;;;;;Medication Forms;37
+;Gastro-resistant granules ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385045000;;SAME-AS;;;;;;Medication Forms;38
+;Prolonged-release granules ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385046004;;SAME-AS;;;;;;Medication Forms;39
+;Modified-release granules ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385047008;;SAME-AS;;;;;;Medication Forms;40
+;Cachet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385048003;;SAME-AS;;;;;;Medication Forms;41
+;Capsule dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385049006;;SAME-AS;;;;;;Medication Forms;42
+;Hard capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385050006;;SAME-AS;;;;;;Medication Forms;43
+;Soft capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385051005;;SAME-AS;;;;;;Medication Forms;44
+;Gastro-resistant capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385052003;;SAME-AS;;;;;;Medication Forms;45
+;Prolonged-release capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385053008;;SAME-AS;;;;;;Medication Forms;46
+;Modified-release capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385054002;;SAME-AS;;;;;;Medication Forms;47
+;Tablet dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385055001;;SAME-AS;;;;;;Medication Forms;48
+;Film-coated tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385057009;;SAME-AS;;;;;;Medication Forms;49
+;Effervescent tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385058004;;SAME-AS;;;;;;Medication Forms;50
+;Gastro-resistant tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385059007;;SAME-AS;;;;;;Medication Forms;51
+;Prolonged-release tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385060002;;SAME-AS;;;;;;Medication Forms;52
+;Modified-release tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385061003;;SAME-AS;;;;;;Medication Forms;53
+;Oral lyophilisate ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385062005;;SAME-AS;;;;;;Medication Forms;54
+;Oral gum ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385063000;;SAME-AS;;;;;;Medication Forms;55
+;Pillule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385064006;;SAME-AS;;;;;;Medication Forms;56
+;Oromucosal liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385069001;;SAME-AS;;;;;;Medication Forms;57
+;Oromucosal solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385070000;;SAME-AS;;;;;;Medication Forms;58
+;Oromucosal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385071001;;SAME-AS;;;;;;Medication Forms;59
+;Oromucosal spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385073003;;SAME-AS;;;;;;Medication Forms;60
+;Sublingual spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385074009;;SAME-AS;;;;;;Medication Forms;61
+;Gingival solution;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385077002;;SAME-AS;;;;;;Medication Forms;62
+;Oromucosal gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385078007;;SAME-AS;;;;;;Medication Forms;63
+;Oromucosal paste ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385079004;;SAME-AS;;;;;;Medication Forms;64
+;Medicated chewing-gum ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385080001;;SAME-AS;;;;;;Medication Forms;65
+;Gingival gel;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385081002;;SAME-AS;;;;;;Medication Forms;66
+;Gingival paste ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385082009;;SAME-AS;;;;;;Medication Forms;67
+;Oromucosal capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385083004;;SAME-AS;;;;;;Medication Forms;68
+;Sublingual tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385084005;;SAME-AS;;;;;;Medication Forms;69
+;Buccal tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385085006;;SAME-AS;;;;;;Medication Forms;70
+;Muco-adhesive buccal tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385086007;;SAME-AS;;;;;;Medication Forms;71
+;Lozenge ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385087003;;SAME-AS;;;;;;Medication Forms;72
+;Dental gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385088008;;SAME-AS;;;;;;Medication Forms;73
+;Dental stick ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385089000;;SAME-AS;;;;;;Medication Forms;74
+;Dental insert ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385090009;;SAME-AS;;;;;;Medication Forms;75
+;Dental powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385091008;;SAME-AS;;;;;;Medication Forms;76
+;Dental liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385092001;;SAME-AS;;;;;;Medication Forms;77
+;Dental solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385094000;;SAME-AS;;;;;;Medication Forms;78
+;Dental suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385095004;;SAME-AS;;;;;;Medication Forms;79
+;Dental emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385096003;;SAME-AS;;;;;;Medication Forms;80
+;Bath additive ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385098002;;SAME-AS;;;;;;Medication Forms;81
+;Cream ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385099005;;SAME-AS;;;;;;Medication Forms;82
+;Gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385100002;;SAME-AS;;;;;;Medication Forms;83
+;Ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385101003;;SAME-AS;;;;;;Medication Forms;84
+;Cutaneous paste ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385102005;;SAME-AS;;;;;;Medication Forms;85
+;Cutaneous foam ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385103000;;SAME-AS;;;;;;Medication Forms;86
+;Shampoo dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385104006;;SAME-AS;;;;;;Medication Forms;87
+;Cutaneous spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385105007;;SAME-AS;;;;;;Medication Forms;88
+;Cutaneous solution spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385106008;;SAME-AS;;;;;;Medication Forms;89
+;Cutaneous liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385107004;;SAME-AS;;;;;;Medication Forms;90
+;Cutaneous solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385108009;;SAME-AS;;;;;;Medication Forms;91
+;Cutaneous suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385110006;;SAME-AS;;;;;;Medication Forms;92
+;Cutaneous emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385111005;;SAME-AS;;;;;;Medication Forms;93
+;Cutaneous powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385112003;;SAME-AS;;;;;;Medication Forms;94
+;Solution for iontophoresis ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385113008;;SAME-AS;;;;;;Medication Forms;95
+;Transdermal patch ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385114002;;SAME-AS;;;;;;Medication Forms;96
+;Collodion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385115001;;SAME-AS;;;;;;Medication Forms;97
+;Medicated nail laquer ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385116000;;SAME-AS;;;;;;Medication Forms;98
+;Poultice ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385117009;;SAME-AS;;;;;;Medication Forms;99
+;Cutaneous stick ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385118004;;SAME-AS;;;;;;Medication Forms;100
+;Cutaneous sponge ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385119007;;SAME-AS;;;;;;Medication Forms;101
+;Eye cream ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385121002;;SAME-AS;;;;;;Medication Forms;102
+;Eye gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385122009;;SAME-AS;;;;;;Medication Forms;103
+;Eye ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385123004;;SAME-AS;;;;;;Medication Forms;104
+;Eye drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385124005;;SAME-AS;;;;;;Medication Forms;105
+;Eye drops solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385125006;;SAME-AS;;;;;;Medication Forms;106
+;Prolonged-release eye drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385128008;;SAME-AS;;;;;;Medication Forms;107
+;Eye lotion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385130005;;SAME-AS;;;;;;Medication Forms;108
+;Ophthalmic insert ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385132002;;SAME-AS;;;;;;Medication Forms;109
+;Ear cream ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385133007;;SAME-AS;;;;;;Medication Forms;110
+;Ear gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385134001;;SAME-AS;;;;;;Medication Forms;111
+;Ear ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385135000;;SAME-AS;;;;;;Medication Forms;112
+;Ear drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385136004;;SAME-AS;;;;;;Medication Forms;113
+;Ear drops solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385137008;;SAME-AS;;;;;;Medication Forms;114
+;Ear drops emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385138003;;SAME-AS;;;;;;Medication Forms;115
+;Ear powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385139006;;SAME-AS;;;;;;Medication Forms;116
+;Ear spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385140008;;SAME-AS;;;;;;Medication Forms;117
+;Ear spray solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385141007;;SAME-AS;;;;;;Medication Forms;118
+;Ear spray suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385142000;;SAME-AS;;;;;;Medication Forms;119
+;Ear spray emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385143005;;SAME-AS;;;;;;Medication Forms;120
+;Ear tampon ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385147006;;SAME-AS;;;;;;Medication Forms;121
+;Ear stick ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385148001;;SAME-AS;;;;;;Medication Forms;122
+;Nasal cream ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385149009;;SAME-AS;;;;;;Medication Forms;123
+;Nasal gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385150009;;SAME-AS;;;;;;Medication Forms;124
+;Nasal ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385151008;;SAME-AS;;;;;;Medication Forms;125
+;Nasal drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385152001;;SAME-AS;;;;;;Medication Forms;126
+;Nasal drops solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385153006;;SAME-AS;;;;;;Medication Forms;127
+;Nasal drops suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385154000;;SAME-AS;;;;;;Medication Forms;128
+;Nasal drops emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385155004;;SAME-AS;;;;;;Medication Forms;129
+;Nasal powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385156003;;SAME-AS;;;;;;Medication Forms;130
+;Nasal spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385157007;;SAME-AS;;;;;;Medication Forms;131
+;Nasal spray solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385158002;;SAME-AS;;;;;;Medication Forms;132
+;Nasal spray suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385159005;;SAME-AS;;;;;;Medication Forms;133
+;Nasal spray emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385160000;;SAME-AS;;;;;;Medication Forms;134
+;Nasal stick ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385162008;;SAME-AS;;;;;;Medication Forms;135
+;Eye/ear/nose drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385163003;;SAME-AS;;;;;;Medication Forms;136
+;Eye/ear/nose ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385164009;;SAME-AS;;;;;;Medication Forms;137
+;Vaginal cream ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385165005;;SAME-AS;;;;;;Medication Forms;138
+;Vaginal gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385166006;;SAME-AS;;;;;;Medication Forms;139
+;Vaginal ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385167002;;SAME-AS;;;;;;Medication Forms;140
+;Vaginal foam ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385168007;;SAME-AS;;;;;;Medication Forms;141
+;Vaginal liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385169004;;SAME-AS;;;;;;Medication Forms;142
+;Vaginal solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385170003;;SAME-AS;;;;;;Medication Forms;143
+;Vaginal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385171004;;SAME-AS;;;;;;Medication Forms;144
+;Vaginal emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385172006;;SAME-AS;;;;;;Medication Forms;145
+;Tablet for vaginal solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385173001;;SAME-AS;;;;;;Medication Forms;146
+;Pessary;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385174007;;SAME-AS;;;;;;Medication Forms;147
+;Vaginal capsule;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385175008;;SAME-AS;;;;;;Medication Forms;148
+;Hard vaginal capsule;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385176009;;SAME-AS;;;;;;Medication Forms;149
+;Soft vaginal capsule;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385177000;;SAME-AS;;;;;;Medication Forms;150
+;Vaginal tablet;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385178005;;SAME-AS;;;;;;Medication Forms;151
+;Effervescent vaginal tablet;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385179002;;SAME-AS;;;;;;Medication Forms;152
+;Medicated vaginal tampon ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385180004;;SAME-AS;;;;;;Medication Forms;153
+;Rectal cream ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385182007;;SAME-AS;;;;;;Medication Forms;154
+;Rectal gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385183002;;SAME-AS;;;;;;Medication Forms;155
+;Rectal ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385184008;;SAME-AS;;;;;;Medication Forms;156
+;Rectal foam ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385185009;;SAME-AS;;;;;;Medication Forms;157
+;Enema ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385186005;;SAME-AS;;;;;;Medication Forms;158
+;Rectal solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385187001;;SAME-AS;;;;;;Medication Forms;159
+;Rectal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385188006;;SAME-AS;;;;;;Medication Forms;160
+;Rectal emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385189003;;SAME-AS;;;;;;Medication Forms;161
+;Powder for rectal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385191006;;SAME-AS;;;;;;Medication Forms;162
+;Tablet for rectal solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385192004;;SAME-AS;;;;;;Medication Forms;163
+;Tablet for rectal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385193009;;SAME-AS;;;;;;Medication Forms;164
+;Suppository dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385194003;;SAME-AS;;;;;;Medication Forms;165
+;Rectal capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385195002;;SAME-AS;;;;;;Medication Forms;166
+;Rectal tampon ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385196001;;SAME-AS;;;;;;Medication Forms;167
+;Nebulizer liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385197005;;SAME-AS;;;;;;Medication Forms;168
+;Nebulizer solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385198000;;SAME-AS;;;;;;Medication Forms;169
+;Nebulizer suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385199008;;SAME-AS;;;;;;Medication Forms;170
+;Powder for nebulizer suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385200006;;SAME-AS;;;;;;Medication Forms;171
+;Powder for nebulizer solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385201005;;SAME-AS;;;;;;Medication Forms;172
+;Nebulizer emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385202003;;SAME-AS;;;;;;Medication Forms;173
+;Pressurised inhalation ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385203008;;SAME-AS;;;;;;Medication Forms;174
+;Pressurised inhalation solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385204002;;SAME-AS;;;;;;Medication Forms;175
+;Pressurised inhalation suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385205001;;SAME-AS;;;;;;Medication Forms;176
+;Pressurised inhalation emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385206000;;SAME-AS;;;;;;Medication Forms;177
+;Inhalation powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385207009;;SAME-AS;;;;;;Medication Forms;178
+;Hard capsule inhalation powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385208004;;SAME-AS;;;;;;Medication Forms;179
+;Inhalation vapor ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385210002;;SAME-AS;;;;;;Medication Forms;180
+;Inhalation vapor powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385211003;;SAME-AS;;;;;;Medication Forms;181
+;Inhalation vapor capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385212005;;SAME-AS;;;;;;Medication Forms;182
+;Inhalation vapor solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385213000;;SAME-AS;;;;;;Medication Forms;183
+;Inhalation vapor tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385214006;;SAME-AS;;;;;;Medication Forms;184
+;Inhalation vapor ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385215007;;SAME-AS;;;;;;Medication Forms;185
+;Inhalation vapor liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385216008;;SAME-AS;;;;;;Medication Forms;186
+;Gas for inhalation ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385217004;;SAME-AS;;;;;;Medication Forms;187
+;Injection solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385219001;;SAME-AS;;;;;;Medication Forms;188
+;Injection suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385220007;;SAME-AS;;;;;;Medication Forms;189
+;Injection emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385221006;;SAME-AS;;;;;;Medication Forms;190
+;Injection powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385222004;;SAME-AS;;;;;;Medication Forms;191
+;Powder for injection solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385223009;;SAME-AS;;;;;;Medication Forms;192
+;Powder for injection suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385224003;;SAME-AS;;;;;;Medication Forms;193
+;Infusion solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385229008;;SAME-AS;;;;;;Medication Forms;194
+;Infusion powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385230003;;SAME-AS;;;;;;Medication Forms;195
+;Powder for infusion solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385231004;;SAME-AS;;;;;;Medication Forms;196
+;Implantation tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385236009;;SAME-AS;;;;;;Medication Forms;197
+;Implantation chain ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385237000;;SAME-AS;;;;;;Medication Forms;198
+;Intravesical solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385242008;;SAME-AS;;;;;;Medication Forms;199
+;Urethral gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385245005;;SAME-AS;;;;;;Medication Forms;200
+;Urethral stick ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385246006;;SAME-AS;;;;;;Medication Forms;201
+;Endotracheopulmonary instillation solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385247002;;SAME-AS;;;;;;Medication Forms;202
+;Powder for endotracheopulmonary instillation solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385248007;;SAME-AS;;;;;;Medication Forms;203
+;Endotracheopulmonary instillation suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385250004;;SAME-AS;;;;;;Medication Forms;204
+;Endocervical gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385251000;;SAME-AS;;;;;;Medication Forms;205
+;Gastroenteral liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385257001;;SAME-AS;;;;;;Medication Forms;206
+;Gastroenteral solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385258006;;SAME-AS;;;;;;Medication Forms;207
+;Gastroenteral suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385259003;;SAME-AS;;;;;;Medication Forms;208
+;Gastroenteral emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385260008;;SAME-AS;;;;;;Medication Forms;209
+;Wound stick ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385261007;;SAME-AS;;;;;;Medication Forms;210
+;Organ preservation solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385262000;;SAME-AS;;;;;;Medication Forms;211
+;Cutaneous powder spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385278003;;SAME-AS;;;;;;Medication Forms;212
+;Cutaneous suspension spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385279006;;SAME-AS;;;;;;Medication Forms;213
+;Implant dosage form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385286003;;SAME-AS;;;;;;Medication Forms;214
+;Oral elixir ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;414951009;;SAME-AS;;;;;;Medication Forms;215
+;Tampon dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420243009;;SAME-AS;;;;;;Medication Forms;216
+;Oil injection ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420253005;;SAME-AS;;;;;;Medication Forms;217
+;Semi-solid dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420275007;;SAME-AS;;;;;;Medication Forms;218
+;Nasal emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420283001;;SAME-AS;;;;;;Medication Forms;219
+;Rectal powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420292003;;SAME-AS;;;;;;Medication Forms;220
+;Coated pellets capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420293008;;SAME-AS;;;;;;Medication Forms;221
+;Powder for oral liquid;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420305009;;SAME-AS;;;;;;Medication Forms;222
+;Inhaler ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420317006;;SAME-AS;;;;;;Medication Forms;223
+;Extended-release film coated tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420378007;;SAME-AS;;;;;;Medication Forms;224
+;Extended-release insert ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420385006;;SAME-AS;;;;;;Medication Forms;225
+;Drug emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420386007;;SAME-AS;;;;;;Medication Forms;226
+;Inhalation aerosol solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420407000;;SAME-AS;;;;;;Medication Forms;227
+;Lyophilized powder for injectable extended release liposomal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420430006;;SAME-AS;;;;;;Medication Forms;228
+;Pressurized nebulizer suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420450005;;SAME-AS;;;;;;Medication Forms;229
+;Film ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420460001;;SAME-AS;;;;;;Medication Forms;230
+;Oral granules ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420509004;;SAME-AS;;;;;;Medication Forms;231
+;Vaginal powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420536002;;SAME-AS;;;;;;Medication Forms;232
+;Cutaneous oil ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420540006;;SAME-AS;;;;;;Medication Forms;233
+;Nasal aerosol ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420610000;;SAME-AS;;;;;;Medication Forms;234
+;Extended-release tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420627008;;SAME-AS;;;;;;Medication Forms;235
+;Vaginal insert ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420631002;;SAME-AS;;;;;;Medication Forms;236
+;Microspheres for injectable suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420634005;;SAME-AS;;;;;;Medication Forms;237
+;Eye/ear drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420636007;;SAME-AS;;;;;;Medication Forms;238
+;Solution for inhalation ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420641004;;SAME-AS;;;;;;Medication Forms;239
+;Lyophilized powder for injectable liposomal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420656008;;SAME-AS;;;;;;Medication Forms;240
+;Oral capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420692007;;SAME-AS;;;;;;Medication Forms;241
+;Liquid dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420699003;;SAME-AS;;;;;;Medication Forms;242
+;Inhalation aerosol suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420705007;;SAME-AS;;;;;;Medication Forms;243
+;Eye suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420736004;;SAME-AS;;;;;;Medication Forms;244
+;Delayed-release granules ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420757007;;SAME-AS;;;;;;Medication Forms;245
+;Urethral suppository ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420761001;;SAME-AS;;;;;;Medication Forms;246
+;Delayed-release pellets capsule;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420767002;;SAME-AS;;;;;;Medication Forms;247
+;Pellet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420768007;;SAME-AS;;;;;;Medication Forms;248
+;Extended-release oral liquid ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420802004;;SAME-AS;;;;;;Medication Forms;249
+;Powder for reconstitution for drug product ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420828001;;SAME-AS;;;;;;Medication Forms;250
+;Metered dose aerosol ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420847003;;SAME-AS;;;;;;Medication Forms;251
+;Extended release injectable suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420873008;;SAME-AS;;;;;;Medication Forms;252
+;Intrathecal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420887008;;SAME-AS;;;;;;Medication Forms;253
+;Ear drops suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420891003;;SAME-AS;;;;;;Medication Forms;254
+;Ear emulsion ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420901005;;SAME-AS;;;;;;Medication Forms;255
+;Metered powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420927005;;SAME-AS;;;;;;Medication Forms;256
+;Rectal suppository ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420929008;;SAME-AS;;;;;;Medication Forms;257
+;Powder for solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420955009;;SAME-AS;;;;;;Medication Forms;258
+;Ultramicronized tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420956005;;SAME-AS;;;;;;Medication Forms;259
+;Implantable pellet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420992009;;SAME-AS;;;;;;Medication Forms;260
+;Oral tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421026006;;SAME-AS;;;;;;Medication Forms;261
+;Delayed-release capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421027002;;SAME-AS;;;;;;Medication Forms;262
+;Extended-release suppository ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421034000;;SAME-AS;;;;;;Medication Forms;263
+;Extended-release film ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421043009;;SAME-AS;;;;;;Medication Forms;264
+;Sonicated injectable suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421051007;;SAME-AS;;;;;;Medication Forms;265
+;Emulsion for inhalation ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421056002;;SAME-AS;;;;;;Medication Forms;266
+;Pastille ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421079001;;SAME-AS;;;;;;Medication Forms;267
+;Powder for suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421080003;;SAME-AS;;;;;;Medication Forms;268
+;Aerosol powder ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421104008;;SAME-AS;;;;;;Medication Forms;269
+;Gaseous dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421131006;;SAME-AS;;;;;;Medication Forms;270
+;Extended-release enteric coated tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421155001;;SAME-AS;;;;;;Medication Forms;271
+;Foam ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421166008;;SAME-AS;;;;;;Medication Forms;272
+;Vaginal suppository ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421195004;;SAME-AS;;;;;;Medication Forms;273
+;Suspension for inhalation ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421221008;;SAME-AS;;;;;;Medication Forms;274
+;Extended-release bead implant ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421271006;;SAME-AS;;;;;;Medication Forms;275
+;Sponge ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421288004;;SAME-AS;;;;;;Medication Forms;276
+;Extended-release film coated capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421300005;;SAME-AS;;;;;;Medication Forms;277
+;Powder for eye drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421316007;;SAME-AS;;;;;;Medication Forms;278
+;Extended-release coated capsule;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421338009;;SAME-AS;;;;;;Medication Forms;279
+;Powder spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421340004;;SAME-AS;;;;;;Medication Forms;280
+;Powder for cutaneous solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421343002;;SAME-AS;;;;;;Medication Forms;281
+;Cutaneous aerosol ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421347001;;SAME-AS;;;;;;Medication Forms;282
+;Tablet for oral suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421366001;;SAME-AS;;;;;;Medication Forms;283
+;Delayed-release tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421374000;;SAME-AS;;;;;;Medication Forms;284
+;Solid dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421378002;;SAME-AS;;;;;;Medication Forms;285
+;Ear suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421382000;;SAME-AS;;;;;;Medication Forms;286
+;Intravenous solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421410002;;SAME-AS;;;;;;Medication Forms;287
+;Powder for inhalation solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421425002;;SAME-AS;;;;;;Medication Forms;288
+;Eye/ear ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421427005;;SAME-AS;;;;;;Medication Forms;289
+;Injectable oil suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421428000;;SAME-AS;;;;;;Medication Forms;290
+;Extended-release granules for suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421446006;;SAME-AS;;;;;;Medication Forms;291
+;Cone ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421504000;;SAME-AS;;;;;;Medication Forms;292
+;Liposomal injectable suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421522002;;SAME-AS;;;;;;Medication Forms;293
+;Insert ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421532009;;SAME-AS;;;;;;Medication Forms;294
+;Delayed-release particles tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421535006;;SAME-AS;;;;;;Medication Forms;295
+;Powder for ear drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421575003;;SAME-AS;;;;;;Medication Forms;296
+;Aerosol spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421606006;;SAME-AS;;;;;;Medication Forms;297
+;Powder for nasal drops ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421607002;;SAME-AS;;;;;;Medication Forms;298
+;Extended-release capsule;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421618002;;SAME-AS;;;;;;Medication Forms;299
+;Sustained-release buccal tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421620004;;SAME-AS;;;;;;Medication Forms;300
+;Cutaneous cream ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421628006;;SAME-AS;;;;;;Medication Forms;301
+;Lyophilized powder for injectable solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421637006;;SAME-AS;;;;;;Medication Forms;302
+;Metered gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421669002;;SAME-AS;;;;;;Medication Forms;303
+;Tablet for oral solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421701006;;SAME-AS;;;;;;Medication Forms;304
+;Ear solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421713001;;SAME-AS;;;;;;Medication Forms;305
+;Transdermal drug delivery system ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421716009;;SAME-AS;;;;;;Medication Forms;306
+;Spray dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421720008;;SAME-AS;;;;;;Medication Forms;307
+;Coated particles tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421721007;;SAME-AS;;;;;;Medication Forms;308
+;Extended-release enteric coated capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421752008;;SAME-AS;;;;;;Medication Forms;309
+;Metered dose aerosol inhaler ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421759004;;SAME-AS;;;;;;Medication Forms;310
+;Intraperitoneal solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421765004;;SAME-AS;;;;;;Medication Forms;311
+;Powder for ophthalmic solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421857007;;SAME-AS;;;;;;Medication Forms;312
+;Oral cream ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421873001;;SAME-AS;;;;;;Medication Forms;313
+;Oil ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421890007;;SAME-AS;;;;;;Medication Forms;314
+;Multilayer tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421932003;;SAME-AS;;;;;;Medication Forms;315
+;Medicated toothpaste ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421937009;;SAME-AS;;;;;;Medication Forms;316
+;Lyophilized powder for injectable suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421943006;;SAME-AS;;;;;;Medication Forms;317
+;Cutaneous gel ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421949005;;SAME-AS;;;;;;Medication Forms;318
+;Intraocular solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421987002;;SAME-AS;;;;;;Medication Forms;319
+;Extended-release coated pellets ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421999009;;SAME-AS;;;;;;Medication Forms;320
+;Metered dose powder inhaler ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422054001;;SAME-AS;;;;;;Medication Forms;321
+;Metered dose inhaler ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422059006;;SAME-AS;;;;;;Medication Forms;322
+;Ophthalmic solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422060001;;SAME-AS;;;;;;Medication Forms;323
+;Eye drops suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422068008;;SAME-AS;;;;;;Medication Forms;324
+;Nasal suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422080000;;SAME-AS;;;;;;Medication Forms;325
+;Powder for ophthalmic suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422085005;;SAME-AS;;;;;;Medication Forms;326
+;Breath activated powder inhaler ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422151007;;SAME-AS;;;;;;Medication Forms;327
+;Tincture ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422186009;;SAME-AS;;;;;;Medication Forms;328
+;Breath activated inhaler ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422197009;;SAME-AS;;;;;;Medication Forms;329
+;Dental cone ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422199007;;SAME-AS;;;;;;Medication Forms;330
+;Tablet for cutaneous solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422201009;;SAME-AS;;;;;;Medication Forms;331
+;Colloidal suspension for injection ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422202002;;SAME-AS;;;;;;Medication Forms;332
+;Spirit ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422259002;;SAME-AS;;;;;;Medication Forms;333
+;Powder for injectable extended release suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422264003;;SAME-AS;;;;;;Medication Forms;334
+;Modified-release pessary ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422301006;;SAME-AS;;;;;;Medication Forms;335
+;Nasal solution ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422336005;;SAME-AS;;;;;;Medication Forms;336
+;Extended-release oral suspension ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422353003;;SAME-AS;;;;;;Medication Forms;337
+;Aerosol generator ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;424179000;;SAME-AS;;;;;;Medication Forms;338
+;Vaginal sponge ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;424552006;;SAME-AS;;;;;;Medication Forms;339
+;Cutaneous ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;425753008;;SAME-AS;;;;;;Medication Forms;340
+;Rectal spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;425965000;;SAME-AS;;;;;;Medication Forms;341
+;Gum ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426210003;;SAME-AS;;;;;;Medication Forms;342
+;Drops dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426684005;;SAME-AS;;;;;;Medication Forms;343
+;Vaginal spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426823003;;SAME-AS;;;;;;Medication Forms;344
+;Metered spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426969004;;SAME-AS;;;;;;Medication Forms;345
+;Coated capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;427129005;;SAME-AS;;;;;;Medication Forms;346
+;Pressurized spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;427564005;;SAME-AS;;;;;;Medication Forms;347
+;Modified release drops dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;427609008;;SAME-AS;;;;;;Medication Forms;348
+;Bar dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;429885007;;SAME-AS;;;;;;Medication Forms;349
+;Buccal film ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;443424002;;SAME-AS;;;;;;Medication Forms;350
+;Orodispersible film ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;447050008;;SAME-AS;;;;;;Medication Forms;351
+;Orodispersible tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;447079001;;SAME-AS;;;;;;Medication Forms;352

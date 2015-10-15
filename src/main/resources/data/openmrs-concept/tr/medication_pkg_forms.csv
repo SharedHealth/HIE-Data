@@ -1,0 +1,59 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Drop - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;404218003;;SAME-AS;;;;;;Medication Package Forms;1
+;Ampule - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;413516001;;SAME-AS;;;;;;Medication Package Forms;2
+;Application - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;413568008;;SAME-AS;;;;;;Medication Package Forms;3
+;Case - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;413769002;;SAME-AS;;;;;;Medication Package Forms;4
+;Puffs;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;415215001;;SAME-AS;;;;;;Medication Package Forms;5
+;Scoops;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;415505006;;SAME-AS;;;;;;Medication Package Forms;6
+;Tbsp;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;415702006;;SAME-AS;;;;;;Medication Package Forms;7
+;Teaspoonful - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;415703001;;SAME-AS;;;;;;Medication Package Forms;8
+;Vial - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;415818006;;SAME-AS;;;;;;Medication Package Forms;9
+;Box - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;418445004;;SAME-AS;;;;;;Medication Package Forms;10
+;Tube - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;418530008;;SAME-AS;;;;;;Medication Package Forms;11
+;Base - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;418836005;;SAME-AS;;;;;;Medication Package Forms;12
+;Kit - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;419179001;;SAME-AS;;;;;;Medication Package Forms;13
+;Bottle - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;419672006;;SAME-AS;;;;;;Medication Package Forms;14
+;Spray - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;419694003;;SAME-AS;;;;;;Medication Package Forms;15
+;Patch - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;419702001;;SAME-AS;;;;;;Medication Package Forms;16
+;Packet - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;419888008;;SAME-AS;;;;;;Medication Package Forms;17
+;Swab - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;420401004;;SAME-AS;;;;;;Medication Package Forms;18
+;Glassful - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421496007;;SAME-AS;;;;;;Medication Package Forms;19
+;Pad - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421823004;;SAME-AS;;;;;;Medication Package Forms;20
+;Dropperful - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;421954001;;SAME-AS;;;;;;Medication Package Forms;21
+;Inhalation - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;422237004;;SAME-AS;;;;;;Medication Package Forms;22
+;Blister - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;425565005;;SAME-AS;;;;;;Medication Package Forms;23
+;Sachet - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426148002;;SAME-AS;;;;;;Medication Package Forms;24
+;Dual dose sachet - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426198001;;SAME-AS;;;;;;Medication Package Forms;25
+;Disc - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;427678004;;SAME-AS;;;;;;Medication Package Forms;26
+;Bar - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;428003006;;SAME-AS;;;;;;Medication Package Forms;27
+;Implant - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;428177008;;SAME-AS;;;;;;Medication Package Forms;28
+;Cup - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;428178003;;SAME-AS;;;;;;Medication Package Forms;29
+;Insert - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;428639001;;SAME-AS;;;;;;Medication Package Forms;30
+;Pellet - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;428640004;;SAME-AS;;;;;;Medication Package Forms;31
+;Capsule - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;428641000;;SAME-AS;;;;;;Medication Package Forms;32
+;Bag - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;428672001;;SAME-AS;;;;;;Medication Package Forms;33
+;Tablet - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;428673006;;SAME-AS;;;;;;Medication Package Forms;34
+;Can - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;429308001;;SAME-AS;;;;;;Medication Package Forms;35
+;Lozenge - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;429587008;;SAME-AS;;;;;;Medication Package Forms;36
+;Sponge - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;429671000;;SAME-AS;;;;;;Medication Package Forms;37
+;Gum - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;430281005;;SAME-AS;;;;;;Medication Package Forms;38
+;Suppository - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;430293001;;SAME-AS;;;;;;Medication Package Forms;39
+;Vaginal suppository - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700472005;;SAME-AS;;;;;;Medication Package Forms;40
+;Pastille - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700473000;;SAME-AS;;;;;;Medication Package Forms;41
+;Prefilled syringe - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700474006;;SAME-AS;;;;;;Medication Package Forms;42
+;Enema - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700476008;;SAME-AS;;;;;;Medication Package Forms;43
+;Tampon - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700477004;;SAME-AS;;;;;;Medication Package Forms;44
+;Dressing - unit of product ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700478009;;SAME-AS;;;;;;Medication Package Forms;45
+;Sublingual tablet - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700479001;;SAME-AS;;;;;;Medication Package Forms;46
+;Rectal capsule - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700480003;;SAME-AS;;;;;;Medication Package Forms;47
+;Rectal tablet - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700481004;;SAME-AS;;;;;;Medication Package Forms;48
+;Vaginal tablet - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700482006;;SAME-AS;;;;;;Medication Package Forms;49
+;Vaginal capsule - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;700483001;;SAME-AS;;;;;;Medication Package Forms;50
+;Applicator - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;1641000175108;;SAME-AS;;;;;;Medication Package Forms;51
+;Applicatorful - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;1651000175105;;SAME-AS;;;;;;Medication Package Forms;52
+;Squirt - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;1661000175107;;SAME-AS;;;;;;Medication Package Forms;53
+;Strip - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;1671000175104;;SAME-AS;;;;;;Medication Package Forms;54
+;Package - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;1681000175101;;SAME-AS;;;;;;Medication Package Forms;55
+;Stick - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;1691000175103;;SAME-AS;;;;;;Medication Package Forms;56
+;Wafer - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;1701000175103;;SAME-AS;;;;;;Medication Package Forms;57
+;Pump - unit of product  ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;2741000175105;;SAME-AS;;;;;;Medication Package Forms;58
