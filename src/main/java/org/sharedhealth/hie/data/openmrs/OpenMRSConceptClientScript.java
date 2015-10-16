@@ -41,11 +41,10 @@ public class OpenMRSConceptClientScript {
         if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("TR_ALL")) {
             System.out.println("Trying to generate all TR concepts");
             generateForAllConfigured(outputDir, "data/openmrs-concept/tr/tr_all_files.txt");
-        } if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("BAHMNI_ALL")) {
+        } else if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("BAHMNI_ALL")) {
             System.out.println("Trying to generate all Bahmni concepts");
             generateForAllConfigured(outputDir, "data/openmrs-concept/bahmni/bahmni_all_files.txt");
-        }
-        else {
+        } else {
             generateSQL(inputDirPath, outputDir, false, 1);
         }
     }

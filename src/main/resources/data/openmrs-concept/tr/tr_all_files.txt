@@ -1,2 +1,12 @@
 data/openmrs-concept/tr/medication_forms.csv
 data/openmrs-concept/tr/medication_pkg_forms.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_A_B.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_C_D.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_E_F.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_G_I.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_J_L.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_M_N.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_O_Q.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_R_S.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_T_and_V_not_U.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_W_Y.csv
