@@ -4,6 +4,8 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.sharedhealth.hie.data.SHRUtils;
 
@@ -36,10 +38,41 @@ public class OpenMRSConceptClientScript {
         outputDir.mkdirs();
         FileUtils.cleanDirectory(outputDir);
 
+        if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("TR_ALL")) {
+            System.out.println("Trying to generate all TR concepts");
+            generateForAllConfigured(outputDir, "data/openmrs-concept/tr/tr_all_files.txt");
+        } if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("BAHMNI_ALL")) {
+            System.out.println("Trying to generate all Bahmni concepts");
+            generateForAllConfigured(outputDir, "data/openmrs-concept/bahmni/bahmni_all_files.txt");
+        }
+        else {
+            generateSQL(inputDirPath, outputDir, false, 1);
+        }
+    }
+
+    private void generateForAllConfigured(File outputDir, String config) throws Exception {
+        List<String> lines = IOUtils.readLines(ClassLoader.getSystemResourceAsStream(config));
+        int i = 1;
+        for (String line : lines) {
+            if (StringUtils.isBlank(line)) {
+                continue;
+            }
+            if (!line.startsWith("#")) {
+                System.out.println("Processing entry: " + line);
+                generateSQL(line, outputDir, true, i);
+                i++;
+            }
+        }
+    }
+
+    private void generateSQL(String inputDirPath, File outputDir, boolean retainFileName, int prefix) throws Exception {
         System.out.println(String.format("Generating OpenMRS concept scripts. Output directory: %s/%s", outputDir.getPath(), OPENMRS_CONCEPT_SCRIPTS));
         System.out.println("Picking OpenMRS Concept data from:" + inputDirPath);
-
-        File output = new File(outputDir, OPENMRS_CONCEPT_SCRIPTS);
+        String outFileName = OPENMRS_CONCEPT_SCRIPTS;
+        if (retainFileName) {
+            outFileName = String.format("%03d_%s.sql", prefix, FilenameUtils.getBaseName(inputDirPath).replace(" " , "_"));
+        }
+        File output = new File(outputDir, outFileName);
         URL inputFileUrl = new SHRUtils().getResource(inputDirPath);
         CSVParser parser = CSVParser.parse(inputFileUrl, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());
         List<CSVRecord> csvRecords = parser.getRecords();
