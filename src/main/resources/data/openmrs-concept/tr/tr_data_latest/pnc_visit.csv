@@ -1,0 +1,7 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;PNC visit number;;;;Question;Coded;PNC Visit Number;;SNOMED-CT-BD;169762003;Postnatal visit number;SAME-AS;;;;;;;
+;Is PNC Within 48 Hours After Birth;;;;Question;Boolean;Is PNC Within 48 Hours After Birth;;;;;;;;;;;;
+;Perineum status;;;;Question;Coded;Perineum status;;SNOMED-CT-BD;289849003;Perineum status;SAME-AS;;;;;;;
+;Counselling offered;;;;Question;Coded;Counselling offered;;SNOMED-CT-BD;170977008;Counselling offered;SAME-AS;;;;;;;
+;Family Planning Counselling;;;;Misc;N/A;Family Planning Counselling;;SNOMED-CT-BD;410290005;Family Planning Counselling;SAME-AS;;;;;;Counselling offered;1
+;Counselling about breastfeeding;;;;Misc;N/A;Counselling about breastfeeding;;SNOMED-CT-BD;243094003;Counselling about breastfeeding;SAME-AS;;;;;;Counselling offered;2

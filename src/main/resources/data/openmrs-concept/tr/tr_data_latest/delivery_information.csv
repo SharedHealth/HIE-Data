@@ -1,0 +1,36 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Place of delivery;;;;Question;Coded;Place of delivery;;;;;;;;;;;;
+;Community clinic;;;;Misc;N/A;Community clinic;;;;;;;;;;;Place of delivery;1
+;District hospital;;;;Misc;N/A;District hospital;;;;;;;;;;;Place of delivery;2
+;Medical college hospital;;;;Misc;N/A;Medical college hospital;;;;;;;;;;;Place of delivery;3
+;Own facility;;;;Misc;N/A;Own facility;;;;;;;;;;;Place of delivery;4
+;Upazila hospital;;;;Misc;N/A;Upazila hospital;;;;;;;;;;;Place of delivery;5
+;Home;;;;Misc;N/A;Home;;;;;;;;;;;Place of delivery;6
+;Health Center;;;;Misc;N/A;Health Center;;;;;;;;;;;;
+;Private hospital / NGO clinic;;;;Misc;N/A;Private hospital / NGO clinic;;;;;;;;;;;Place of delivery;7
+;UH & FWC / USC;;;;Misc;N/A;UH & FWC / USC;;;;;;;;;;;Place of delivery;8
+;Delivered by;;;;Question;Coded;Delivered by;;;;;;;;;;;;
+;Type of delivery;;;;Question;Coded;Type of Delivery;;;;;;;;;;;;
+;Vaginal face delivery;;;;Misc;N/A;Vaginal face delivery;;;;;;;;;;;Type of delivery;1
+;Forcep;;;;Misc;N/A;Forcep;;SNOMED-CT-BD;302383004;Forcep;SAME-AS;;;;;;Type of delivery;4
+;Destructive operation;;;;Misc;N/A;Destructive operation;;;;;;;;;;;Type of delivery;7
+;Medication received during delivery;;;;Question;Coded;Medication received;;;;;;;;;;;;
+;Oxytocin;;;;Misc;N/A;Oxytocin;;;;;;;;;;;Medication received;1
+;Misoprostol;;;;Misc;N/A;Misoprostol;;;;;;;;;;;Medication received;2
+;Delivery outcome;;;;Question;Coded;Delivery outcome;;SNOMED-CT-BD;364738009;Delivery outcome;SAME-AS;;;;;;;
+;Single - stillborn;;;;Misc;N/A;Single - stillborn;;SNOMED-CT-BD;169827000;Single - stillborn;SAME-AS;;;;;;Delivery outcome;1
+;Single - liveborn;;;;Misc;N/A;Single - liveborn;;SNOMED-CT-BD;169826009;Single - liveborn;SAME-AS;;;;;;Delivery outcome;2
+;Twins - one liveborn/one stillborn;;;;Misc;N/A;Twins - one liveborn/one stillborn;;SNOMED-CT-BD;169829002;Twins - one liveborn/one stillborn;SAME-AS;;;;;;Delivery outcome;3
+;Twins - both liveborn;;;;Misc;N/A;Twins - both liveborn;;SNOMED-CT-BD;169828005;Twins - both liveborn;SAME-AS;;;;;;Delivery outcome;4
+;Twins - both stillborn;;;;Misc;N/A;Twins - both still born;;SNOMED-CT-BD;169830007;Twins - both stillborn;SAME-AS;;;;;;Delivery outcome;5
+;Triplets - All liveborn;;;;Misc;N/A;Triplets - All liveborn;;SNOMED-CT-BD;169831006;Triplets - All liveborn;SAME-AS;;;;;;Delivery outcome;6
+;Triplets - All stillborn;;;;Misc;N/A;Triplets - All stillborn;;SNOMED-CT-BD;169834003;Triplets - All stillborn;SAME-AS;;;;;;Delivery outcome;7
+;Triplets - one liveborn/two stillborn;;;;Misc;N/A;Triplets - one liveborn/two stillborn;;SNOMED-CT-BD;169833009;Triplets - one liveborn/two stillborn;SAME-AS;;;;;;Delivery outcome;8
+;Triplets - two liveborn/one stillborn;;;;Misc;N/A;Triplets - two liveborn/one stillborn;;SNOMED-CT-BD;169832004;Triplets - two liveborn/one stillborn;SAME-AS;;;;;;Delivery outcome;9
+;Retained placenta;;;;Diagnosis;N/A;Retained placenta;;ICD10-BD;O73.0;Retained placenta;SAME-AS;;;;;;;
+;Qualitative birth outcome;;;;Question;Coded;Qualitative birth outcome;;SNOMED-CT-BD;302080006;Qualitative birth outcome;SAME-AS;;;;;;Qualitative birth outcome;1
+;Macerated stillbirth;;;;Misc;N/A;Macerated stillbirth;;SNOMED-CT-BD;237366000;Macerated stillbirth;SAME-AS;;;;;;Qualitative birth outcome;2
+;Fresh stillbirth;;;;Misc;N/A;Fresh stillbirth;;SNOMED-CT-BD;237365001;Fresh stillbirth;SAME-AS;;;;;;;
+;APGAR score at 1 minute;;;;Question;Numeric;APGAR score at 1 minute;;SNOMED-CT-BD;169895004;APGAR score at 1 minute;SAME-AS;;;;;;;
+;APGAR score at 5 minutes;;;;Question;Numeric;APGAR score at 5 minutes;;SNOMED-CT-BD;169909004;APGAR score at 5 minutes;SAME-AS;;;;;;;
+;APGAR score at 10 minutes;;;;Question;Numeric;APGAR score at 10 minutes;;SNOMED-CT-BD;169922007;APGAR score at 10 minutes;SAME-AS;;;;;;;

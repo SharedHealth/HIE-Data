@@ -1,0 +1,12 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight;
+;Birth weight, qualitative;;;;Question;Coded;Birth weight, qualitative;;SNOMED-CT-BD;364589006;Birth weight, qualitative;SAME-AS;;;;;;;;
+;Birthweight, quantitative;;;;Finding;Numeric;;;SNOMED-CT-BD;364589006;Birthweight, quantitative;SAME-AS;;;;;;;;
+;Normal;;;;Finding;N/A;Normal;;SNOMED-CT-BD;17621005;Normal;SAME-AS;;;;;;Birth weight, qualitative;1;1
+;Low;;;;Finding;N/A;Low;;SNOMED-CT-BD;62482003;Low;SAME-AS;;;;;;Birth weight, qualitative;2;2
+;Newborn care received;;;;Question;Coded;Newborn care received;;;;;;;;;;;;;
+;Immediate thermal care;;;;Misc;N/A;Immediate thermal care;;;;;;;;;;;Newborn care received;1;1
+;Breastfeed within an hour of birth;;;;Misc;N/A;Breastfeed within an hour of birth;;;431868002;Early initiation of breastfeeding;SAME-AS;;;;;;Newborn care received;2;2
+;Delayed bathing (after 72 hours);;;;Misc;N/A;Delayed bathing (after 72 hours);;;;;;;;;;;Newborn care received;3;3
+;Child Gender;;;;Question;Coded;Child Gender;;SNOMED-CT-BD;302081005;Child gender;SAME-AS;;;;;;;;
+;Baby male;;;;Misc;N/A;Baby male;;SNOMED-CT-BD;248153007;Baby male;SAME-AS;;;;;;Child Gender;1;
+;Baby female;;;;Misc;N/A;Baby female;;SNOMED-CT-BD;169839008;Baby female;SAME-AS;;;;;;Child Gender;2;
