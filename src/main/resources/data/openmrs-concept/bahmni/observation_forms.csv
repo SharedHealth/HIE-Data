@@ -22,11 +22,12 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Procedure Diagnostic Result;;;;Misc;Text;Result;FALSE;;;;;;;;Procedure Diagnostic Study;2;;
 ;Procedure Diagnosis;;;;Misc;Coded;Diagnosis;FALSE;;;;;;;;Procedure Diagnostic Study;3;;
 ;Immunization Incident Template;;;;ConvSet;N/A;Immunization Incident;TRUE;;;;;;;;All Observation Templates;6;;
-;Immunization Incident Vaccine;;;;Misc;Coded;Vaccine;FALSE;;;;;;;;Immunization Incident Template;1;;
-;Immunization Incident Vaccination Date;;;;Misc;Date;Vaccination Date;FALSE;;;;;;;;Immunization Incident Template;2;;
-;Immunization Incident Vaccination Dosage;;;;Misc;Numeric;Dosage;FALSE;;;;;;;;Immunization Incident Template;3;;
-;Immunization Incident Vaccination Reported;;;;Misc;Boolean;Vaccination Reported;FALSE;;;;;;;;Immunization Incident Template;5;;
-;Immunization Incident Vaccination Refused;;;;Misc;Boolean;Vaccination Refused;FALSE;;;;;;;;Immunization Incident Template;7;;
+;Immunization Incident Group;;;;ConvSet;N/A;Immunization;TRUE;;;;;;;;Immunization Incident Template;1;;
+;Immunization Incident Vaccine;;;;Misc;Coded;Vaccine;FALSE;;;;;;;;Immunization Incident Group;1;;
+;Immunization Incident Vaccination Date;;;;Misc;Date;Vaccination Date;FALSE;;;;;;;;Immunization Incident Group;2;;
+;Immunization Incident Vaccination Dosage;;;;Misc;Numeric;Dosage;FALSE;;;;;;;;Immunization Incident Group;3;;
+;Immunization Incident Vaccination Reported;;;;Misc;Boolean;Vaccination Reported;FALSE;;;;;;;;Immunization Incident Group;5;;
+;Immunization Incident Vaccination Refused;;;;Misc;Boolean;Vaccination Refused;FALSE;;;;;;;;Immunization Incident Group;7;;
 ;Discharge Summary;;;;ConvSet;N/A;Discharge Summary;TRUE;;;;;;;;All Observation Templates;4;;
 ;Hospital course;;;;Misc;Text;Hospital course;FALSE;;;;;;;;Discharge Summary;1;;
 ;History and examination notes;;;;Misc;Text;History and examination notes;FALSE;;;;;;;;Discharge Summary;2;;
