@@ -14,9 +14,9 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Vaginal face delivery;;;;Misc;N/A;Vaginal face delivery;;;;;;;;;;;Type of delivery;1
 ;Forcep;;;;Misc;N/A;Forcep;;SNOMED-CT-BD;302383004;Forcep;SAME-AS;;;;;;Type of delivery;2
 ;Destructive operation;;;;Misc;N/A;Destructive operation;;;;;;;;;;;Type of delivery;3
-;Medication received during delivery;;;;Question;Coded;Medication received;;;;;;;;;;;;
-;Oxytocin;;;;Misc;N/A;Oxytocin;;;;;;;;;;;Medication received;1
-;Misoprostol;;;;Misc;N/A;Misoprostol;;;;;;;;;;;Medication received;2
+;Medication received during delivery;;;;Question;Coded;Medication received during delivery;;;;;;;;;;;;
+;Oxytocin;;;;Misc;N/A;Oxytocin;;;;;;;;;;;Medication received during delivery;1
+;Misoprostol;;;;Misc;N/A;Misoprostol;;;;;;;;;;;Medication received during delivery;2
 ;Delivery outcome;;;;Question;Coded;Delivery outcome;;SNOMED-CT-BD;364738009;Delivery outcome;SAME-AS;;;;;;;
 ;Single - stillborn;;;;Misc;N/A;Single - stillborn;;SNOMED-CT-BD;169827000;Single - stillborn;SAME-AS;;;;;;Delivery outcome;1
 ;Single - liveborn;;;;Misc;N/A;Single - liveborn;;SNOMED-CT-BD;169826009;Single - liveborn;SAME-AS;;;;;;Delivery outcome;2
