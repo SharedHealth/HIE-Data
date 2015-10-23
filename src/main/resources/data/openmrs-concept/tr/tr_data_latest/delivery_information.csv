@@ -27,7 +27,6 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Triplets - All stillborn;;;;Misc;N/A;Triplets - All stillborn;;SNOMED-CT-BD;169834003;Triplets - All stillborn;SAME-AS;;;;;;Delivery outcome;7
 ;Triplets - one liveborn/two stillborn;;;;Misc;N/A;Triplets - one liveborn/two stillborn;;SNOMED-CT-BD;169833009;Triplets - one liveborn/two stillborn;SAME-AS;;;;;;Delivery outcome;8
 ;Triplets - two liveborn/one stillborn;;;;Misc;N/A;Triplets - two liveborn/one stillborn;;SNOMED-CT-BD;169832004;Triplets - two liveborn/one stillborn;SAME-AS;;;;;;Delivery outcome;9
-;Retained placenta;;;;Diagnosis;N/A;Retained placenta;;ICD10-BD;O73.0;Retained placenta;SAME-AS;;;;;;;
 ;Qualitative birth outcome;;;;Question;Coded;Qualitative birth outcome;;SNOMED-CT-BD;302080006;Qualitative birth outcome;SAME-AS;;;;;;Qualitative birth outcome;1
 ;Macerated stillbirth;;;;Misc;N/A;Macerated stillbirth;;SNOMED-CT-BD;237366000;Macerated stillbirth;SAME-AS;;;;;;Qualitative birth outcome;2
 ;Fresh stillbirth;;;;Misc;N/A;Fresh stillbirth;;SNOMED-CT-BD;237365001;Fresh stillbirth;SAME-AS;;;;;;;
