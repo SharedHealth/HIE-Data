@@ -4,7 +4,7 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;General Treatment;;;;Misc;N/A;General Treatment;FALSE;;;;;;;;;;Treatment Given;1
 ;Antibiotics given;;;;Misc;N/A;Antibiotics given;FALSE;;;;;;;;;;Treatment Given;3
 ;Advice given;;;;Misc;N/A;Advice given;FALSE;;;;;;;;;;Treatment Given;2
-;Is The Child ( 6-23 Months) Provided (4 Or 4+ Food Group);;;;Question;Boolean;Is The Child ( 6-23 Months) Provided (4 Or 4+ Food Group);FALSE;;;;;;;;Child Health;;;
+;Has the child been ( 6-23 Months) provided (4 Or 4+ Food Group);;;;Question;Boolean;Has the child been ( 6-23 Months) Provided (4 Or 4+ Food Group);FALSE;;;;;;;;Child Health;;;
 ;Is The Child (Under 6 Months) On Exclusive Breast Feeding?;;;;Question;Boolean;Is The Child (Under 6 Months) On Exclusive Breast Feeding?;FALSE;;;;;;;;Child Health;;;
 ;Pneumonia Information;;;;ConvSet;N/A;Pneumonia Information;TRUE;;;;;;;;Child Health;;;
 ;Diarrhea Information;;;;ConvSet;N/A;Diarrhea Information;TRUE;;;;;;;;Child Health;;;
