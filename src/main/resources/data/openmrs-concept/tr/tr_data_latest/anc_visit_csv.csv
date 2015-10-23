@@ -1,9 +1,9 @@
 uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
 ;ANC visit number;;;;Question;Coded;ANC Visit Number;;SNOMED-CT-BD;298057009;Antenatal Visit Number;SAME-AS;;;;;;;
-;First;;;;Misc;N/A;First;;;;;;;;;;;ANC number;1
-;Second;;;;Misc;N/A;Second;;;;;;;;;;;ANC number;2
-;Third;;;;Misc;N/A;Third;;;;;;;;;;;ANC number;3
-;Four or more;;;;Misc;N/A;Four or more;;;;;;;;;;;ANC number;4
+;First;;;;Misc;N/A;First;;;;;;;;;;;ANC visit number;1
+;Second;;;;Misc;N/A;Second;;;;;;;;;;;ANC visit number;2
+;Third;;;;Misc;N/A;Third;;;;;;;;;;;ANC visit number;3
+;Four or more;;;;Misc;N/A;Four or more;;;;;;;;;;;ANC visit number;4
 ;Anemia level;;;;Question;Coded;Anemia level;;;;;;;;;;;;
 ;One Plus;;;;Misc;N/A;One Plus;;SNOMED-CT-BD;260408008;One Plus;SAME-AS;;;;;;Anemia level;1
 ;Two Plus;;;;Misc;N/A;Two Plus;;SNOMED-CT-BD;441517005;Two Plus;SAME-AS;;;;;;Anemia level;2
