@@ -1,5 +1,5 @@
 uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight;
-;Birth weight, qualitative;;;;Question;Coded;Birth weight, qualitative;;SNOMED-CT-BD;364589006;Birth weight, qualitative;SAME-AS;;;;;;;;
+;Birth weight, qualitative;;;;Finding;Coded;Birth weight, qualitative;;SNOMED-CT-BD;364589006;Birth weight, qualitative;SAME-AS;;;;;;;;
 ;Birthweight, quantitative;;;;Finding;Numeric;;;SNOMED-CT-BD;364589006;Birthweight, quantitative;SAME-AS;;;;;;;;
 ;Normal;;;;Finding;N/A;Normal;;SNOMED-CT-BD;17621005;Normal;SAME-AS;;;;;;Birth weight, qualitative;1;1
 ;Low;;;;Finding;N/A;Low;;SNOMED-CT-BD;62482003;Low;SAME-AS;;;;;;Birth weight, qualitative;2;2
