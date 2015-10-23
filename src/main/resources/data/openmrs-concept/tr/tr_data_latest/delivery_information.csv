@@ -29,7 +29,7 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Triplets - two liveborn/one stillborn;;;;Finding;N/A;Triplets - two liveborn/one stillborn;;SNOMED-CT-BD;169832004;Triplets - two liveborn/one stillborn;SAME-AS;;;;;;Delivery outcome;9
 ;Qualitative birth outcome;;;;Finding;Coded;Qualitative birth outcome;;SNOMED-CT-BD;302080006;Qualitative birth outcome;SAME-AS;;;;;;;
 ;Macerated stillbirth;;;;Finding;N/A;Macerated stillbirth;;SNOMED-CT-BD;237366000;Macerated stillbirth;SAME-AS;;;;;;Qualitative birth outcome;1
-;Fresh stillbirth;;;;Misc;Finding;Fresh stillbirth;;SNOMED-CT-BD;237365001;Fresh stillbirth;SAME-AS;;;;;;Qualitative birth outcome;2
+;Fresh stillbirth;;;;Finding;N/A;Fresh stillbirth;;SNOMED-CT-BD;237365001;Fresh stillbirth;SAME-AS;;;;;;Qualitative birth outcome;2
 ;APGAR score at 1 minute;;;;Finding;Numeric;APGAR score at 1 minute;;SNOMED-CT-BD;169895004;APGAR score at 1 minute;SAME-AS;;;;;;;
 ;APGAR score at 5 minutes;;;;Finding;Numeric;APGAR score at 5 minutes;;SNOMED-CT-BD;169909004;APGAR score at 5 minutes;SAME-AS;;;;;;;
 ;APGAR score at 10 minutes;;;;Finding;Numeric;APGAR score at 10 minutes;;SNOMED-CT-BD;169922007;APGAR score at 10 minutes;SAME-AS;;;;;;;
