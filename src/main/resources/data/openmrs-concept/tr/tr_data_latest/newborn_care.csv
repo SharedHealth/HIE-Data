@@ -5,7 +5,7 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Low;;;;Finding;N/A;Low;;SNOMED-CT-BD;62482003;Low;SAME-AS;;;;;;Birth weight, qualitative;2;
 ;Newborn care received;;;;Question;Coded;Newborn care received;;;;;;;;;;;;;
 ;Immediate thermal care;;;;Misc;N/A;Immediate thermal care;;;;;;;;;;;Newborn care received;1;
-;Breastfeed within an hour of birth;;;;Misc;N/A;Breastfeed within an hour of birth;;;431868002;Early initiation of breastfeeding;SAME-AS;;;;;;Newborn care received;2;
+;Breastfeed within an hour of birth;;;;Misc;N/A;Breastfeed within an hour of birth;;SNOMED-CT-BD;431868002;Early initiation of breastfeeding;SAME-AS;;;;;;Newborn care received;2;
 ;Delayed bathing (after 72 hours);;;;Misc;N/A;Delayed bathing (after 72 hours);;;;;;;;;;;Newborn care received;3;
 ;Child Gender;;;;Finding;Coded;Child Gender;;SNOMED-CT-BD;302081005;Child gender;SAME-AS;;;;;;;;
 ;Baby male;;;;Finding;N/A;Baby male;;SNOMED-CT-BD;248153007;Baby male;SAME-AS;;;;;;Child Gender;1;
