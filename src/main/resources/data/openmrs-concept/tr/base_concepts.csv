@@ -1,0 +1,5 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Positive;;;;Misc;N/A;Positive;;SNOMED-CT-BD;10828004;Positive;;;;;;;;
+;Negative;;;;Misc;N/A;Negative;;SNOMED-CT-BD;260385009;Negative;;;;;;;;
+;Reactive;;;;Misc;N/A;Reactive;;SNOMED-CT-BD;11214006;Reactive;;;;;;;;
+;Non-Reactive;;;;Misc;N/A;Non-Reactive;;SNOMED-CT-BD;131194007;Non-Reactive;;;;;;;;
