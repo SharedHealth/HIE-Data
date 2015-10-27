@@ -40,4 +40,5 @@ dependencies {
     compile 'com.datastax.cassandra:cassandra-driver-dse:2.0.4'
 
     testCompile 'junit:junit:4.11'
+    testCompile "mysql:mysql-connector-java:5.1.33"
 }

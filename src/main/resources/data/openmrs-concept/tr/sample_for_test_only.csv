@@ -1,0 +1,13 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Positive;;;;Misc;N/A;Positive;;;;;;;;;;;;
+;Test Group Set;;;;ConvSet;N/A;TGS;TRUE;;;;;;;;;;;
+;Positive;;;;Misc;N/A;Positive;;;;;;;;;Test Group Set;1;;
+;Negative;;;;Misc;N/A;Negative;;;;;;;;;Test Group Set;2;;
+;VDRL;;;;Test;Coded;Reagin Antibody in Serum by VDRL;;LOINC-BD;5292-8;;SAME-AS;;;;;;;
+;Positive;;;;Misc;N/A;Positive;;;;;;;;;;;VDRL;1
+;Negative;;;;Misc;N/A;Negative;;;;;;;;;;;VDRL;2
+;Reactive;;;;Misc;N/A;Reactive;;;;;;;;;;;VDRL;3
+;Non-reactive;;;;Misc;N/A;Non-reactive;;;;;;;;;;;VDRL;4
+;Sputum AFB Staining;;;;Test;Coded;Sputum for AFB;;LOINC-BD;11477-7;;SAME-AS;;;;;;;
+;Positive;;;;Misc;N/A;Positive;;;;;;;;;;;Sputum AFB Staining;1
+;Negative;;;;Misc;N/A;Negative;;;;;;;;;;;Sputum AFB Staining;2

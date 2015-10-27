@@ -11,3 +11,6 @@ data/openmrs-concept/tr/diagnosis/Diagnosis_O_Q.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_R_S.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_T_and_V_not_U.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_W_Y.csv
+data/openmrs-concept/tr/Lab_tests.csv
+data/openmrs-concept/tr/Panel_tests.csv
+

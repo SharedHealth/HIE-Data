@@ -284,6 +284,9 @@ public class OpenMRSConceptClientScript {
         String referenceTermCode = replaceSpecialCharsWithEscapeSequences(csvRecord.get("reference-term-code"));
         String referenceTermName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("reference-term-name"));
         String referenceTermRelationship = StringUtils.trim(csvRecord.get("reference-term-relationship"));
+        if (StringUtils.isBlank(referenceTermRelationship)) {
+            referenceTermRelationship = "SAME-AS";
+        }
         String conceptName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("name"));
         if (StringUtils.isBlank(referenceTermName)) {
             referenceTermName = conceptName;
