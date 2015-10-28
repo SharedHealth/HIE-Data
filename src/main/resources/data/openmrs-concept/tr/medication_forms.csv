@@ -40,13 +40,13 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Prolonged-release granules ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385046004;;SAME-AS;;;;;;Medication Forms;39
 ;Modified-release granules ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385047008;;SAME-AS;;;;;;Medication Forms;40
 ;Cachet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385048003;;SAME-AS;;;;;;Medication Forms;41
-;Capsule dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385049006;;SAME-AS;;;;;;Medication Forms;42
+;Capsule dose form ;;;;Misc;N/A;Capsule;FALSE;SNOMED-CT-BD;385049006;;SAME-AS;;;;;;Medication Forms;42
 ;Hard capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385050006;;SAME-AS;;;;;;Medication Forms;43
 ;Soft capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385051005;;SAME-AS;;;;;;Medication Forms;44
 ;Gastro-resistant capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385052003;;SAME-AS;;;;;;Medication Forms;45
 ;Prolonged-release capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385053008;;SAME-AS;;;;;;Medication Forms;46
 ;Modified-release capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385054002;;SAME-AS;;;;;;Medication Forms;47
-;Tablet dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385055001;;SAME-AS;;;;;;Medication Forms;48
+;Tablet dose form ;;;;Misc;N/A;Tablet;FALSE;SNOMED-CT-BD;385055001;;SAME-AS;;;;;;Medication Forms;48
 ;Film-coated tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385057009;;SAME-AS;;;;;;Medication Forms;49
 ;Effervescent tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385058004;;SAME-AS;;;;;;Medication Forms;50
 ;Gastro-resistant tablet ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;385059007;;SAME-AS;;;;;;Medication Forms;51
@@ -341,7 +341,7 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Cutaneous ointment ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;425753008;;SAME-AS;;;;;;Medication Forms;340
 ;Rectal spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;425965000;;SAME-AS;;;;;;Medication Forms;341
 ;Gum ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426210003;;SAME-AS;;;;;;Medication Forms;342
-;Drops dose form ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426684005;;SAME-AS;;;;;;Medication Forms;343
+;Drops dose form ;;;;Misc;N/A;Drop;FALSE;SNOMED-CT-BD;426684005;;SAME-AS;;;;;;Medication Forms;343
 ;Vaginal spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426823003;;SAME-AS;;;;;;Medication Forms;344
 ;Metered spray ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;426969004;;SAME-AS;;;;;;Medication Forms;345
 ;Coated capsule ;;;;Misc;N/A;;FALSE;SNOMED-CT-BD;427129005;;SAME-AS;;;;;;Medication Forms;346

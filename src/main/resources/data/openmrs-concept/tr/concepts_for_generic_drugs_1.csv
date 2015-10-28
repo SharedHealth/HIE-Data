@@ -1,0 +1,27 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Combinations and complexes of aluminium, calcium and magnesium compounds;;;;Drug;N/A;Combinations and complexes of aluminium, calcium and magnesium compounds;;WHO ATC-BD;A02AD;Combinations and complexes of aluminium, calcium and magnesium compounds;SAME-AS;;;;;;;
+;Vitamin B-complex, plain;;;;Drug;N/A;Vitamin B-complex, plain;;WHO ATC-BD;A11EA;Vitamin B-complex, plain;SAME-AS;;;;;;;
+;Butylscopolamine;;;;Drug;N/A;Butylscopolamine;;WHO ATC-BD;A03BB01;Butylscopolamine;SAME-AS;;;;;;;
+;Ranitidine;;;;Drug;N/A;Ranitidine;;WHO ATC-BD;A02BA02;Ranitidine;SAME-AS;;;;;;;
+;Ciprofloxacin;;;;Drug;N/A;Ciprofloxacin;;WHO ATC-BD;J01MA02;Ciprofloxacin;SAME-AS;;;;;;;
+;Diclofenac;;;;Drug;N/A;Diclofenac;;WHO ATC-BD;M01AB05;Diclofenac;SAME-AS;;;;;;;
+;Chlorphenamine ;;;;Drug;N/A;Chlorphenamine ;;WHO ATC-BD;R06AB04 ;Chlorphenamine ;SAME-AS;;;;;;;
+;Zinc sulfate;;;;Drug;N/A;Zinc sulfate;;WHO ATC-BD;A12CB01;Zinc sulfate;SAME-AS;;;;;;;
+;Calcium lactate;;;;Drug;N/A;Calcium lactate;;WHO ATC-BD;A12AA05;Calcium lactate;SAME-AS;;;;;;;
+;Diazepam;;;;Drug;N/A;Diazepam;;WHO ATC-BD;N05BA01;Diazepam;SAME-AS;;;;;;;
+;Salbutamol;;;;Drug;N/A;Salbutamol;;WHO ATC-BD;R03AC02;Salbutamol;SAME-AS;;;;;;;
+;Atenolol;;;;Drug;N/A;Atenolol;;WHO ATC-BD;C07AB03;Atenolol;SAME-AS;;;;;;;
+;Ketorolac;;;;Drug;N/A;Ketorolac;;WHO ATC-BD;M01AB15;Ketorolac;SAME-AS;;;;;;;
+;Azithromycin;;;;Drug;N/A;Azithromycin;;WHO ATC-BD;J01FA10;Azithromycin;SAME-AS;;;;;;;
+;Pantoprazole;;;;Drug;N/A;Pantoprazole;;WHO ATC-BD;A02BC02;Pantoprazole;SAME-AS;;;;;;;
+;Misoprostol;;;;Drug;N/A;Misoprostol;;WHO ATC-BD;G02AD06;Misoprostol;SAME-AS;;;;;;;
+;Metronidazole;;;;Drug;N/A;Metronidazole;;WHO ATC-BD;J01XD01;Metronidazole;SAME-AS;;;;;;;
+;Amoxicillin;;;;Drug;N/A;Amoxicillin;;WHO ATC-BD;J01CA04 ;Amoxicillin;SAME-AS;;;;;;;
+;Flucloxacillin;;;;Drug;N/A;Flucloxacillin;;WHO ATC-BD;J01CF05;Flucloxacillin;SAME-AS;;;;;;;
+;Cefixime;;;;Drug;N/A;Cefixime;;WHO ATC-BD;J01DD08;Cefixime;SAME-AS;;;;;;;
+;Cefradine;;;;Drug;N/A;Cefradine;;WHO ATC-BD;J01DB09;Cefradine;SAME-AS;;;;;;;
+;Fluconazole;;;;Drug;N/A;Fluconazole;;WHO ATC-BD;J02AC01;Fluconazole;SAME-AS;;;;;;;
+;Paracetamol;;;;Drug;N/A;Paracetamol;;WHO ATC-BD;N02BE01;Paracetamol;SAME-AS;;;;;;;
+;Calcium carbonate;;;;Drug;N/A;Calcium carbonate;;WHO ATC-BD;A12AA04;Calcium carbonate;SAME-AS;;;;;;;
+;Atropin;;;;Drug;N/A;Atropine;;WHO ATC-BD;A03BA01;Atropin;SAME-AS;;;;;;;
+;Paracetamol, combinations excl. psycholeptics;;;;Drug;N/A;Paracetamol, combinations excl. psycholeptics;;WHO ATC-BD;N02BE51;Paracetamol, combinations excl. psycholeptics;SAME-AS;;;;;;;

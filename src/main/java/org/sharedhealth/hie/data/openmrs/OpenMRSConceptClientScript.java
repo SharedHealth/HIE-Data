@@ -65,12 +65,13 @@ public class OpenMRSConceptClientScript {
     }
 
     private void generateSQL(String inputDirPath, File outputDir, boolean retainFileName, int prefix) throws Exception {
-        System.out.println(String.format("Generating OpenMRS concept scripts. Output directory: %s/%s", outputDir.getPath(), OPENMRS_CONCEPT_SCRIPTS));
         System.out.println("Picking OpenMRS Concept data from:" + inputDirPath);
         String outFileName = OPENMRS_CONCEPT_SCRIPTS;
         if (retainFileName) {
             outFileName = String.format("%03d_%s.sql", prefix, FilenameUtils.getBaseName(inputDirPath).replace(" " , "_"));
         }
+        System.out.println(String.format("Generating OpenMRS concept scripts. Output directory: %s/%s", outputDir.getPath(), outFileName));
+
         File output = new File(outputDir, outFileName);
         URL inputFileUrl = new SHRUtils().getResource(inputDirPath);
         CSVParser parser = CSVParser.parse(inputFileUrl, Charset.forName("UTF-8"), CSVFormat.newFormat(';').withHeader());

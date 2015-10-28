@@ -3,6 +3,7 @@ package org.sharedhealth.hie.data;
 import org.sharedhealth.hie.data.bahmni.BDSHRClientScript;
 import org.sharedhealth.hie.data.mci.MciScript;
 import org.sharedhealth.hie.data.openmrs.OpenMRSConceptClientScript;
+import org.sharedhealth.hie.data.openmrs.OpenMRSDrugScript;
 
 public class Main {
 
@@ -43,12 +44,28 @@ public class Main {
         if ("openmrs-concept".equals(proj)) {
             generateOpenmrsConceptScripts(args);
         }
+
+        if ("drugs".equals(proj)) {
+            generateDrugScripts(args);
+        }
+    }
+
+    private static void generateDrugScripts(String[] args) throws Exception {
+        if (args.length < 4) {
+            System.out.println("Please use the below format");
+            System.out.println("java -jar drugs <<input-dir-path>> <<output-dir-path>> <<is TR server: true|false>>");
+            throw new RuntimeException("Missing argument(s).");
+        }
+        String inputDir = args[1];
+        String outputDir = args[2];
+        boolean isTr = new Boolean(args[3]);
+        new OpenMRSDrugScript(isTr).generate(inputDir, outputDir);
     }
 
     private static void generateOpenmrsConceptScripts(String[] args) throws Exception {
         if (args.length < 4) {
             System.out.println("Please use the below format");
-            System.out.println("java -jar <<openmrs-concept>> <<input-dir-path>> <<output-dir-path>> <<is TR server: true|false>>");
+            System.out.println("java -jar openmrs-concept <<input-dir-path>> <<output-dir-path>> <<is TR server: true|false>>");
             throw new RuntimeException("Missing argument(s).");
         }
         String inputDir = args[1];
