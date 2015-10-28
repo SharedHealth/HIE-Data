@@ -29,3 +29,9 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Others;;;;Misc;N/A;Others;;;;;;;;;;;Service provided by;10
 ;Date of last menstrual period;;;;Question;Date;Date of last menstrual period;;SNOMED-CT-BD;21840007;Date of last menstrual period;SAME-AS;;;;;;;
 ;Estimated date of delivery;;;;Question;Date;Estimated date of delivery;;SNOMED-CT-BD;366322004;Estimated date of delivery;SAME-AS;;;;;;;
+;Gestational weeks;;;;Finding;Numeric;Gestational weeks;;SNOMED-CT-BD;366323009;Finding of length of gestation;SAME-AS;;;;;;;
+;Fundal height;;;;Finding;Numeric;Fundal height;;SNOMED-CT-BD;289625003;Finding of fundal height of uterus;SAME-AS;;;;;;;
+;Fetal movements present;;;;Finding;N/A;Fetal movements present;;SNOMED-CT-BD;289431008;Fetal movements present;SAME-AS;;;;;;;
+;Fetal movements not observed;;;;Finding;N/A;Fetal movements not observed;;SNOMED-CT-BD;289433006;Fetal movements not observed;SAME-AS;;;;;;;
+;Fetal heart sounds present;;;;Finding;N/A;Fetal heart sounds present;;SNOMED-CT-BD;249045009;Fetal heart sounds present;SAME-AS;;;;;;;
+;Fetal heart sounds absent;;;;Finding;N/A;Fetal heart sounds absent;;SNOMED-CT-BD;289446001;Fetal heart sounds absent;SAME-AS;;;;;;;
