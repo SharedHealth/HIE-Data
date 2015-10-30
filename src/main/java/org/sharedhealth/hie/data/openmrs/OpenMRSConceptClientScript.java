@@ -40,18 +40,18 @@ public class OpenMRSConceptClientScript {
 
         if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("TR_ALL")) {
             System.out.println("Trying to generate all TR concepts");
-            generateForAllConfigured(outputDir, "data/openmrs-concept/tr/tr_all_files.txt");
+            generateForAllConfigured(outputDir, "data/openmrs-concept/tr/tr_all_files.txt", "data/openmrs-concept/tr/tr_all_drugs.txt");
         } else if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("BAHMNI_ALL")) {
             System.out.println("Trying to generate all Bahmni concepts");
-            generateForAllConfigured(outputDir, "data/openmrs-concept/bahmni/bahmni_all_files.txt");
+            generateForAllConfigured(outputDir, "data/openmrs-concept/bahmni/bahmni_all_files.txt", null);
         } else {
             generateSQL(inputDirPath, outputDir, false, 1);
         }
     }
 
-    private void generateForAllConfigured(File outputDir, String config) throws Exception {
-        List<String> lines = IOUtils.readLines(ClassLoader.getSystemResourceAsStream(config));
+    private void generateForAllConfigured(File outputDir, String config, String drug_config_path) throws Exception {
         int i = 1;
+        List<String> lines = IOUtils.readLines(ClassLoader.getSystemResourceAsStream(config));
         for (String line : lines) {
             if (StringUtils.isBlank(line)) {
                 continue;
@@ -59,6 +59,19 @@ public class OpenMRSConceptClientScript {
             if (!line.startsWith("#")) {
                 System.out.println("Processing entry: " + line);
                 generateSQL(line, outputDir, true, i);
+                i++;
+            }
+        }
+        if (null == drug_config_path) return;
+        List<String> drugFileNames = IOUtils.readLines(ClassLoader.getSystemResourceAsStream(drug_config_path));
+        OpenMRSDrugScript openMRSDrugScript = new OpenMRSDrugScript(isTr);
+        for (String drugFileName : drugFileNames) {
+            if (StringUtils.isBlank(drugFileName)) {
+                continue;
+            }
+            if (!drugFileName.startsWith("#")) {
+                System.out.println("Processing entry: " + drugFileName);
+                openMRSDrugScript.generate(drugFileName, outputDir, true, i);
                 i++;
             }
         }

@@ -4,6 +4,7 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.sharedhealth.hie.data.SHRUtils;
 
@@ -27,9 +28,19 @@ public class OpenMRSDrugScript {
         File outputDir = new File(outputDirPath);
         outputDir.mkdirs();
         FileUtils.cleanDirectory(outputDir);
+        generate(inputSrc, new File(outputDirPath), false, 0);
+    }
 
+    public void generate(String inputSrc, File outputDir, boolean retainFileName, int prefix) throws Exception {
+        generateDrugSql(inputSrc, outputDir, retainFileName, prefix);
+    }
+
+    private void generateDrugSql(String inputSrc, File outputDir, boolean retainFileName, int prefix) throws Exception {
         System.out.println("Picking Drugs data from:" + inputSrc);
         String outFileName = OPENMRS_DRUGS_SCRIPT;
+        if (retainFileName) {
+            outFileName = String.format("%03d_%s.sql", prefix, FilenameUtils.getBaseName(inputSrc).replace(" " , "_"));
+        }
         System.out.println(String.format("Generating OpenMRS drugs scripts. Output directory: %s/%s", outputDir.getPath(), outFileName));
 
         File output = new File(outputDir, outFileName);
@@ -58,7 +69,7 @@ public class OpenMRSDrugScript {
             writeLineToFile(output,
                     String.format("INSERT INTO drug (concept_id, name, combination, creator, date_created, retired, uuid, strength) " +
                                     " select %s, '%s', 0, 1, now(), 0, uuid(), '%s' from dual where 0 = %s;",
-                                    "@concept_id", brandName, strength, "@drug_name_count"));
+                            "@concept_id", brandName, strength, "@drug_name_count"));
             writeLineToFile(output, String.format("UPDATE drug set dosage_form = %s where name = '%s' and 0 != @dosage_form; ", "@dosage_form", brandName));
             writeLineToFile(output, String.format("SELECT uuid into @drug_uuid from drug where name = '%s';", brandName));
             if (isTr) {
@@ -68,7 +79,6 @@ public class OpenMRSDrugScript {
             writeLineToFile(output, "COMMIT;");
             writeLineToFile(output, "\n");
         }
-
     }
 
     private void writeDrugNameCheck(File output, String brandName, String varName) throws IOException {
@@ -80,6 +90,5 @@ public class OpenMRSDrugScript {
         writeLineToFile(output, String.format("SELECT concept_id into %s from " +
                 "concept_name where name = '%s' and concept_name_type = 'FULLY_SPECIFIED';", varName, conceptName));
     }
-
 
 }
