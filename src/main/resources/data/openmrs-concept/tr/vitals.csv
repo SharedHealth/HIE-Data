@@ -8,4 +8,3 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Weight;;;;Finding;Numeric;Weight;FALSE;SNOMED-CT-BD;27113001;Weight;SAME-AS;;;;;;;
 ;MUAC;;;;Finding;Numeric;MUAC;FALSE;SNOMED-CT-BD;284473002;Mid Upper Arm Circumference;SAME-AS;;;;;;;
 ;BMI;;;;Finding;Numeric;BMI;FALSE;SNOMED-CT-BD;60621009;Body Mass Index;SAME-AS;;;;;;;
-
