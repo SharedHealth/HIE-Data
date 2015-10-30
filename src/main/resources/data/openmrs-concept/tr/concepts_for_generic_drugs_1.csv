@@ -23,5 +23,5 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Fluconazole;;;;Drug;N/A;Fluconazole;;WHO ATC-BD;J02AC01;Fluconazole;SAME-AS;;;;;;;
 ;Paracetamol;;;;Drug;N/A;Paracetamol;;WHO ATC-BD;N02BE01;Paracetamol;SAME-AS;;;;;;;
 ;Calcium carbonate;;;;Drug;N/A;Calcium carbonate;;WHO ATC-BD;A12AA04;Calcium carbonate;SAME-AS;;;;;;;
-;Atropin;;;;Drug;N/A;Atropine;;WHO ATC-BD;A03BA01;Atropin;SAME-AS;;;;;;;
+;Atropine;;;;Drug;N/A;Atropine;;WHO ATC-BD;A03BA01;Atropin;SAME-AS;;;;;;;
 ;Paracetamol, combinations excl. psycholeptics;;;;Drug;N/A;Paracetamol, combinations excl. psycholeptics;;WHO ATC-BD;N02BE51;Paracetamol, combinations excl. psycholeptics;SAME-AS;;;;;;;
