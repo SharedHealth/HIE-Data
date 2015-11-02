@@ -1,6 +1,7 @@
 data/openmrs-concept/tr/base_concepts.csv
 data/openmrs-concept/tr/medication_forms.csv
 data/openmrs-concept/tr/medication_pkg_forms.csv
+data/openmrs-concept/tr/death_note.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_A_B.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_C_D.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_E_F.csv
