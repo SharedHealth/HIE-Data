@@ -6,6 +6,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.sharedhealth.hie.data.Main;
 import org.sharedhealth.hie.data.SHRUtils;
 
 import java.io.File;
@@ -14,10 +15,10 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.List;
 
+import static org.sharedhealth.hie.data.Main.OPENMRS_CONCEPT_SCRIPTS;
 import static org.sharedhealth.hie.data.SHRUtils.writeLineToFile;
 
 public class OpenMRSDrugScript {
-    public static final String OPENMRS_DRUGS_SCRIPT = "openmrs_drugs.sql";
     private boolean isTr;
 
     public OpenMRSDrugScript(boolean isTr) {
@@ -37,7 +38,7 @@ public class OpenMRSDrugScript {
 
     private void generateDrugSql(String inputSrc, File outputDir, boolean retainFileName, int prefix) throws Exception {
         System.out.println("Picking Drugs data from:" + inputSrc);
-        String outFileName = OPENMRS_DRUGS_SCRIPT;
+        String outFileName = OPENMRS_CONCEPT_SCRIPTS;
         if (retainFileName) {
             outFileName = String.format("%03d_%s.sql", prefix, FilenameUtils.getBaseName(inputSrc).replace(" " , "_"));
         }
