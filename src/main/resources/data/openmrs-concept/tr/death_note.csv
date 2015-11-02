@@ -1,0 +1,7 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Death Note;;;;ConvSet;N/A;death note;TRUE;SNOMED-CT-BD;419620001;Death Event;SAME-AS;;;;;;;
+;Date of death;;;;Question;Datetime;date of death;;;;;;;;;Death Note;1;;
+;Cause of Death;;;;Finding;Coded;cause of death;;;;;;;;;Death Note;2;;
+;Circumstances of Death;;;;Question;Coded;Death Circumstances;;;;;;;;;Death Note;3;;
+;Place of Death;;;;Question;Coded;Place of Death;;;;;;;;;Death Note;4;;
+;Additional details of death;;;;Misc;Text;Additional details of death;;;;;;;;;Death Note;5;;
