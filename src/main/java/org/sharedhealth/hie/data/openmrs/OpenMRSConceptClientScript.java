@@ -3,9 +3,7 @@ package org.sharedhealth.hie.data.openmrs;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
-import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.sharedhealth.hie.data.SHRUtils;
 
@@ -33,55 +31,15 @@ public class OpenMRSConceptClientScript {
         this.isTr = isTr;
     }
 
-    public void generate(String inputDirPath, String outputDirPath) throws Exception {
-        File outputDir = new File(outputDirPath);
-        outputDir.mkdirs();
-        FileUtils.cleanDirectory(outputDir);
-
-        if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("TR_ALL")) {
-            System.out.println("Trying to generate all TR concepts");
-            generateForAllConfigured(outputDir, "data/openmrs-concept/tr/tr_all_files.txt", "data/openmrs-concept/tr/tr_all_drugs.txt");
-        } else if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("BAHMNI_ALL")) {
-            System.out.println("Trying to generate all Bahmni concepts");
-            generateForAllConfigured(outputDir, "data/openmrs-concept/bahmni/bahmni_all_files.txt", null);
-        } else {
-            generateSQL(inputDirPath, outputDir, false, 1);
-        }
-    }
-
-    private void generateForAllConfigured(File outputDir, String config, String drug_config_path) throws Exception {
-        int i = 1;
-        List<String> lines = IOUtils.readLines(ClassLoader.getSystemResourceAsStream(config));
-        for (String line : lines) {
-            if (StringUtils.isBlank(line)) {
-                continue;
-            }
-            if (!line.startsWith("#")) {
-                System.out.println("Processing entry: " + line);
-                generateSQL(line, outputDir, true, i);
-                i++;
-            }
-        }
-        if (null == drug_config_path) return;
-        List<String> drugFileNames = IOUtils.readLines(ClassLoader.getSystemResourceAsStream(drug_config_path));
-        OpenMRSDrugScript openMRSDrugScript = new OpenMRSDrugScript(isTr);
-        for (String drugFileName : drugFileNames) {
-            if (StringUtils.isBlank(drugFileName)) {
-                continue;
-            }
-            if (!drugFileName.startsWith("#")) {
-                System.out.println("Processing entry: " + drugFileName);
-                openMRSDrugScript.generate(drugFileName, outputDir, true, i);
-                i++;
-            }
-        }
+    public void generate(String inputDirPath, File outputDir, boolean retainFileName, int prefix) throws Exception {
+        generateSQL(inputDirPath, outputDir, retainFileName, prefix);
     }
 
     private void generateSQL(String inputDirPath, File outputDir, boolean retainFileName, int prefix) throws Exception {
         System.out.println("Picking OpenMRS Concept data from:" + inputDirPath);
         String outFileName = OPENMRS_CONCEPT_SCRIPTS;
         if (retainFileName) {
-            outFileName = String.format("%03d_%s.sql", prefix, FilenameUtils.getBaseName(inputDirPath).replace(" " , "_"));
+            outFileName = String.format("%03d_%s.sql", prefix, FilenameUtils.getBaseName(inputDirPath).replace(" ", "_"));
         }
         System.out.println(String.format("Generating OpenMRS concept scripts. Output directory: %s/%s", outputDir.getPath(), outFileName));
 

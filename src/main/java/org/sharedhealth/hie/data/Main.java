@@ -2,7 +2,7 @@ package org.sharedhealth.hie.data;
 
 import org.sharedhealth.hie.data.bahmni.BDSHRClientScript;
 import org.sharedhealth.hie.data.mci.MciScript;
-import org.sharedhealth.hie.data.openmrs.OpenMRSConceptClientScript;
+import org.sharedhealth.hie.data.openmrs.OMRSClientScript;
 import org.sharedhealth.hie.data.openmrs.OpenMRSDrugScript;
 
 public class Main {
@@ -71,7 +71,7 @@ public class Main {
         String inputDir = args[1];
         String outputDir = args[2];
         boolean isTr = new Boolean(args[3]);
-        new OpenMRSConceptClientScript(isTr).generate(inputDir, outputDir);
+        new OMRSClientScript(isTr).generate(inputDir, outputDir);
     }
 
     private static void generateShrClientHrmScripts(String[] args, String proj) throws Exception {
