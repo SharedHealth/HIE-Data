@@ -8,5 +8,5 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Breastfeed within an hour of birth;;;;Misc;N/A;Breastfeed within an hour of birth;;SNOMED-CT-BD;431868002;Early initiation of breastfeeding;SAME-AS;;;;;;Newborn care received;2;
 ;Delayed bathing (after 72 hours);;;;Misc;N/A;Delayed bathing (after 72 hours);;;;;;;;;;;Newborn care received;3;
 ;Child Gender;;;;Finding;Coded;Child Gender;;SNOMED-CT-BD;302081005;Child gender;SAME-AS;;;;;;;;
-;Baby male;;;;Finding;N/A;Baby male;;SNOMED-CT-BD;248153007;Baby male;SAME-AS;;;;;;Child Gender;1;
+;Baby male;;;;Finding;N/A;Baby male;;SNOMED-CT-BD;169838000;Baby male;SAME-AS;;;;;;Child Gender;1;
 ;Baby female;;;;Finding;N/A;Baby female;;SNOMED-CT-BD;169839008;Baby female;SAME-AS;;;;;;Child Gender;2;
