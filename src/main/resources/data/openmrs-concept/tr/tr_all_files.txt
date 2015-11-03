@@ -1,4 +1,5 @@
 data/openmrs-concept/tr/base_concepts.csv
+data/openmrs-concept/tr/immunization_reasons.csv
 data/openmrs-concept/tr/medication_forms.csv
 data/openmrs-concept/tr/medication_pkg_forms.csv
 data/openmrs-concept/tr/death_note.csv

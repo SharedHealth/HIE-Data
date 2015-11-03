@@ -1,0 +1,9 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;No Immunization Reason;;;;Valueset;Coded;No Immunization Reason;;;;;;;;;;;;
+;immunity;;;;Misc;N/A;IMMUNE;;;;;;;;;;;No Immunization Reason;
+;medical precaution;;;;Misc;N/A;MEDPREC;;;;;;;;;;;No Immunization Reason;
+;product out of stock;;;;Misc;N/A;OSTOCK;;;;;;;;;;;No Immunization Reason;
+;patient objection;;;;Misc;N/A;PATOBJ;;;;;;;;;;;No Immunization Reason;
+;Immunization Reason;;;;Valueset;Coded;Immunization Reason;;;;;;;;;;;;
+;Travel vaccinations;;;;Misc;N/A;Travel vaccinations;;SNOMED-CT-BD;281657000;Travel vaccinations;SAME-AS;;;;;;Immunization Reason;
+;Occupational requirement;;;;Misc;N/A;Occupational requirement;;SNOMED-CT-BD;429060002;Occupational requirement;SAME-AS;;;;;;Immunization Reason;
