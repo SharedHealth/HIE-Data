@@ -58,8 +58,8 @@ public class Main {
         }
         String inputDir = args[1];
         String outputDir = args[2];
-        boolean isTr = new Boolean(args[3]);
-        new OpenMRSDrugScript(isTr).generate(inputDir, outputDir);
+        boolean shouldRaiseEvents = new Boolean(args[3]);
+        new OpenMRSDrugScript(shouldRaiseEvents).generate(inputDir, outputDir);
     }
 
     private static void generateOpenmrsConceptScripts(String[] args) throws Exception {
@@ -70,8 +70,12 @@ public class Main {
         }
         String inputDir = args[1];
         String outputDir = args[2];
-        boolean isTr = new Boolean(args[3]);
-        new OMRSClientScript(isTr).generate(inputDir, outputDir);
+        boolean shouldRaiseEvents = new Boolean(args[3]);
+        boolean isBahmni = false;
+        if (args.length > 4) {
+            isBahmni = new Boolean(args[4]);
+        }
+        new OMRSClientScript(shouldRaiseEvents,isBahmni).generate(inputDir, outputDir);
     }
 
     private static void generateShrClientHrmScripts(String[] args, String proj) throws Exception {

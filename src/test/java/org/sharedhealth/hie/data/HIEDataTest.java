@@ -144,12 +144,12 @@ public class HIEDataTest {
         for (int i = 0; i < words.length; i++) {
             if (i == 0) {
                 String conceptName = words[0].trim();
-                String conceptLine = String.format(";%s;;;;%s;N/A;%s;TRUE;;;;;;;;%s;;", conceptName + " " + className, className, conceptName, memberOf);
+                String conceptLine = String.format(";%s;;;;%s;N/A;%s;TRUE;;;;;;;;%s;;;", conceptName + " " + className, className, conceptName, memberOf);
                 conceptLines.add(conceptLine);
             } else {
                 String conceptSetName = words[0].trim();
                 String conceptName = words[i].trim();
-                String conceptLine = String.format(";%s;;;;LabTest;N/A;%s;FALSE;;;;;;;;%s;;", conceptName, conceptName, conceptSetName+ " " + className);
+                String conceptLine = String.format(";%s;;;;LabTest;N/A;%s;FALSE;;;;;;;;%s;;;", conceptName, conceptName, conceptSetName+ " " + className);
                 conceptLines.add(conceptLine);
             }
         }

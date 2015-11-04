@@ -6,7 +6,6 @@ import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.sharedhealth.hie.data.Main;
 import org.sharedhealth.hie.data.SHRUtils;
 
 import java.io.File;
@@ -19,10 +18,10 @@ import static org.sharedhealth.hie.data.Main.OPENMRS_CONCEPT_SCRIPTS;
 import static org.sharedhealth.hie.data.SHRUtils.writeLineToFile;
 
 public class OpenMRSDrugScript {
-    private boolean isTr;
+    private boolean shouldRaiseEvent;
 
-    public OpenMRSDrugScript(boolean isTr) {
-        this.isTr = isTr;
+    public OpenMRSDrugScript(boolean shouldRaiseEvent) {
+        this.shouldRaiseEvent = shouldRaiseEvent;
     }
 
     public void generate(String inputSrc, String outputDirPath) throws Exception {
@@ -73,7 +72,7 @@ public class OpenMRSDrugScript {
                             "@concept_id", brandName, strength, "@drug_name_count"));
             writeLineToFile(output, String.format("UPDATE drug set dosage_form = %s where name = '%s' and 0 != @dosage_form; ", "@dosage_form", brandName));
             writeLineToFile(output, String.format("SELECT uuid into @drug_uuid from drug where name = '%s';", brandName));
-            if (isTr) {
+            if (shouldRaiseEvent) {
                 writeLineToFile(output, String.format("SELECT concat('%s', @drug_uuid) INTO @drug_uri;", "/openmrs/ws/rest/v1/tr/drugs/"));
                 writeLineToFile(output, String.format("INSERT INTO event_records(uuid, title, category, uri, object) values (uuid(), '%s', '%s', @drug_uri, @drug_uri); ", "Medication", "Medication"));
             }
