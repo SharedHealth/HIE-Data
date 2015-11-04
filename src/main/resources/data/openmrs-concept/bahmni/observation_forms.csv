@@ -28,6 +28,7 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Immunization Incident Vaccination Dosage;;;;Misc;Numeric;Dosage;FALSE;;;;;;;;Immunization Incident Group;3;;
 ;Immunization Incident Vaccination Reported;;;;Misc;Boolean;Vaccination Reported;FALSE;;;;;;;;Immunization Incident Group;5;;
 ;Immunization Incident Vaccination Refused;;;;Misc;Boolean;Vaccination Refused;FALSE;;;;;;;;Immunization Incident Group;7;;
+;Immunization Note;;;;Misc;Text;Note;FALSE;;;;;;;;Immunization Incident Group;8;;
 ;Discharge Summary;;;;ConvSet;N/A;Discharge Summary;TRUE;;;;;;;;All Observation Templates;4;;
 ;Hospital course;;;;Misc;Text;Hospital course;FALSE;;;;;;;;Discharge Summary;1;;
 ;History and examination notes;;;;Misc;Text;History and examination notes;FALSE;;;;;;;;Discharge Summary;2;;
