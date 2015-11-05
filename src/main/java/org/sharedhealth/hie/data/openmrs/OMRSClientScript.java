@@ -23,7 +23,7 @@ public class OMRSClientScript {
 
         if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("TR_ALL")) {
             System.out.println("Trying to generate all TR concepts");
-            generateForAllConfigured(outputDir, "data/openmrs-concept/tr/tr_all_files.txt", "data/openmrs-concept/tr/tr_all_drugs.txt");
+            generateForAllConfigured(outputDir, "data/openmrs-concept/tr/tr_all_concepts.txt", "data/openmrs-concept/tr/tr_all_drugs.txt");
         } else if (!StringUtils.isBlank(inputDirPath) && inputDirPath.equals("BAHMNI_ALL")) {
             System.out.println("Trying to generate all Bahmni concepts");
             generateForAllConfigured(outputDir, "data/openmrs-concept/bahmni/bahmni_all_files.txt", null);
