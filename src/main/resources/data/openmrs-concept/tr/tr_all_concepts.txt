@@ -17,4 +17,5 @@ data/openmrs-concept/tr/diagnosis/Diagnosis_Z.csv
 data/openmrs-concept/tr/Lab_tests.csv
 data/openmrs-concept/tr/Panel_tests.csv
 data/openmrs-concept/tr/concepts_for_generic_drugs_1.csv
-
+data/openmrs-concept/tr/vaccines.csv
+data/openmrs-concept/tr/vaccine_brands.csv
