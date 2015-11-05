@@ -18,3 +18,4 @@ data/openmrs-concept/tr/Lab_tests.csv
 data/openmrs-concept/tr/Panel_tests.csv
 data/openmrs-concept/tr/concepts_for_generic_drugs_1.csv
 data/openmrs-concept/tr/vaccines.csv
+data/openmrs-concept/tr/chief_complaints.csv
