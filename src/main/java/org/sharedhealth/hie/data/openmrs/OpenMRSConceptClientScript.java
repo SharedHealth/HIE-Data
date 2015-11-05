@@ -27,6 +27,8 @@ public class OpenMRSConceptClientScript {
     private final static String CONCEPT_NAME_TYPE_SHORT = "SHORT";
     private final static String LOCALE_ENGLISH = "en";
     private final static String LOCALE_BANGLA = "bn";
+    public static final String PANEL_URI_PREFIX = "/openmrs/ws/rest/v1/reference-data/panel/";
+    public static final String TEST_URI_PREFIX = "/openmrs/ws/rest/v1/reference-data/test/";
     private boolean shouldRaiseEvent;
     private boolean isBahmni;
 
@@ -246,41 +248,57 @@ public class OpenMRSConceptClientScript {
             if (raiseEventAnyway) {
                 shouldInsertVar = "0";
             }
-            decideURIPrefix(output);
-            decideTitle(output, conceptClassName);
-            decideCategory(output, conceptClassName);
 
-            writeLineToFile(output, String.format("SELECT uuid INTO @db_uuid FROM concept WHERE concept_id = %s;", conceptIdVariableName));
-            if(!isBahmni){
+            if (!isBahmni) {
+                writeLineToFile(output, String.format("SELECT uuid INTO @db_uuid FROM concept WHERE concept_id = %s;", conceptIdVariableName));
                 writeLineToFile(output, String.format("SELECT concat('%s', @db_uuid) INTO @uri;", TR_CONCEPT_URI_PREFIX));
                 writeLineToFile(output, String.format("INSERT INTO event_records(uuid, title, category, uri, object) " +
                         "SELECT uuid(), 'concept', 'concept', @uri, @uri FROM dual WHERE 0 = %s;", shouldInsertVar));
+                writeLineToFile(output, String.format("INSERT INTO event_records(uuid, title, category, uri, object) " +
+                        "SELECT uuid(), %s, %s, @uri, @uri FROM dual WHERE 0 = %s;", conceptClassName, conceptClassName, shouldInsertVar));
+            } else {
+                writeLineToFile(output, String.format("SELECT uuid INTO @db_uuid FROM concept WHERE concept_id = %s;", conceptIdVariableName));
+                decideURIPrefix(output);
+                decideTitle(output, conceptClassName);
+                decideCategory(output, conceptClassName);
+                writeLineToFile(output, String.format("SELECT concat(@uri_prefix, @db_uuid) INTO @uri;"));
+                writeLineToFile(output, String.format("INSERT INTO event_records(uuid, title, category, uri, object) " +
+                        "SELECT uuid(), @title, @category, @uri, @uri FROM dual WHERE 0 = %s;", shouldInsertVar));
             }
-            writeLineToFile(output, String.format("SELECT concat(@uri_prefix, @db_uuid) INTO @uri;"));
-            writeLineToFile(output, String.format("INSERT INTO event_records(uuid, title, category, uri, object) " +
-                    "SELECT uuid(), @title, @category, @uri, @uri FROM dual WHERE 0 = %s;", shouldInsertVar));
         }
     }
 
     private void decideCategory(File output, String conceptClassName) throws IOException {
-        writeLineToFile(output, String.format("SELECT CASE @concept_class_name" +
-                " WHEN 'Department' then 'lab'" +
-                " WHEN 'Sample' then 'lab'" +
-                " ELSE %s END INTO @category from Dual;", conceptClassName));
+        writeLineToFile(output,
+                String.format("SELECT CASE @concept_class_name" +
+                    " WHEN 'Department' then 'lab'" +
+                    " WHEN 'Sample' then 'lab'" +
+                    " WHEN 'LabSet' then 'lab'" +
+                    " WHEN 'LabTest' then 'lab'" +
+                    " ELSE %s END INTO @category from Dual;",
+                conceptClassName));
     }
 
     private void decideURIPrefix(File output) throws IOException {
-        writeLineToFile(output, String.format("SELECT CASE @concept_class_name" +
-                " WHEN 'Department' then '%s'" +
-                " WHEN 'Sample' then '%s'" +
-                " ELSE '%s' END INTO @uri_prefix  from Dual;", DEPARTMENT_URI_PREFIX, SAMPLE_URI_PREFIX, TR_CONCEPT_URI_PREFIX));
+        writeLineToFile(output,
+                String.format("SELECT CASE @concept_class_name" +
+                    " WHEN 'Department' then '%s'" +
+                    " WHEN 'Sample' then '%s'" +
+                    " WHEN 'LabSet' then '%s'" +
+                    " WHEN 'LabTest' then '%s'" +
+                    " ELSE '%s' END INTO @uri_prefix  from Dual;",
+                DEPARTMENT_URI_PREFIX, SAMPLE_URI_PREFIX, PANEL_URI_PREFIX, TEST_URI_PREFIX, TR_CONCEPT_URI_PREFIX));
     }
 
     private void decideTitle(File output, String conceptClassName) throws IOException {
-        writeLineToFile(output, String.format("SELECT CASE @concept_class_name" +
-                " WHEN 'Department' then '%s'" +
-                " WHEN 'Sample' then '%s'" +
-                " ELSE %s END INTO @title  from Dual;", "department", "sample", conceptClassName));
+        writeLineToFile(output,
+             String.format("SELECT CASE @concept_class_name" +
+                    " WHEN 'Department' then '%s'" +
+                    " WHEN 'Sample' then '%s'" +
+                    " WHEN 'LabSet' then '%s'" +
+                    " WHEN 'LabTest' then '%s'" +
+                    " ELSE %s END INTO @title  from Dual;",
+             "department", "sample", "panel", "test", conceptClassName));
     }
 
     private void createReferenceTermMap(File output, CSVRecord csvRecord) throws IOException {
