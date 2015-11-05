@@ -1,0 +1,7 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Diphtheria-hemophilus influenzae B-pertussis-poliomyelitis-tetanus-hepatitis B;;;;Drug;N/A;Diphtheria-hemophilus influenzae B-pertussis-poliomyelitis-tetanus-hepatitis B;FALSE;WHO-ATC-BD;J07CA09;Diphtheria-hemophilus influenzae B-pertussis-poliomyelitis-tetanus-hepatitis B;SAME-AS;;;;;;;
+;Poliomyelitis oral, trivalent, live attenuated;;;;Drug;N/A;Poliomyelitis oral, trivalent, live attenuated;FALSE;WHO-ATC-BD;J07BF02;Poliomyelitis oral, trivalent, live attenuated;SAME-AS;;;;;;;
+;Tuberculosis, live attenuated;;;;Drug;N/A;Tuberculosis, live attenuated;FALSE;WHO-ATC-BD;J07AN01;Tuberculosis, live attenuated;SAME-AS;;;;;;;
+;Pneumococcus, purified polysaccharides antigen conjugated;;;;Drug;N/A;Pneumococcus, purified polysaccharides antigen conjugated;FALSE;WHO-ATC-BD;J07AL02;Pneumococcus, purified polysaccharides antigen conjugated;SAME-AS;;;;;;;
+;Measles, combinations with rubella, live attenuated;;;;Drug;N/A;Measles, combinations with rubella, live attenuated;FALSE;WHO-ATC-BD;J07BD53;Measles, combinations with rubella, live attenuated;SAME-AS;;;;;;;
+;Tetanus toxoid;;;;Drug;N/A;Tetanus toxoid;FALSE;WHO-ATC-BD;J07AM01;Tetanus toxoid;SAME-AS;;;;;;;
