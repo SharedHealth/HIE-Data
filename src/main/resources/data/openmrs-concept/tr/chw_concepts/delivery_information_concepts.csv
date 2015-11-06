@@ -15,8 +15,6 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Forcep;;;;Misc;N/A;Forcep;;SNOMED-CT-BD;302383004;Forcep;SAME-AS;;;;;;Type of delivery;2
 ;Destructive operation;;;;Misc;N/A;Destructive operation;;;;;;;;;;;Type of delivery;3
 ;Medication received during delivery;;;;Question;Coded;Medication received during delivery;;;;;;;;;;;;
-;Oxytocin;;;;Misc;N/A;Oxytocin;;;;;;;;;;;Medication received during delivery;1
-;Misoprostol;;;;Misc;N/A;Misoprostol;;;;;;;;;;;Medication received during delivery;2
 ;Delivery outcome;;;;Finding;Coded;Delivery outcome;;SNOMED-CT-BD;364738009;Delivery outcome;SAME-AS;;;;;;;
 ;Qualitative birth outcome;;;;Finding;Coded;Qualitative birth outcome;;SNOMED-CT-BD;302080006;Qualitative birth outcome;SAME-AS;;;;;;;
 ;Macerated stillbirth;;;;Finding;N/A;Macerated stillbirth;;SNOMED-CT-BD;237366000;Macerated stillbirth;SAME-AS;;;;;;Qualitative birth outcome;1
