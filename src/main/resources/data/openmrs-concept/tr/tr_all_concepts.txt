@@ -17,8 +17,8 @@
 # data/openmrs-concept/tr/Lab_tests.csv
 # data/openmrs-concept/tr/Panel_tests.csv
 # data/openmrs-concept/tr/concepts_for_generic_drugs_1.csv
-data/openmrs-concept/tr/vaccines.csv
-data/openmrs-concept/tr/chief_complaints.csv
+# data/openmrs-concept/tr/vaccines.csv
+# data/openmrs-concept/tr/chief_complaints.csv
 data/openmrs-concept/tr/chw_concepts/anc_visit.csv
 data/openmrs-concept/tr/chw_concepts/pnc_visit_concepts.csv
 data/openmrs-concept/tr/chw_concepts/delivery_information_concepts.csv
