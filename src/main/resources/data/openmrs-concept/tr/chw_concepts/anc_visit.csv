@@ -5,10 +5,10 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Third;;;;Misc;N/A;Third;;;;;;;;;;;ANC visit number;3
 ;Four or more;;;;Misc;N/A;Four or more;;;;;;;;;;;ANC visit number;4
 ;Anemia level;;;;Question;Coded;Anemia level;;;;;;;;;;;;
-;One Plus;;;;Misc;N/A;One Plus;;SNOMED-CT-BD;260408008;One Plus;SAME-AS;;;;;;Anemia level;1
-;Two Plus;;;;Misc;N/A;Two Plus;;SNOMED-CT-BD;441517005;Two Plus;SAME-AS;;;;;;Anemia level;2
-;Three Plus;;;;Misc;N/A;Three Plus;;SNOMED-CT-BD;441521003;Three Plus;SAME-AS;;;;;;Anemia level;3
-;Four Plus;;;;Misc;N/A;Four Plus;;;;;;;;;;;Anemia level;4
+;One Plus;;;;Misc;N/A;One Plus;;SNOMED-CT-BD;260347006;One Plus;SAME-AS;;;;;;Anemia level;1
+;Two Plus;;;;Misc;N/A;Two Plus;;SNOMED-CT-BD;260348001;Two Plus;SAME-AS;;;;;;Anemia level;2
+;Three Plus;;;;Misc;N/A;Three Plus;;SNOMED-CT-BD;260349009;Three Plus;SAME-AS;;;;;;Anemia level;3
+;Four Plus;;;;Misc;N/A;Four Plus;;SNOMED-CT-BD;260350009;Four Plus;SAME-AS;;;;;;Anemia level;4
 ;Danger sign;;;;Question;Coded;Danger sign;;;;;;;;;;;;
 ;Oedema;;;;Question;Coded;Oedema;;SNOMED-CT-BD;267038008;Oedema;SAME-AS;;;;;;;
 ;Urine Sugar;;;;Question;Coded;Urine Sugar;;SNOMED-CT-BD;45154002;Glycosuria;SAME-AS;;;;;;;
