@@ -5,7 +5,6 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.sharedhealth.hie.data.SHRUtils;
 
@@ -13,9 +12,9 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.List;
 
-import static org.sharedhealth.hie.data.Main.OPENMRS_CONCEPT_SCRIPTS;
 import static org.sharedhealth.hie.data.SHRUtils.replaceSpecialCharsWithEscapeSequences;
 import static org.sharedhealth.hie.data.SHRUtils.writeLineToFile;
 
@@ -31,9 +30,16 @@ public class OpenMRSTestMapScript {
     public static final String PANEL_URI_PREFIX = "/openmrs/ws/rest/v1/reference-data/panel/";
     public static final String TEST_URI_PREFIX = "/openmrs/ws/rest/v1/reference-data/test/";
 
+    public class MrsConcept {
+        CSVRecord details = null;
+        List<MrsConcept> children = new ArrayList<>();
+    }
+
     public OpenMRSTestMapScript(boolean shouldRaiseEvent) {
         this.shouldRaiseEvent = shouldRaiseEvent;
     }
+
+
 
     public void generate(String inputDirPath, String outputDirPath) throws Exception {
         File outputDir = new File(outputDirPath);
@@ -56,81 +62,109 @@ public class OpenMRSTestMapScript {
         List<CSVRecord> csvRecords = parser.getRecords();
 
         writeLineToFile(output, "\n");
-
-        boolean transactionStarted = false;
-        String previousParentConcept = null;
+        List<MrsConcept> conceptTree = new ArrayList<>();
         for (CSVRecord csvRecord : csvRecords) {
-            String conceptClass = StringUtils.trim(csvRecord.get("class"));
-            String parentConcept = replaceSpecialCharsWithEscapeSequences(csvRecord.get("member-of"));
-
-
-            boolean shouldCreateConcept = conceptClass.equalsIgnoreCase("Sample") || conceptClass.equalsIgnoreCase("Department");
-            if (!StringUtils.isBlank(previousParentConcept) && shouldCreateConcept) {
-                if (!previousParentConcept.equalsIgnoreCase(parentConcept)) {
-                    addConceptEvent(output, "@member_of_concept", null, true);
-                    writeLineToFile(output, "COMMIT;");
-                    writeLineToFile(output, "\n");
-                    transactionStarted = false;
-                }
-            }
-
-            if (shouldCreateConcept) {
-                if (transactionStarted) {
-                    writeLineToFile(output, "COMMIT;");
-                    writeLineToFile(output, "\n");
-                }
-                writeLineToFile(output, "START TRANSACTION;");
-                initializeMysqlVariables(output);
-                checkIfConceptExists(output, csvRecord);
-                insertIntoConcept(output, csvRecord, false);
-                addConceptToMemberConcept(output, csvRecord, false);
-                addConceptToQuestionConcept(output, csvRecord, false);
-                writeLineToFile(output, "COMMIT;");
-                writeLineToFile(output, "\n");
-                transactionStarted = false;
-                previousParentConcept = null;
-            } else {
-                if (!(conceptClass.equalsIgnoreCase("LabSet") || conceptClass.equalsIgnoreCase("LabTest"))) {
-                    continue;
-                }
-
-                boolean raiseEvent = false;
-                if (!StringUtils.isBlank(parentConcept)) {
-                    if (StringUtils.isBlank(previousParentConcept)) {
-                        //do nothing
-                    } else {
-                        if (!previousParentConcept.equalsIgnoreCase(parentConcept)) {
-                            raiseEvent = true;
-                        }
-                    }
-                } else {
-                    continue;
-                }
-
-                if (raiseEvent && transactionStarted) {
-                    addConceptEvent(output, "@member_of_concept", null, true);
-                    writeLineToFile(output, "COMMIT;");
-                    writeLineToFile(output, "\n");
-                    transactionStarted = false;
-                }
-
-                if (!transactionStarted) {
-                    writeLineToFile(output, "START TRANSACTION;");
-                    transactionStarted = true;
-                }
-
-                initializeMysqlVariables(output);
-
-
-                addConceptToMemberConcept(output, csvRecord, false);
-                previousParentConcept = parentConcept;
-            }
+            insertIntoConceptTree(conceptTree, csvRecord);
         }
+        generateSQLForConceptTree(conceptTree, outputDir, outFileName);
+    }
 
-        if (transactionStarted) {
+    private void generateSQLForConceptTree(List<MrsConcept> conceptTree, File outputDir, String outFileName) throws Exception {
+        System.out.println(String.format("Generating OpenMRS concept scripts. Output directory: %s/%s", outputDir.getPath(), outFileName));
+        File output = new File(outputDir, outFileName);
+        writeLineToFile(output, "\n");
+        for (MrsConcept mrsConcept : conceptTree) {
+            generateSQLForConcept(output, mrsConcept, null);
+        }
+    }
+
+    private void generateSQLForConcept(File output, MrsConcept mrsConcept, MrsConcept parent) throws Exception {
+        String conceptClass = StringUtils.trim(mrsConcept.details.get("class"));
+        boolean isGroup = conceptClass.equalsIgnoreCase("Sample") || conceptClass.equalsIgnoreCase("Department");
+        if (isGroup) {
+            writeLineToFile(output, "START TRANSACTION;");
+            initializeMysqlVariables(output);
+            checkIfConceptExists(output, mrsConcept.details);
+            insertIntoConcept(output, mrsConcept.details, false);
+            addConceptToMemberConcept(output, mrsConcept.details, false);
+            addConceptToQuestionConcept(output, mrsConcept.details, false);
             writeLineToFile(output, "COMMIT;");
             writeLineToFile(output, "\n");
+
+            if (!mrsConcept.children.isEmpty()) {
+                writeLineToFile(output, "START TRANSACTION;");
+                for (MrsConcept child : mrsConcept.children) {
+                    generateSQLForConcept(output, child, mrsConcept);
+                }
+                addConceptEvent(output, "@member_of_concept", null, true);
+                //generate event for parent
+                writeLineToFile(output, "COMMIT;");
+                writeLineToFile(output, "\n");
+            }
+        } else {
+            initializeMysqlVariables(output);
+            addConceptToMemberConcept(output, mrsConcept.details, false);
         }
+
+    }
+
+    private void insertIntoConceptTree(List<MrsConcept> conceptTree, CSVRecord csvRecord) {
+        String conceptName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("name"));
+        String conceptClass = StringUtils.trim(csvRecord.get("class"));
+        String parentConceptName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("member-of"));
+        if (StringUtils.isBlank(parentConceptName)) {
+            //add as root
+            boolean shouldAdd = true;
+            for (MrsConcept mrsConcept : conceptTree) {
+                if (mrsConcept.details != null) {
+                    String name = mrsConcept.details.get("name");
+                    if (name.equalsIgnoreCase(conceptName)) {
+                        shouldAdd = false;
+                    }
+                }
+            }
+
+            if (shouldAdd) {
+                MrsConcept mrsConcept = new MrsConcept();
+                mrsConcept.details = csvRecord;
+                conceptTree.add(mrsConcept);
+            }
+        } else {
+            MrsConcept parent = identifyParent(conceptTree, parentConceptName);
+            MrsConcept mrsConcept = new MrsConcept();
+            mrsConcept.details = csvRecord;
+            if (parent == null) {
+                conceptTree.add(mrsConcept);
+            } else {
+                parent.children.add(mrsConcept);
+            }
+        }
+
+    }
+
+    private MrsConcept identifyParent(List<MrsConcept> conceptTree, String parentConceptName) {
+        if (StringUtils.isBlank(parentConceptName)) return null;
+        if (conceptTree == null) return null;
+        if (conceptTree.isEmpty()) return null;
+
+        MrsConcept parent = null;
+        for (MrsConcept mrsConcept : conceptTree) {
+            String name = mrsConcept.details.get("name");
+            if (name.equalsIgnoreCase(parentConceptName)) {
+                parent = mrsConcept;
+                break;
+            }
+        }
+
+        if (parent == null) {
+            for (MrsConcept mrsConcept : conceptTree) {
+                parent = identifyParent(mrsConcept.children, parentConceptName);
+                if (parent != null) {
+                    break;
+                }
+            }
+        }
+        return parent;
     }
 
     private void initializeMysqlVariables(File output) throws IOException {
@@ -242,7 +276,7 @@ public class OpenMRSTestMapScript {
 
     private void selectConceptClassNameFromConceptId(File output, String conceptIdVariable) throws IOException {
         writeLineToFile(output, String.format("SELECT name INTO @concept_class_name from " +
-                "concept_class WHERE concept_class_id IN " +
+                "concept_class WHERE concept_class_id = " +
                 "(SELECT class_id FROM concept WHERE concept_id = %s);", conceptIdVariable));
     }
 

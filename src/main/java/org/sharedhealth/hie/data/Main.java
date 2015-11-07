@@ -28,7 +28,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         if (args.length < 1) {
             System.out.println("Please specify the project name");
-            System.out.println("java -jar <<project-name|mci|shr-client|openmrs-concept>>");
+            System.out.println("java -jar (target:mci|shr-client|openmrs-concept|drugs|openmrs-test-map) ... ");
             throw new RuntimeException("Missing argument(s).");
         }
 
@@ -58,23 +58,29 @@ public class Main {
     private static void generateOpenmrsConceptScriptsForElis(String[] args) throws Exception {
         if (args.length < 4) {
             System.out.println("Please use the below format");
-            System.out.println("java -jar openmrs-concept <<input-dir-path>> <<output-dir-path>> <<is TR server: true|false>>");
+            System.out.println("java -jar openmrs-concept (input-dir-path) (output-dir-path) (raise-event: true|false) [is-bahmni-openmrs: true|false]");
             throw new RuntimeException("Missing argument(s).");
         }
-        String inputDir = args[1];
-        String outputDir = args[2];
-        boolean shouldRaiseEvents = new Boolean(args[3]);
-        boolean isBahmni = false;
+
+        boolean isBahmniOpenMRS = false;
         if (args.length > 4) {
-            isBahmni = new Boolean(args[4]);
+            isBahmniOpenMRS = new Boolean(args[4]);
         }
-        new OpenMRSTestMapScript(true).generate(inputDir, outputDir);
+        if (!isBahmniOpenMRS) {
+            System.out.println("Can not run script for non bahmni openmrs version");
+            throw new RuntimeException("Invalid argument(s).");
+        }
+
+        String inDir = args[1];
+        String outDir = args[2];
+        boolean shouldRaiseEvents = new Boolean(args[3]);
+        new OpenMRSTestMapScript(shouldRaiseEvents).generate(inDir, outDir);
     }
 
     private static void generateDrugScripts(String[] args) throws Exception {
         if (args.length < 4) {
             System.out.println("Please use the below format");
-            System.out.println("java -jar drugs <<input-dir-path>> <<output-dir-path>> <<is TR server: true|false>>");
+            System.out.println("java -jar drugs (input-dir-path) (output-dir-path) (raise-event: true|false) [is-bahmni-openmrs: true|false]");
             throw new RuntimeException("Missing argument(s).");
         }
         String inputDir = args[1];
@@ -86,23 +92,23 @@ public class Main {
     private static void generateOpenmrsConceptScripts(String[] args) throws Exception {
         if (args.length < 4) {
             System.out.println("Please use the below format");
-            System.out.println("java -jar openmrs-concept <<input-dir-path>> <<output-dir-path>> <<is TR server: true|false>>");
+            System.out.println("java -jar (openmrs-concept|mci|)  (input-dir-path) (output-dir-path) (raise-event: true|false) [is-bahmni-openmrs: true|false]");
             throw new RuntimeException("Missing argument(s).");
         }
         String inputDir = args[1];
         String outputDir = args[2];
         boolean shouldRaiseEvents = new Boolean(args[3]);
-        boolean isBahmni = false;
+        boolean isBahmniOpenMRS = false;
         if (args.length > 4) {
-            isBahmni = new Boolean(args[4]);
+            isBahmniOpenMRS = new Boolean(args[4]);
         }
-        new OMRSClientScript(shouldRaiseEvents,isBahmni).generate(inputDir, outputDir);
+        new OMRSClientScript(shouldRaiseEvents,isBahmniOpenMRS).generate(inputDir, outputDir);
     }
 
     private static void generateShrClientHrmScripts(String[] args, String proj) throws Exception {
         if (args.length < 3) {
             System.out.println("Please use the below format");
-            System.out.println("java -jar <<mci>> <<env|prod,qa,showcase>> <<output-dir-path>>");
+            System.out.println("java -jar shr-client (env:prod|qa|showcase) (output-dir-path)");
             throw new RuntimeException("Missing argument(s).");
         }
         String env = args[1];
@@ -117,7 +123,7 @@ public class Main {
     private static void generateMciScripts(String[] args, String proj) throws Exception {
         if (args.length < 3) {
             System.out.println("Please use the below format");
-            System.out.println("java -jar <<shr-client>> <<env|prod,qa,showcase>> <<output-dir-path>>");
+            System.out.println("java -jar mci (env:prod|qa|showcase) (output-dir-path)");
             throw new RuntimeException("Missing argument(s).");
         }
         String env = args[1];
