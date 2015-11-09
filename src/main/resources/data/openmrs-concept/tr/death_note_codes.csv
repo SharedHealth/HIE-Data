@@ -1,0 +1,9 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Died in hospital;;;;Finding;N/A;Died in hospital;;SNOMED-CT-BD;183676005;Died in hospital;SAME-AS;;;;;;;
+;Died at home;;;;Finding;N/A;Died at home;;SNOMED-CT-BD;184293009;Died at home;SAME-AS;;;;;;;
+;Died in ambulance;;;;Finding;N/A;Died in ambulance;;SNOMED-CT-BD;927461000000106;Died in ambulance;SAME-AS;;;;;;;
+;Maternal death;;;;Finding;N/A;Maternal death;;SNOMED-CT-BD;59283008;Maternal death;SAME-AS;;;;;;;
+;Death on arrival at hospital;;;;Finding;N/A;Death on arrival at hospital;;SNOMED-CT-BD;63238001;Death on arrival at hospital;SAME-AS;;;;;;;
+;Accidental death;;;;Finding;N/A;Accidental death;;SNOMED-CT-BD;7878000;Accidental death;SAME-AS;;;;;;;
+;Perinatal and neonatal death;;;;Finding;N/A;Perinatal and neonatal death;;SNOMED-CT-BD;276503009;Perinatal and neonatal death;SAME-AS;;;;;;;
+;Found dead;;;;Finding;N/A;Found dead;;SNOMED-CT-BD;419973004;Found dead;SAME-AS;;;;;;;
