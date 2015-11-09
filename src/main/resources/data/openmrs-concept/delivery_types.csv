@@ -1,0 +1,9 @@
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;;;;;;;;;;;;;;;;;;;
+;Single spontaneous delivery;;;;Diagnosis;N/A;Single spontaneous delivery;;ICD10-BD;O80;Single spontaneous delivery;SAME-AS;;;;;;;
+;Single delivery by caesarean section;;;;Diagnosis;N/A;Single delivery by caesarean section;;ICD10-BD;O82;Single delivery by caesarean section;SAME-AS;;;;;;;
+;Other and unspecified forceps delivery;;;;Diagnosis;N/A;Other and unspecified forceps delivery;;ICD10-BD;O81.3;Other and unspecified forceps delivery;SAME-AS;;;;;;;
+;Destructive operation for delivery;;;;Diagnosis;N/A;Destructive operation for delivery;;ICD10-BD;O83.4;Destructive operation for delivery;SAME-AS;;;;;;;
+;Vacuum extractor delivery;;;;Diagnosis;N/A;Vacuum extractor delivery;;ICD10-BD;O81.4;Vacuum extractor delivery;SAME-AS;;;;;;;
+;Spontaneous breech delivery;;;;Diagnosis;N/A;Spontaneous breech delivery;;ICD10-BD;O80.1;Spontaneous breech delivery;SAME-AS;;;;;;;
+;Oxytocin;;;;Drug;N/A;Oxytocin;;WHO ATC-BD;H01BB02;Oxytocin;SAME-AS;;;;;;;
