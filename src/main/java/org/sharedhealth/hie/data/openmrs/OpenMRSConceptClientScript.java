@@ -57,6 +57,10 @@ public class OpenMRSConceptClientScript {
         writeLineToFile(output, "\n");
 
         for (CSVRecord csvRecord : csvRecords) {
+            String conceptName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("name"));
+            if (StringUtils.isBlank(conceptName)) {
+                continue;
+            }
             writeLineToFile(output, "START TRANSACTION;");
             initializeMysqlVariables(output);
             checkIfConceptExists(output, csvRecord);

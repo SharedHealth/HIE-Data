@@ -1,5 +1,4 @@
 uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
-;;;;;;;;;;;;;;;;;;;
 ;Single spontaneous delivery;;;;Diagnosis;N/A;Single spontaneous delivery;;ICD10-BD;O80;Single spontaneous delivery;SAME-AS;;;;;;;
 ;Single delivery by caesarean section;;;;Diagnosis;N/A;Single delivery by caesarean section;;ICD10-BD;O82;Single delivery by caesarean section;SAME-AS;;;;;;;
 ;Other and unspecified forceps delivery;;;;Diagnosis;N/A;Other and unspecified forceps delivery;;ICD10-BD;O81.3;Other and unspecified forceps delivery;SAME-AS;;;;;;;
