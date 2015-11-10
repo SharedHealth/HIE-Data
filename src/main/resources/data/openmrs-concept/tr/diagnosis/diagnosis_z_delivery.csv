@@ -1,4 +1,4 @@
-﻿uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
 ;Single live birth;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.0;Single live birth;SAME-AS;;;;;;;
 ;Single stillbirth;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.1;Single stillbirth;SAME-AS;;;;;;;
 ;Twins, both liveborn;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.2;Twins, both liveborn;SAME-AS;;;;;;;

@@ -13,7 +13,7 @@ data/openmrs-concept/tr/diagnosis/Diagnosis_O_Q.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_R_S.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_T_and_V_not_U.csv
 data/openmrs-concept/tr/diagnosis/Diagnosis_W_Y.csv
-data/openmrs-concept/tr/diagnosis/diagnosis_z_delivery.csv
+data/openmrs-concept/tr/diagnosis/Diagnosis_Z_Delivery.csv
 data/openmrs-concept/tr/death_note_codes.csv
 data/openmrs-concept/tr/delivery_types.csv
 data/openmrs-concept/tr/Lab_tests.csv
