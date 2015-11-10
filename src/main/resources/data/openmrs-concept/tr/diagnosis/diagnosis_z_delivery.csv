@@ -1,0 +1,19 @@
+﻿uuid;name;description;local-name;local-description;class;datatype;shortname;is-set;reference-term-source;reference-term-code;reference-term-name;reference-term-relationship;units;high-normal;low-normal;member-of;member-of-sort-weight;answer-of;answer-of-sort-weight
+;Single live birth;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.0;Single live birth;SAME-AS;;;;;;;
+;Single stillbirth;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.1;Single stillbirth;SAME-AS;;;;;;;
+;Twins, both liveborn;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.2;Twins, both liveborn;SAME-AS;;;;;;;
+;Twins, one liveborn and one stillborn;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.3;Twins, one liveborn and one stillborn;SAME-AS;;;;;;;
+;Twins, both stillborn;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.4;Twins, both stillborn;SAME-AS;;;;;;;
+;Other multiple births, all liveborn;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.5;Other multiple births, all liveborn;SAME-AS;;;;;;;
+;Other multiple births, some liveborn;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.6;Other multiple births, some liveborn;SAME-AS;;;;;;;
+;Other multiple births, all stillborn;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.7;Other multiple births, all stillborn;SAME-AS;;;;;;;
+;Outcome of delivery, unspecified;;;;Finding;N/A;;FALSE;ICD10-BD;Z37.9;Outcome of delivery, unspecified;SAME-AS;;;;;;;
+;Singleton, born in hospital;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.0;Singleton, born in hospital;SAME-AS;;;;;;;
+;Singleton, born outside hospital;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.1;Singleton, born outside hospital;SAME-AS;;;;;;;
+;Singleton, unspecified as to place of birth;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.2;Singleton, unspecified as to place of birth;SAME-AS;;;;;;;
+;Twin, born in hospital;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.3;Twin, born in hospital;SAME-AS;;;;;;;
+;Twin, born outside hospital;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.4;Twin, born outside hospital;SAME-AS;;;;;;;
+;Twin, unspecified as to place of birth;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.5;Twin, unspecified as to place of birth;SAME-AS;;;;;;;
+;Other multiple, born in hospital;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.6;Other multiple, born in hospital;SAME-AS;;;;;;;
+;Other multiple, born outside hospital;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.7;Other multiple, born outside hospital;SAME-AS;;;;;;;
+;Other multiple, unspecified as to place of birth;;;;Finding;N/A;;FALSE;ICD10-BD;Z38.8;Other multiple, unspecified as to place of birth;SAME-AS;;;;;;;
