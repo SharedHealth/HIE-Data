@@ -28,4 +28,5 @@ data/openmrs-concept/tr/chw_concepts/family_planning_concepts.csv
 data/openmrs-concept/tr/chw_concepts/newborn_care_concepts.csv
 data/openmrs-concept/tr/chw_concepts/child_health_template.csv
 data/openmrs-concept/tr/vitals.csv
+data/openmrs-concept/tr/Procedures_01.csv
 

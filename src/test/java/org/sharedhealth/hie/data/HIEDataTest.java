@@ -58,7 +58,7 @@ public class HIEDataTest {
     @Test
     @Ignore
     public void cleanupDatasheet() throws Exception {
-        InputStream inputStream = new URL("file:///Users/angshus/work/bdshr/sharedhealth/HIE-Data/src/main/resources/data/openmrs-concept/tr/chw_concepts/child_health_template.csv").openStream();
+        InputStream inputStream = new URL("file:///Users/angshus/work/bdshr/sharedhealth/HIE-Data/src/main/resources/data/openmrs-concept/tr/Procedures_01.csv").openStream();
         Writer writer = null;
         InputStreamReader inputStreamReader = null;
         BufferedReader bufferedReader = null;
@@ -66,9 +66,9 @@ public class HIEDataTest {
         try {
             inputStreamReader = new InputStreamReader(inputStream, "us-ascii");
             bufferedReader = new BufferedReader(inputStreamReader);
-            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("/Users/angshus/Documents/child_health_template.csv"), "utf-8"));
+            writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("/Users/angshus/Documents/Procedures_01.csv"), "utf-8"));
             while ((line = bufferedReader.readLine()) != null) {
-                writer.write(line.replace("/?", "/").concat("\n"));
+                writer.write(line.replace("/?", "/").replace("\n"," ").concat("\n"));
             }
         } finally {
             if (bufferedReader != null)

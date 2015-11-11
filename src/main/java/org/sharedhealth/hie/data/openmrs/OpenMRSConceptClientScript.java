@@ -56,7 +56,9 @@ public class OpenMRSConceptClientScript {
 
         writeLineToFile(output, "\n");
 
+        int i = 0;
         for (CSVRecord csvRecord : csvRecords) {
+            i++;
             String conceptName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("name"));
             if (StringUtils.isBlank(conceptName)) {
                 continue;
@@ -64,6 +66,7 @@ public class OpenMRSConceptClientScript {
             writeLineToFile(output, "START TRANSACTION;");
             initializeMysqlVariables(output);
             checkIfConceptExists(output, csvRecord);
+            //System.out.println("Processing line no:" + i);
             insertIntoConcept(output, csvRecord);
             addConceptToMemberConcept(output, csvRecord);
             addConceptToQuestionConcept(output, csvRecord);
@@ -102,13 +105,13 @@ public class OpenMRSConceptClientScript {
                 "'" + StringUtils.trim(csvRecord.get("uuid")) + "'" : "uuid()";
         String conceptName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("name"));
         String conceptShortName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("shortname"));
-        String conceptLocalName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("local-name"));
+        String conceptLocalName = replaceSpecialCharsWithEscapeSequences(getNonMandatoryColumnData(csvRecord,"local-name"));
         String conceptDescription = replaceSpecialCharsWithEscapeSequences(csvRecord.get("description"));
         String version = replaceSpecialCharsWithEscapeSequences(getNonMandatoryColumnData(csvRecord, "version"));
-        String conceptLocalDescription = replaceSpecialCharsWithEscapeSequences(csvRecord.get("local-description"));
+        String conceptLocalDescription = replaceSpecialCharsWithEscapeSequences(getNonMandatoryColumnData(csvRecord,"local-description"));
         String conceptClass = StringUtils.trim(csvRecord.get("class"));
         String conceptDatatype = StringUtils.trim(csvRecord.get("datatype"));
-        String conceptIsSet = StringUtils.trim(csvRecord.get("is-set"));
+        String conceptIsSet = StringUtils.trim(getNonMandatoryColumnData(csvRecord,"is-set"));
 
         selectConceptDatatype(output, conceptDatatype);
         selectConceptClass(output, conceptClass);
@@ -308,7 +311,7 @@ public class OpenMRSConceptClientScript {
     private void createReferenceTermMap(File output, CSVRecord csvRecord) throws IOException {
         String referenceTermSource = StringUtils.trim(csvRecord.get("reference-term-source"));
         String referenceTermCode = replaceSpecialCharsWithEscapeSequences(csvRecord.get("reference-term-code"));
-        String referenceTermName = replaceSpecialCharsWithEscapeSequences(csvRecord.get("reference-term-name"));
+        String referenceTermName = replaceSpecialCharsWithEscapeSequences(getNonMandatoryColumnData(csvRecord,"reference-term-name"));
         String referenceTermRelationship = StringUtils.trim(csvRecord.get("reference-term-relationship"));
         if (StringUtils.isBlank(referenceTermRelationship)) {
             referenceTermRelationship = "SAME-AS";
