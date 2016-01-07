@@ -1,2 +1,1 @@
 # data/openmrs-concept/bahmni/bahmni_concepts.csv
-data/openmrs-concept/bahmni/observation_forms.csv
