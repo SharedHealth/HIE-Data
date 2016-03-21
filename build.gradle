@@ -24,6 +24,10 @@ jar {
     exclude 'META-INF/*.RSA', 'META-INF/*.SF','META-INF/*.DSA'
 }
 
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.12'
+}
+
 repositories {
     mavenCentral()
     flatDir {
