@@ -80,11 +80,11 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Distance vision, left eye, 6/9;;;;Finding;N/A;Distance vision 6/9;FALSE;SNOMED-CT-BD ;260273003;Distance vision 6/9;;;;;;;;
 ;Distance vision, left eye, 6/6;;;;Finding;N/A;Distance vision 6/6;FALSE;SNOMED-CT-BD ;260272008;Distance vision 6/6;;;;;;;;
 ;Animal bite form, recommended;;;;ConvSet;N/A;Animal bite form;TRUE;;;;;;;;;;;
-;Animal bite form, Date of incident;;;;Question;Date;Date of incident;FALSE;;;;;;;;;;;
-;Animal bite form, Affected area;;;;Finding;Coded;Affected area;FALSE;;;;;;;;;;;
+;Animal bite form, Date of incident;;;;Question;Date;Date of incident;FALSE;;;;;;;;Animal bite form, recommended;1;;
+;Animal bite form, Affected area;;;;Finding;Coded;Affected area;FALSE;;;;;;;;Animal bite form, recommended;2;;
 ;Animal bite form, affected area, Arm;;;;Finding;N/A;Arm;FALSE;;;;;;;;;;Animal bite form, Affected area;
 ;Animal bite form, affected area, Foot;;;;Finding;N/A;Foot;FALSE;;;;;;;;;;Animal bite form, Affected area;
 ;Animal bite form, affected area, Leg;;;;Finding;N/A;Leg;FALSE;;;;;;;;;;Animal bite form, Affected area;
 ;Animal bite form, affected area, Others;;;;Finding;N/A;Others;FALSE;;;;;;;;;;Animal bite form, Affected area;
-;Animal bite form, Type of animal;;;;Question;Coded;Type of animal;FALSE;;;;;;;;;;;
-;Animal bite form, Severity of infection;;;;Finding;Coded;Severity of infection;FALSE;;;;;;;;;;;
+;Animal bite form, Type of animal;;;;Question;Coded;Type of animal;FALSE;;;;;;;;Animal bite form, Type of animal;3;;
+;Animal bite form, Severity of infection;;;;Finding;Coded;Severity of infection;FALSE;;;;;;;;Animal bite form, Severity of infection;4;;
