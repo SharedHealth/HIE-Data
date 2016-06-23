@@ -40,8 +40,7 @@ uuid;name;description;local-name;local-description;class;datatype;shortname;is-s
 ;Finding of regularity of menstrual cycle;;;;Finding;Coded;Regularity of menstrual cycle;FALSE;;;;;;;;;;;
 ;Regular periods;;;;Finding;N/A;Regular;FALSE;SNOMED-CT-BD ;302757007;Regular periods;;;;;;;Finding of regularity of menstrual cycle;
 ;Finding of duration of menstrual period;;;;Finding;Numeric;Duration of menstrual period;FALSE;SNOMED-CT-BD ;289893003;Finding of duration of menstrual period;;;;;;;;
-;Contraceptive history;;;;Question;Text;Contraceptives used
-;FALSE;SNOMED-CT-BD ;161771009;Contraceptive history;;;;;;;;
+;Contraceptive history;;;;Question;Text;Contraceptives used;FALSE;SNOMED-CT-BD ;161771009;Contraceptive history;;;;;;;;
 ;Sees hand movements, right eye;;;;Finding;N/A;Sees hand movements;FALSE;SNOMED-CT-BD ;260295004;Sees hand movements;;;;;;;;
 ;Counts fingers, right eye;;;;Finding;N/A;Counts fingers;FALSE;SNOMED-CT-BD ;422256009;Counts fingers - distance vision;;;;;;;;
 ;Distance vision, right eye, 1/60;;;;Finding;N/A;Distance vision 1/60;FALSE;SNOMED-CT-BD ;260290009;Distance vision 1/60;;;;;;;;
