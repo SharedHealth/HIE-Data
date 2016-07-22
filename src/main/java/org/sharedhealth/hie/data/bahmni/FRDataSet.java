@@ -75,5 +75,4 @@ public class FRDataSet {
     private String getHRMFRSystemUri(String facilityCode) {
         return String.format(Main.HRM + "/api/1.0/facilities/%s.json", facilityCode);
     }
-
 }

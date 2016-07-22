@@ -5,6 +5,7 @@ import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.sharedhealth.hie.data.Main;
 import org.sharedhealth.hie.data.SHRUtils;
 
 import java.io.File;
@@ -33,7 +34,9 @@ public class PRDataSet {
         FileUtils.writeStringToFile(output, buildSelectProviderAttributeScript(), Charset.forName("UTF-8"), true);
         for (CSVRecord csvRecord : csvRecords) {
             providerId++;
-            FileUtils.writeStringToFile(output, buildInsertProviderScripts(csvRecord, providerId), Charset.forName("UTF-8"), true);
+            UUID uuid = UUID.randomUUID();
+            FileUtils.writeStringToFile(output, buildInsertProviderScripts(csvRecord, providerId, uuid), Charset.forName("UTF-8"), true);
+            FileUtils.writeStringToFile(output, buildInsertProviderIdMappingScripts(csvRecord, uuid), Charset.forName("UTF-8"), true);
             String providerFacilityMapping = buildInsertProviderAttributeScripts(csvRecord, providerId);
             if(providerFacilityMapping != null){
                 FileUtils.writeStringToFile(output, providerFacilityMapping, Charset.forName("UTF-8"), true);
@@ -48,8 +51,7 @@ public class PRDataSet {
      return "SELECT provider_attribute_type_id from provider_attribute_type where name='Organization' into @attribute_type_id;\n";
     }
 
-    public String buildInsertProviderScripts(CSVRecord csvRecord, int providerId) {
-        UUID uuid = UUID.randomUUID();
+    public String buildInsertProviderScripts(CSVRecord csvRecord, int providerId, UUID uuid) {
         String providerIdentifier = csvRecord.get("provider_id");
         String facilityName = StringUtils.trim(StringUtils.replace(csvRecord.get("facility_name"), "'", "''"));
         String providerName = StringUtils.trim(StringUtils.replace(csvRecord.get("provider_name"), "'", "''"));
@@ -58,8 +60,15 @@ public class PRDataSet {
 
         return String.format("\nINSERT INTO provider (provider_id, name, identifier, creator, date_created, uuid) SELECT " +
                             "%s,'%s','%s',1,now(),'%s' FROM DUAL WHERE NOT EXISTS(SELECT * FROM provider WHERE identifier = '%s');\n",
-                            providerId, providerName, providerIdentifier,
-                            uuid, providerIdentifier);
+                providerId, providerName, providerIdentifier, uuid, providerIdentifier);
+    }
+
+    public String buildInsertProviderIdMappingScripts(CSVRecord csvRecord, UUID uuid) {
+        String providerIdentifier = csvRecord.get("provider_id");
+
+        return String.format("\nINSERT INTO provider_id_mapping (internal_id, external_id, uri, created_at) SELECT " +
+                        "%s, '%s', '%s', now() FROM DUAL WHERE NOT EXISTS(SELECT * FROM provider_id_mapping WHERE external_id = '%s');\n",
+                uuid, providerIdentifier, getHRMPRSystemUri(providerIdentifier), providerIdentifier);
     }
 
     private String buildInsertProviderAttributeScripts(CSVRecord csvRecord, int providerId) {
@@ -71,6 +80,7 @@ public class PRDataSet {
                             : null;
     }
 
-
-
+    private String getHRMPRSystemUri(String providerIdentifier) {
+        return String.format(Main.HRM + "/api/1.0/providers/%s.json", providerIdentifier);
+    }
 }
